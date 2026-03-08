@@ -8,6 +8,7 @@ import Blog from "./pages/Blog";
 import SeoPricing from "./pages/SeoPricing";
 import SeoServices from "./pages/SeoServices";
 import PpcAdvertising from "./pages/PpcAdvertising";
+import SocialMediaMarketing from "./pages/SocialMediaMarketing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
