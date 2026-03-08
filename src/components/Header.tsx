@@ -16,6 +16,7 @@ const navItems = [
     href: "#seo",
     children: [
       { label: "SEO Services", href: "/search-engine-optimization" },
+      { label: "Google Penalty Recovery", href: "/google-penalty-recovery" },
       { label: "On-Page SEO", href: "#" },
       { label: "Off-Page SEO", href: "#" },
       { label: "Technical SEO", href: "#" },
