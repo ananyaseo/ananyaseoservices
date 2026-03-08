@@ -15,14 +15,10 @@ const navItems = [
   },
   {
     label: "Search Engine Optimization",
-    href: "#seo",
+    href: "/search-engine-optimization",
     children: [
       { label: "SEO Services", href: "/search-engine-optimization" },
       { label: "Google Penalty Recovery", href: "/google-penalty-recovery" },
-      { label: "On-Page SEO", href: "#" },
-      { label: "Off-Page SEO", href: "#" },
-      { label: "Technical SEO", href: "#" },
-      { label: "Local SEO", href: "#" },
       { label: "SEO Pricing", href: "/seo-pricing" },
       { label: "Digital Marketing for Nonprofits", href: "/digital-marketing-nonprofits" },
     ],
