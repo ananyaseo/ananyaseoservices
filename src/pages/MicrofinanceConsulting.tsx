@@ -48,8 +48,14 @@ const highlights = [
   "Consulted with an MFI to strengthen their Individual Lending operations by training their team in advanced financial analysis for MSME onlending throughout India.",
 ];
 
-const MicrofinanceConsulting = () => (
-  <div className="min-h-screen">
+const MicrofinanceConsulting = () => {
+  useSEO({
+    title: "Microfinance Consulting | NBFC MFI Advisory | Ananya SEO",
+    description: "Expert microfinance consulting services for NBFCs and MFIs. Diagnostic assessment, due diligence, risk management, loan portfolio audit, and capacity building.",
+  });
+
+  return (
+    <div className="min-h-screen">
     <TopBar />
     <Header />
 
