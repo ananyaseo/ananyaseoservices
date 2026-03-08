@@ -166,20 +166,6 @@ const SmallerBusinessesAI = () => (
     <p>Start with content drafting, data analysis, FAQ chatbot, and internal automation. Avoid full AI dependency, blind automation, and replacing human judgment.</p>
     <p><strong>AI rewards strategy. It punishes impatience.</strong></p>
 
-    <hr />
-
-    <h2>🎥 Watch: Should Smaller Businesses Implement AI?</h2>
-    <div className="aspect-video rounded-xl overflow-hidden shadow-md">
-      <iframe
-        width="100%"
-        height="100%"
-        src="https://www.youtube.com/embed/n_NDPsL-AyU"
-        title="Should Smaller Businesses Implement AI Immediately?"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        className="border-0"
-      />
-    </div>
   </BlogPostLayout>
 );
 
