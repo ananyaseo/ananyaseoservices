@@ -2,7 +2,8 @@ import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
-import heroImg from "@/assets/blog/seo-nonprofits.png";
+import heroImg from "@/assets/nonprofits-hero.jpg";
+import caseStudyImg from "@/assets/nonprofits-casestudy.jpg";
 import { Search, DollarSign, Share2, FileText, Globe, Mail } from "lucide-react";
 
 const strategies = [
@@ -118,16 +119,28 @@ const DigitalMarketingNonprofits = () => (
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground text-center mb-4">
           Case Study: SERUDS NGO
         </h2>
-        <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-          We are proud to highlight our impactful partnership with <strong>Sai Educational Rural & Urban Development Society (SERUDS)</strong>, an NGO dedicated to community upliftment.
+        <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+          We are proud to highlight our impactful partnership with <strong>Sai Educational Rural &amp; Urban Development Society (SERUDS)</strong>, an NGO dedicated to community upliftment. Our comprehensive digital marketing efforts have yielded significant and measurable results for their noble cause:
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+        <div className="mb-12 rounded-xl overflow-hidden">
+          <img src={caseStudyImg} alt="SERUDS NGO children group" className="w-full h-auto object-cover" />
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           {caseStudyResults.map((r) => (
             <div key={r.label} className="text-center p-6 bg-primary/5 rounded-xl">
               <div className="text-3xl md:text-4xl font-bold text-primary font-heading mb-2">{r.metric}</div>
               <p className="text-muted-foreground text-sm">{r.label}</p>
             </div>
           ))}
+        </div>
+
+        <div className="space-y-6 max-w-4xl mx-auto text-muted-foreground leading-relaxed">
+          <p><strong className="text-foreground">Organic Traffic Growth:</strong> Over a period of three years, we achieved a remarkable 110% increase in organic traffic to SERUDS' website, demonstrating improved visibility and reach among their target audience.</p>
+          <p><strong className="text-foreground">Top Search Rankings:</strong> Our diligent SEO efforts resulted in 7 out of 10 targeted keywords ranking on the 1st page of Google search results, significantly enhancing their discoverability for key initiatives.</p>
+          <p><strong className="text-foreground">Google Ad Grants Impact:</strong> We effectively managed their Google Ads Grants campaign, leading to a 220% increase in clicks over two years, ensuring their message reached a wider audience interested in their work.</p>
+          <p><strong className="text-foreground">Successful Fundraising Campaigns:</strong> Beyond traffic and visibility, we strategically executed fundraising campaigns, including a unique wedding registry initiative and a "donation in memory of a departed loved one" campaign. These efforts successfully raised over ₹2 million INR (approximately $24,000 USD), directly contributing to their impactful projects.</p>
         </div>
       </div>
     </section>
