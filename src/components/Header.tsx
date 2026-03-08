@@ -24,6 +24,7 @@ const navItems = [
       { label: "Technical SEO", href: "#" },
       { label: "Local SEO", href: "#" },
       { label: "SEO Pricing", href: "/seo-pricing" },
+      { label: "Digital Marketing for Nonprofits", href: "/digital-marketing-nonprofits" },
     ],
   },
   { label: "PPC Advertising", href: "/ppc-advertising" },
