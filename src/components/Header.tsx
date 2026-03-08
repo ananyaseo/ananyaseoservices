@@ -8,6 +8,7 @@ const navItems = [
     label: "Search Engine Optimization",
     href: "#seo",
     children: [
+      { label: "SEO Services", href: "/search-engine-optimization" },
       { label: "On-Page SEO", href: "#" },
       { label: "Off-Page SEO", href: "#" },
       { label: "Technical SEO", href: "#" },
