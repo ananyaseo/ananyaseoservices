@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import Testimonials from "./pages/Testimonials";
 import NotFound from "./pages/NotFound";
 import GooglePenaltyRecovery from "./pages/GooglePenaltyRecovery";
+import AboutUs from "./pages/AboutUs";
 
 // Blog post pages - Page 1
 import SmallerBusinessesAI from "./pages/blog/SmallerBusinessesAI";
