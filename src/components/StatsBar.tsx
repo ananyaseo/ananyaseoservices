@@ -7,8 +7,8 @@ const stats = [
 ];
 
 const StatsBar = () => (
-  <section className="bg-primary py-5">
-    <div className="container grid grid-cols-1 md:grid-cols-3 gap-6 text-center max-w-5xl mx-auto bg-primary rounded-xl">
+  <section className="py-5 flex justify-center">
+    <div className="w-[60%] grid grid-cols-1 md:grid-cols-3 gap-6 text-center bg-primary rounded-2xl py-5 px-6">
       {stats.map((stat) => (
         <div key={stat.label} className="flex flex-col items-center gap-1 animate-count-up">
           <stat.icon className="text-primary-foreground" size={28} />

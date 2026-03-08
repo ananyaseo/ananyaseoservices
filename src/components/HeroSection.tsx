@@ -10,7 +10,7 @@ const HeroSection = () => (
       backgroundPosition: "center",
     }}
   >
-    <div className="absolute inset-0 bg-navy/85" />
+    <div className="absolute inset-0 bg-navy/60" />
     <div className="relative z-10 container py-20 px-4">
       <h1 className="text-4xl md:text-6xl font-bold text-navy-foreground mb-4 font-heading">
         Leading SEO<br />Company in India
