@@ -31,9 +31,22 @@ const WhyChooseSection = () => (
         <h2 className="text-2xl md:text-3xl font-bold font-heading text-foreground mt-2 mb-4">
           Affordable Excellence Since 2010
         </h2>
-        <p className="text-foreground/80 max-w-3xl mx-auto text-lg">
-          As a leading SEO company in India and trusted digital marketing company, Ananya SEO Services delivers exceptional results without the premium agency pricing. We specialize in helping startups, nonprofits, NGOs, and small to medium-sized businesses achieve measurable online growth.
-        </p>
+        <div className="flex flex-col md:flex-row gap-6 items-start max-w-3xl mx-auto">
+          <p className="text-foreground/80 text-lg flex-1">
+            As a leading SEO company in India and trusted digital marketing company, Ananya SEO Services delivers exceptional results without the premium agency pricing. We specialize in helping startups, nonprofits, NGOs, and small to medium-sized businesses achieve measurable online growth.
+          </p>
+          <div className="shrink-0 w-48 rounded-xl overflow-hidden shadow-md">
+            <div className="relative w-full" style={{ paddingBottom: '177.78%' }}>
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/ecq6pSv9Se8"
+                title="Ananya SEO Services"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -52,20 +65,6 @@ const WhyChooseSection = () => (
         ))}
       </div>
 
-      {/* YouTube Video Widget */}
-      <div className="mt-12 flex justify-center">
-        <div className="w-full max-w-3xl rounded-2xl overflow-hidden shadow-lg">
-          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/ZjSyw7P3i8I"
-              title="Ananya SEO Services"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 );
