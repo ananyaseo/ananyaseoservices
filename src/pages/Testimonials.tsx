@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/use-seo";
 import { Star, Quote } from "lucide-react";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
@@ -37,8 +38,14 @@ const testimonials = [
   },
 ];
 
-const Testimonials = () => (
-  <div className="min-h-screen flex flex-col">
+const Testimonials = () => {
+  useSEO({
+    title: "Client Testimonials | Ananya SEO Services",
+    description: "Read testimonials from satisfied clients of Ananya SEO Services. See how we've helped businesses improve their digital presence and search rankings.",
+  });
+
+  return (
+    <div className="min-h-screen flex flex-col">
     <TopBar />
     <Header />
 
@@ -105,6 +112,7 @@ const Testimonials = () => (
 
     <Footer />
   </div>
-);
+  );
+};
 
 export default Testimonials;

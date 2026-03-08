@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/use-seo";
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
@@ -10,8 +11,14 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
-const Index = () => (
-  <div className="min-h-screen">
+const Index = () => {
+  useSEO({
+    title: "SEO & Digital Marketing Agency India | Ananya SEO",
+    description: "Grow your business with Ananya SEO. We provide SEO, responsive WordPress web development, and digital marketing solutions across industries.",
+  });
+
+  return (
+    <div className="min-h-screen">
     <TopBar />
     <Header />
     <HeroSection />
@@ -24,6 +31,7 @@ const Index = () => (
     <CTASection />
     <Footer />
   </div>
-);
+  );
+};
 
 export default Index;

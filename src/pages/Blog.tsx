@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/use-seo";
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -174,6 +175,11 @@ const POSTS_PER_PAGE = 10;
 const totalPages = Math.ceil(allBlogPosts.length / POSTS_PER_PAGE);
 
 const Blog = () => {
+  useSEO({
+    title: "Insights and Tips on Digital Marketing | Ananya SEO Blog",
+    description: "Read our latest articles on SEO, digital marketing, social media marketing, PPC advertising, and more from Ananya SEO experts.",
+  });
+
   const { page } = useParams();
   const currentPage = page ? parseInt(page) : 1;
   const startIdx = (currentPage - 1) * POSTS_PER_PAGE;

@@ -13,11 +13,8 @@ const HeroSection = () => (
     <div className="absolute inset-0 bg-navy/60" />
     <div className="relative z-10 container py-20 px-4">
       <h1 className="text-4xl md:text-6xl font-bold text-navy-foreground mb-4 font-heading">
-        Leading SEO<br />Company in India
+        Leading SEO Company in India |<br />Digital Marketing &amp; PPC Advertising Experts
       </h1>
-      <h2 className="text-xl md:text-2xl font-semibold text-primary mb-4 font-heading">
-        Digital Marketing & PPC Advertising Experts
-      </h2>
       <p className="text-lg text-navy-foreground/90 mb-2 max-w-2xl mx-auto">
         Your One-Stop Solution for Digital Marketing Success
       </p>

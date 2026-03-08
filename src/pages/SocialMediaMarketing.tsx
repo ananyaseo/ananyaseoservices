@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/use-seo";
 import { CheckCircle, Phone, Mail, ArrowRight, Users, BarChart3, Megaphone, Calendar, Target, Eye } from "lucide-react";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
@@ -88,8 +89,14 @@ const faqs = [
   },
 ];
 
-const SocialMediaMarketing = () => (
-  <div className="min-h-screen bg-background">
+const SocialMediaMarketing = () => {
+  useSEO({
+    title: "Social Media Marketing Services Bangalore | Ananya SEO",
+    description: "AI-driven social media marketing strategies for business growth. Facebook, Instagram, LinkedIn marketing services by Ananya SEO in Bangalore.",
+  });
+
+  return (
+    <div className="min-h-screen bg-background">
     <TopBar />
     <Header />
 
@@ -440,6 +447,7 @@ const SocialMediaMarketing = () => (
 
     <Footer />
   </div>
-);
+  );
+};
 
 export default SocialMediaMarketing;

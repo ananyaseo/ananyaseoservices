@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/use-seo";
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter, Youtube, Send } from "lucide-react";
 import { useState } from "react";
 import Header from "@/components/Header";
@@ -14,6 +15,11 @@ const socialLinks = [
 ];
 
 const Contact = () => {
+  useSEO({
+    title: "Contact Ananya SEO Services | Get in Touch",
+    description: "Connect with Ananya SEO Services for SEO, PPC, social media marketing, and website development services in Bangalore, India.",
+  });
+
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 

@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/use-seo";
 import { CheckCircle, Phone, Mail, ArrowRight, Heart, Cpu, MapPin, GraduationCap } from "lucide-react";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
@@ -35,8 +36,14 @@ const industries = [
   },
 ];
 
-const WebsiteDevelopment = () => (
-  <div className="min-h-screen bg-background">
+const WebsiteDevelopment = () => {
+  useSEO({
+    title: "Website Development Services | WordPress Development | Ananya SEO",
+    description: "Professional, SEO-ready & high-performance WordPress website development services. Responsive web design, e-commerce solutions, and landing page design.",
+  });
+
+  return (
+    <div className="min-h-screen bg-background">
     <TopBar />
     <Header />
 
@@ -286,6 +293,7 @@ const WebsiteDevelopment = () => (
 
     <Footer />
   </div>
-);
+  );
+};
 
 export default WebsiteDevelopment;

@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/use-seo";
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -27,8 +28,14 @@ const expertise = [
   },
 ];
 
-const AboutUs = () => (
-  <div className="min-h-screen">
+const AboutUs = () => {
+  useSEO({
+    title: "About Ananya SEO Services | Digital Marketing Agency Bangalore",
+    description: "Learn about Ananya SEO Services - a Bangalore-based digital marketing agency founded in 2009 by an IIM Ahmedabad alumnus, offering SEO, PPC, and social media marketing.",
+  });
+
+  return (
+    <div className="min-h-screen">
     <TopBar />
     <Header />
 
@@ -146,6 +153,7 @@ const AboutUs = () => (
     <CTASection />
     <Footer />
   </div>
-);
+  );
+};
 
 export default AboutUs;

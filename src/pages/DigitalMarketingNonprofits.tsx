@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/use-seo";
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -58,8 +59,14 @@ const caseStudyResults = [
   { metric: "₹20L+", label: "Raised through fundraising campaigns (~$24,000 USD)" },
 ];
 
-const DigitalMarketingNonprofits = () => (
-  <div className="min-h-screen flex flex-col">
+const DigitalMarketingNonprofits = () => {
+  useSEO({
+    title: "Digital Marketing for Nonprofits & NGOs | Ananya SEO",
+    description: "Specialized digital marketing services for nonprofits and NGOs. SEO, PPC with Google Ad Grants, social media marketing at up to 75% discount.",
+  });
+
+  return (
+    <div className="min-h-screen flex flex-col">
     <TopBar />
     <Header />
 
@@ -169,6 +176,7 @@ const DigitalMarketingNonprofits = () => (
     <CTASection />
     <Footer />
   </div>
-);
+  );
+};
 
 export default DigitalMarketingNonprofits;
