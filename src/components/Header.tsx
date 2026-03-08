@@ -95,16 +95,32 @@ const Header = () => {
       {/* Mobile nav */}
       {mobileOpen && (
         <nav className="lg:hidden border-t bg-background pb-4">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="block px-6 py-3 text-sm font-medium text-foreground hover:bg-muted hover:text-primary transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item) =>
+            item.children ? (
+              <div key={item.label}>
+                <span className="block px-6 py-3 text-sm font-bold text-foreground">{item.label}</span>
+                {item.children.map((child) => (
+                  <a
+                    key={child.label}
+                    href={child.href}
+                    className="block px-10 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <a
+                key={item.label}
+                href={item.href}
+                className="block px-6 py-3 text-sm font-medium text-foreground hover:bg-muted hover:text-primary transition-colors"
+                onClick={() => setMobileOpen(false)}
+              >
+                {item.label}
+              </a>
+            )
+          )}
         </nav>
       )}
     </header>
