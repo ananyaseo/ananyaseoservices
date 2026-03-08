@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/ananya-logo-footer.jpg";
 
 const navItems = [
   {
@@ -37,10 +37,6 @@ const Header = () => {
   return (
     <header className="bg-background shadow-sm sticky top-0 z-50">
       <div className="container flex items-center justify-between py-4">
-        <a href="#" className="flex items-center gap-2">
-          <img src={logo} alt="Ananya SEO Services" className="h-12 w-auto" />
-        </a>
-
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-1">
           {navItems.map((item) =>
@@ -82,6 +78,10 @@ const Header = () => {
             )
           )}
         </nav>
+
+        <a href="/" className="flex items-center gap-2">
+          <img src={logo} alt="Ananya SEO Services" className="h-12 w-auto" />
+        </a>
 
         {/* Mobile toggle */}
         <button
