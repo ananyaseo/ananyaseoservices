@@ -16,7 +16,7 @@ const navItems = [
       { label: "SEO Pricing", href: "/seo-pricing" },
     ],
   },
-  { label: "PPC Advertising", href: "#ppc" },
+  { label: "PPC Advertising", href: "/ppc-advertising" },
   { label: "Social Media Marketing", href: "#smm" },
   { label: "Website Development", href: "#webdev" },
   { label: "Contact", href: "#contact" },
