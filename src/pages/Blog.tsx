@@ -47,7 +47,7 @@ const blogPosts = [
     title: "SEO Company in Bangalore | Your Guide to Digital Success",
     date: "2024",
     excerpt: "SEO Company in Bangalore: Your Guide to Top-Tier Digital Success. In the bustling tech hub of Bangalore, standing out in the digital space is key.",
-    image: null,
+    image: seoBangalore,
     link: "/blog/seo-company-in-bangalore",
   },
   {
