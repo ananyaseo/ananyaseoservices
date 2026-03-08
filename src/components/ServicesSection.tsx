@@ -144,7 +144,7 @@ const ServicesSection = () => (
                 ))}
               </ul>
               <a
-                href="#"
+                href={service.link}
                 className={`inline-flex items-center gap-2 ${service.btnClass} px-6 py-3 rounded-md font-semibold hover:brightness-110 transition-all`}
               >
                 Read More
