@@ -21,6 +21,11 @@ const services = [
     ],
     image: seoImg,
     imageRight: true,
+    bgClass: "",
+    textClass: "text-foreground",
+    descClass: "text-foreground/80",
+    itemTextClass: "text-foreground",
+    btnClass: "bg-primary text-primary-foreground",
   },
   {
     id: "smm",
@@ -36,6 +41,11 @@ const services = [
     ],
     image: socialImg,
     imageRight: false,
+    bgClass: "bg-navy",
+    textClass: "text-navy-foreground",
+    descClass: "text-navy-foreground/80",
+    itemTextClass: "text-navy-foreground",
+    btnClass: "bg-primary text-primary-foreground",
   },
   {
     id: "ppc",
@@ -52,6 +62,11 @@ const services = [
     ],
     image: ppcImg,
     imageRight: true,
+    bgClass: "",
+    textClass: "text-foreground",
+    descClass: "text-foreground/80",
+    itemTextClass: "text-foreground",
+    btnClass: "bg-primary text-primary-foreground",
   },
   {
     id: "content",
@@ -66,6 +81,11 @@ const services = [
     ],
     image: contentImg,
     imageRight: false,
+    bgClass: "bg-primary",
+    textClass: "text-primary-foreground",
+    descClass: "text-primary-foreground/80",
+    itemTextClass: "text-primary-foreground",
+    btnClass: "bg-secondary text-secondary-foreground",
   },
   {
     id: "webdev",
@@ -80,6 +100,11 @@ const services = [
     ],
     image: webdevImg,
     imageRight: true,
+    bgClass: "",
+    textClass: "text-foreground",
+    descClass: "text-foreground/80",
+    itemTextClass: "text-foreground",
+    btnClass: "bg-primary text-primary-foreground",
   },
 ];
 
@@ -90,35 +115,33 @@ const ServicesSection = () => (
         <h2 className="text-3xl md:text-4xl font-bold text-foreground font-heading mb-4">
           Explore Our Comprehensive Digital Marketing Services
         </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-foreground/80 max-w-2xl mx-auto text-lg">
           We offer a full suite of digital marketing services to help your business grow online.
         </p>
       </div>
+    </div>
 
-      <div className="space-y-20">
-        {services.map((service) => (
-          <div
-            key={service.id}
-            id={service.id}
-            className={`flex flex-col ${service.imageRight ? "lg:flex-row" : "lg:flex-row-reverse"} gap-12 items-center`}
-          >
+    <div className="space-y-0">
+      {services.map((service) => (
+        <div key={service.id} id={service.id} className={`${service.bgClass} py-16`}>
+          <div className={`container flex flex-col ${service.imageRight ? "lg:flex-row" : "lg:flex-row-reverse"} gap-12 items-center`}>
             <div className="flex-1">
-              <span className="text-primary font-bold text-lg font-heading">{service.number}.</span>
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground font-heading mt-2 mb-4">
+              <span className={`font-bold text-lg font-heading ${service.bgClass ? service.textClass : "text-primary"}`}>{service.number}.</span>
+              <h3 className={`text-2xl md:text-3xl font-bold font-heading mt-2 mb-4 ${service.textClass}`}>
                 {service.title}
               </h3>
-              <p className="text-muted-foreground mb-6">{service.description}</p>
+              <p className={`${service.descClass} mb-6 text-lg`}>{service.description}</p>
               <ul className="space-y-3 mb-6">
                 {service.items.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <CheckCircle className="text-primary mt-0.5 shrink-0" size={18} />
-                    <span className="text-foreground text-sm">{item}</span>
+                    <CheckCircle className={`mt-0.5 shrink-0 ${service.bgClass ? service.textClass : "text-primary"}`} size={18} />
+                    <span className={`${service.itemTextClass} text-base`}>{item}</span>
                   </li>
                 ))}
               </ul>
               <a
                 href="#"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:brightness-110 transition-all"
+                className={`inline-flex items-center gap-2 ${service.btnClass} px-6 py-3 rounded-md font-semibold hover:brightness-110 transition-all`}
               >
                 Read More
               </a>
@@ -132,8 +155,8 @@ const ServicesSection = () => (
               />
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   </section>
 );
