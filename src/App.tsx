@@ -76,6 +76,7 @@ const App = () => (
           <Route path="/blog/ngo-special-offer" element={<NgoSpecialOffer />} />
           <Route path="/seo-pricing" element={<SeoPricing />} />
           <Route path="/google-penalty-recovery" element={<GooglePenaltyRecovery />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/search-engine-optimization" element={<SeoServices />} />
           <Route path="/ppc-advertising" element={<PpcAdvertising />} />
           <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
