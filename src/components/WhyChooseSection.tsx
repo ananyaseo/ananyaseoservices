@@ -70,8 +70,3 @@ const WhyChooseSection = () => (
 );
 
 export default WhyChooseSection;
-    </div>
-  </section>
-);
-
-export default WhyChooseSection;
