@@ -54,7 +54,7 @@ const blogPosts = [
     title: "Success Stories of Impact Investors in India",
     date: "2024",
     excerpt: "Impact Feature Success Stories: Showcasing the Impact of Impact Investors in India. India's vibrant impact investing landscape boasts numerous success stories.",
-    image: null,
+    image: impactInvestors,
     link: "/blog/impact-investors-india",
   },
   {
