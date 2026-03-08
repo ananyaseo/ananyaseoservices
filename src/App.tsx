@@ -11,6 +11,7 @@ import PpcAdvertising from "./pages/PpcAdvertising";
 import SocialMediaMarketing from "./pages/SocialMediaMarketing";
 import WebsiteDevelopment from "./pages/WebsiteDevelopment";
 import Contact from "./pages/Contact";
+import Testimonials from "./pages/Testimonials";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
