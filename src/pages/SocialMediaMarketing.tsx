@@ -4,6 +4,15 @@ import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import heroBg from "@/assets/smm-hero.jpg";
 import ctaBg from "@/assets/smm-cta-bg.jpg";
+import servicesImg from "@/assets/smm-services.jpg";
+import approachImg from "@/assets/smm-approach.jpg";
+import paidAdsImg from "@/assets/smm-paid-ads.jpg";
+import instagramImg from "@/assets/smm-instagram.jpg";
+import facebookImg from "@/assets/smm-facebook.jpg";
+import linkedinImg from "@/assets/smm-linkedin.jpg";
+import calendarImg from "@/assets/smm-calendar.jpg";
+import whyChooseImg from "@/assets/smm-why-choose.jpg";
+import faqImg from "@/assets/smm-faq.jpg";
 
 const services = [
   {
@@ -41,14 +50,17 @@ const services = [
 const platforms = [
   {
     name: "Instagram Marketing",
+    image: instagramImg,
     items: ["Reels and short-form video marketing", "Daily stories and engagement content", "Influencer collaborations", "Interactive posts such as polls and countdowns"],
   },
   {
     name: "Facebook Marketing",
+    image: facebookImg,
     items: ["Page management and content publishing", "Audience targeting and ad campaigns", "Lead generation campaigns", "Community engagement strategies"],
   },
   {
     name: "LinkedIn Marketing",
+    image: linkedinImg,
     items: ["Thought leadership content", "Company page growth", "Professional networking campaigns", "LinkedIn lead generation ads"],
   },
 ];
@@ -132,11 +144,16 @@ const SocialMediaMarketing = () => (
     {/* Services Grid */}
     <section className="py-16 md:py-20 bg-muted/30">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground font-heading mb-4">Our Social Media Marketing Services</h2>
-          <p className="text-lg text-foreground max-w-2xl mx-auto">
-            Comprehensive social media marketing solutions designed to help businesses grow their brand and generate leads online.
-          </p>
+        <div className="flex flex-col lg:flex-row gap-12 items-center mb-12">
+          <div className="flex-1">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground font-heading mb-4">Our Social Media Marketing Services</h2>
+            <p className="text-lg text-foreground">
+              Comprehensive social media marketing solutions designed to help businesses grow their brand and generate leads online.
+            </p>
+          </div>
+          <div className="flex-1">
+            <img src={servicesImg} alt="Social media marketing services dashboard" className="rounded-lg shadow-lg w-full" loading="lazy" />
+          </div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((s) => (
@@ -153,8 +170,16 @@ const SocialMediaMarketing = () => (
     {/* Approach - Creative Content */}
     <section className="py-16 md:py-20">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground font-heading mb-4">Our Social Media Marketing Approach</h2>
+        <div className="flex flex-col lg:flex-row gap-12 items-center mb-12">
+          <div className="flex-1">
+            <img src={approachImg} alt="Social media marketing approach and strategy planning" className="rounded-lg shadow-lg w-full" loading="lazy" />
+          </div>
+          <div className="flex-1">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground font-heading mb-4">Our Social Media Marketing Approach</h2>
+            <p className="text-lg text-foreground leading-relaxed">
+              We combine creative storytelling with AI-powered analytics to create high-impact campaigns that drive real engagement and business results.
+            </p>
+          </div>
         </div>
         <div className="grid md:grid-cols-2 gap-12">
           {/* Creative Content */}
@@ -227,11 +252,16 @@ const SocialMediaMarketing = () => (
     {/* Paid Advertising */}
     <section className="py-16 md:py-20 bg-muted/30">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground font-heading mb-4">Paid Social Media Advertising</h2>
-          <p className="text-lg text-foreground max-w-3xl mx-auto">
-            Paid advertising is one of the fastest ways to reach highly targeted audiences. Our team designs data-driven social media ad campaigns with advanced audience targeting and AI campaign optimization.
-          </p>
+        <div className="flex flex-col lg:flex-row gap-12 items-center mb-12">
+          <div className="flex-1">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground font-heading mb-4">Paid Social Media Advertising</h2>
+            <p className="text-lg text-foreground">
+              Paid advertising is one of the fastest ways to reach highly targeted audiences. Our team designs data-driven social media ad campaigns with advanced audience targeting and AI campaign optimization.
+            </p>
+          </div>
+          <div className="flex-1">
+            <img src={paidAdsImg} alt="Paid social media advertising campaigns" className="rounded-lg shadow-lg w-full" loading="lazy" />
+          </div>
         </div>
         <div className="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
           {["Facebook Ads", "Instagram Ads", "LinkedIn Ads"].map((platform) => (
@@ -262,16 +292,19 @@ const SocialMediaMarketing = () => (
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {platforms.map((p) => (
-            <div key={p.name} className="bg-background p-8 rounded-lg shadow-md border">
-              <h3 className="text-xl font-bold text-foreground font-heading mb-4">{p.name}</h3>
-              <ul className="space-y-3">
-                {p.items.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <CheckCircle className="text-primary mt-0.5 shrink-0" size={18} />
-                    <span className="text-base text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
+            <div key={p.name} className="bg-background rounded-lg shadow-md border overflow-hidden">
+              <img src={p.image} alt={p.name} className="w-full h-48 object-cover" loading="lazy" />
+              <div className="p-8">
+                <h3 className="text-xl font-bold text-foreground font-heading mb-4">{p.name}</h3>
+                <ul className="space-y-3">
+                  {p.items.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <CheckCircle className="text-primary mt-0.5 shrink-0" size={18} />
+                      <span className="text-base text-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
@@ -281,8 +314,11 @@ const SocialMediaMarketing = () => (
     {/* Content Calendar & Reporting */}
     <section className="py-16 md:py-20 bg-muted/30">
       <div className="container">
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
+        <div className="flex flex-col lg:flex-row gap-12 items-center mb-12">
+          <div className="flex-1">
+            <img src={calendarImg} alt="Content calendar planning for social media" className="rounded-lg shadow-lg w-full" loading="lazy" />
+          </div>
+          <div className="flex-1">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground font-heading mb-4">Strategic Content Calendar Planning</h2>
             <p className="text-base text-foreground leading-relaxed mb-4">
               Consistency is critical in social media marketing. We create a structured monthly content calendar that ensures your brand maintains an active and engaging presence online.
@@ -296,23 +332,23 @@ const SocialMediaMarketing = () => (
               ))}
             </ul>
           </div>
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground font-heading mb-4">Transparent Performance Tracking</h2>
-            <p className="text-base text-foreground leading-relaxed mb-4">
-              We provide detailed insights into your social media performance through:
-            </p>
-            <ul className="space-y-3">
-              {["Engagement analytics", "Audience insights", "Campaign performance reports", "Paid advertising ROI analysis"].map((i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="text-primary mt-0.5 shrink-0" size={18} />
-                  <span className="text-base text-foreground">{i}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="text-base text-foreground leading-relaxed mt-4">
-              These insights help continuously refine and improve your social media strategy.
-            </p>
-          </div>
+        </div>
+        <div className="bg-background p-8 rounded-lg shadow-md border">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground font-heading mb-4">Transparent Performance Tracking</h2>
+          <p className="text-base text-foreground leading-relaxed mb-4">
+            We provide detailed insights into your social media performance through:
+          </p>
+          <ul className="space-y-3">
+            {["Engagement analytics", "Audience insights", "Campaign performance reports", "Paid advertising ROI analysis"].map((i) => (
+              <li key={i} className="flex items-start gap-3">
+                <CheckCircle className="text-primary mt-0.5 shrink-0" size={18} />
+                <span className="text-base text-foreground">{i}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-base text-foreground leading-relaxed mt-4">
+            These insights help continuously refine and improve your social media strategy.
+          </p>
         </div>
       </div>
     </section>
@@ -320,8 +356,13 @@ const SocialMediaMarketing = () => (
     {/* Why Choose Us */}
     <section className="py-16 md:py-20">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground font-heading mb-4">Why Businesses Choose Ananya SEO</h2>
+        <div className="flex flex-col lg:flex-row gap-12 items-center mb-12">
+          <div className="flex-1">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground font-heading mb-4">Why Businesses Choose Ananya SEO</h2>
+          </div>
+          <div className="flex-1">
+            <img src={whyChooseImg} alt="Why choose Ananya SEO for social media marketing" className="rounded-lg shadow-lg w-full" loading="lazy" />
+          </div>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {[
@@ -346,8 +387,14 @@ const SocialMediaMarketing = () => (
     {/* FAQs */}
     <section className="py-16 md:py-20 bg-muted/30">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground font-heading mb-4">Social Media Marketing FAQs</h2>
+        <div className="flex flex-col lg:flex-row gap-12 items-center mb-12">
+          <div className="flex-1">
+            <img src={faqImg} alt="Social media marketing frequently asked questions" className="rounded-lg shadow-lg w-full max-w-md" loading="lazy" />
+          </div>
+          <div className="flex-1">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground font-heading mb-4">Social Media Marketing FAQs</h2>
+            <p className="text-lg text-foreground">Find answers to common questions about our social media marketing services.</p>
+          </div>
         </div>
         <div className="max-w-3xl mx-auto space-y-6">
           {faqs.map((faq) => (
