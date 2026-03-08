@@ -13,6 +13,7 @@ import WebsiteDevelopment from "./pages/WebsiteDevelopment";
 import Contact from "./pages/Contact";
 import Testimonials from "./pages/Testimonials";
 import NotFound from "./pages/NotFound";
+import GooglePenaltyRecovery from "./pages/GooglePenaltyRecovery";
 
 // Blog post pages
 import SmallerBusinessesAI from "./pages/blog/SmallerBusinessesAI";
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/blog/increase-sales-instagram" element={<InstagramSales />} />
           <Route path="/blog/digital-marketing-nonprofits" element={<DigitalMarketingNonprofits />} />
           <Route path="/seo-pricing" element={<SeoPricing />} />
+          <Route path="/google-penalty-recovery" element={<GooglePenaltyRecovery />} />
           <Route path="/search-engine-optimization" element={<SeoServices />} />
           <Route path="/ppc-advertising" element={<PpcAdvertising />} />
           <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
