@@ -1,9 +1,11 @@
 import BlogPostLayout from "@/components/BlogPostLayout";
+import heroImg from "@/assets/blog/seo-bangalore.jpg";
 
 const SeoBangalore = () => (
   <BlogPostLayout
     title="SEO Company in Bangalore | Your Guide to Digital Success"
     date="2024"
+    heroImage={heroImg}
   >
     <p>In the bustling tech hub of Bangalore, standing out in the digital landscape is more challenging than ever. As a business owner, you might wonder how you can make your brand more visible online. This is where an SEO company in Bangalore steps in to elevate your digital presence.</p>
 

@@ -9,6 +9,10 @@ import seoTrends from "@/assets/blog/seo-trends-2025.jpg";
 import seoTips from "@/assets/blog/seo-tips-2021.png";
 import instagramSales from "@/assets/blog/instagram-sales.png";
 import seoNonprofits from "@/assets/blog/seo-nonprofits.png";
+import aiToolsFiction from "@/assets/blog/ai-tools-fiction.jpg";
+import seoBangalore from "@/assets/blog/seo-bangalore.jpg";
+import impactInvestors from "@/assets/blog/impact-investors.jpg";
+import nonprofitsSeo from "@/assets/blog/nonprofits-seo.jpg";
 
 const blogPosts = [
   {
@@ -36,28 +40,28 @@ const blogPosts = [
     title: "Unlock Your Creative Potential: Using AI Tools to Write and Publish Fiction",
     date: "2024",
     excerpt: "Using ChatGPT and Kindle Publishing. Unlock Your Creative Potential: Using AI Tools to Write and Publish Fiction. Writing fiction is evolving.",
-    image: null,
+    image: aiToolsFiction,
     link: "/blog/ai-tools-write-publish-fiction",
   },
   {
     title: "SEO Company in Bangalore | Your Guide to Digital Success",
     date: "2024",
     excerpt: "SEO Company in Bangalore: Your Guide to Top-Tier Digital Success. In the bustling tech hub of Bangalore, standing out in the digital space is key.",
-    image: null,
+    image: seoBangalore,
     link: "/blog/seo-company-in-bangalore",
   },
   {
     title: "Success Stories of Impact Investors in India",
     date: "2024",
     excerpt: "Impact Feature Success Stories: Showcasing the Impact of Impact Investors in India. India's vibrant impact investing landscape boasts numerous success stories.",
-    image: null,
+    image: impactInvestors,
     link: "/blog/impact-investors-india",
   },
   {
     title: "Empowering Nonprofits through SEO: Ananya SEO Takes Online Fundraising to New Heights",
     date: "2023",
     excerpt: "Empowering Nonprofits through SEO and Fundraising. In the digital age, establishing a strong online presence is crucial for nonprofits seeking support.",
-    image: null,
+    image: nonprofitsSeo,
     link: "/blog/empowering-nonprofits-seo",
   },
   {

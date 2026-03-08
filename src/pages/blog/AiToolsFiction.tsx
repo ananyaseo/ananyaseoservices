@@ -1,9 +1,11 @@
 import BlogPostLayout from "@/components/BlogPostLayout";
+import heroImg from "@/assets/blog/ai-tools-fiction.jpg";
 
 const AiToolsFiction = () => (
   <BlogPostLayout
     title="Unlock Your Creative Potential: Using AI Tools to Write and Publish Fiction"
     date="2024"
+    heroImage={heroImg}
   >
     <p>Writing fiction is a dream for many, but the journey can be daunting — whether you're a budding writer unsure where to start or a seasoned storyteller facing writer's block. Enter AI tools like ChatGPT, which can serve as your creative partner, brainstorming buddy, and even your editing assistant. Here's how you can use AI and digital platforms to transform your ideas into published books and promote them effectively.</p>
 
