@@ -11,6 +11,7 @@ import PpcAdvertising from "./pages/PpcAdvertising";
 import SocialMediaMarketing from "./pages/SocialMediaMarketing";
 import WebsiteDevelopment from "./pages/WebsiteDevelopment";
 import Contact from "./pages/Contact";
+import Testimonials from "./pages/Testimonials";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/seo-pricing" element={<SeoPricing />} />
           <Route path="/search-engine-optimization" element={<SeoServices />} />

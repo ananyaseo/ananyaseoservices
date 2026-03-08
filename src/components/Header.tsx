@@ -3,7 +3,14 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const navItems = [
-  { label: "Home", href: "#" },
+  {
+    label: "Home",
+    href: "/",
+    children: [
+      { label: "Home", href: "/" },
+      { label: "Testimonials", href: "/testimonials" },
+    ],
+  },
   {
     label: "Search Engine Optimization",
     href: "#seo",
@@ -25,7 +32,7 @@ const navItems = [
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
     <header className="bg-background shadow-sm sticky top-0 z-50">
@@ -41,8 +48,8 @@ const Header = () => {
               <div
                 key={item.label}
                 className="relative"
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
+                onMouseEnter={() => setOpenDropdown(item.label)}
+                onMouseLeave={() => setOpenDropdown(null)}
               >
                 <a
                   href={item.href}
@@ -50,7 +57,7 @@ const Header = () => {
                 >
                   {item.label} <ChevronDown size={14} />
                 </a>
-                {dropdownOpen && (
+                {openDropdown === item.label && (
                   <div className="absolute top-full left-0 bg-background shadow-lg rounded-md py-2 min-w-[200px] border">
                     {item.children.map((child) => (
                       <a
@@ -88,16 +95,32 @@ const Header = () => {
       {/* Mobile nav */}
       {mobileOpen && (
         <nav className="lg:hidden border-t bg-background pb-4">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="block px-6 py-3 text-sm font-medium text-foreground hover:bg-muted hover:text-primary transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item) =>
+            item.children ? (
+              <div key={item.label}>
+                <span className="block px-6 py-3 text-sm font-bold text-foreground">{item.label}</span>
+                {item.children.map((child) => (
+                  <a
+                    key={child.label}
+                    href={child.href}
+                    className="block px-10 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <a
+                key={item.label}
+                href={item.href}
+                className="block px-6 py-3 text-sm font-medium text-foreground hover:bg-muted hover:text-primary transition-colors"
+                onClick={() => setMobileOpen(false)}
+              >
+                {item.label}
+              </a>
+            )
+          )}
         </nav>
       )}
     </header>
