@@ -23,9 +23,10 @@ const services = [
     imageRight: true,
     bgClass: "",
     textClass: "text-foreground",
-    descClass: "text-foreground/80",
+    descClass: "text-foreground/90",
     itemTextClass: "text-foreground",
     btnClass: "bg-primary text-primary-foreground",
+    link: "/search-engine-optimization",
   },
   {
     id: "smm",
@@ -43,9 +44,10 @@ const services = [
     imageRight: false,
     bgClass: "bg-navy",
     textClass: "text-navy-foreground",
-    descClass: "text-navy-foreground/80",
+    descClass: "text-navy-foreground/90",
     itemTextClass: "text-navy-foreground",
     btnClass: "bg-primary text-primary-foreground",
+    link: "/social-media-marketing",
   },
   {
     id: "ppc",
@@ -64,9 +66,10 @@ const services = [
     imageRight: true,
     bgClass: "",
     textClass: "text-foreground",
-    descClass: "text-foreground/80",
+    descClass: "text-foreground/90",
     itemTextClass: "text-foreground",
     btnClass: "bg-primary text-primary-foreground",
+    link: "/ppc-advertising",
   },
   {
     id: "content",
@@ -83,9 +86,10 @@ const services = [
     imageRight: false,
     bgClass: "bg-primary",
     textClass: "text-primary-foreground",
-    descClass: "text-primary-foreground/80",
+    descClass: "text-primary-foreground/90",
     itemTextClass: "text-primary-foreground",
     btnClass: "bg-secondary text-secondary-foreground",
+    link: "/contact",
   },
   {
     id: "webdev",
@@ -102,12 +106,12 @@ const services = [
     imageRight: true,
     bgClass: "",
     textClass: "text-foreground",
-    descClass: "text-foreground/80",
+    descClass: "text-foreground/90",
     itemTextClass: "text-foreground",
     btnClass: "bg-primary text-primary-foreground",
+    link: "/website-development",
   },
 ];
-
 const ServicesSection = () => (
   <section id="services" className="py-20">
     <div className="container">
