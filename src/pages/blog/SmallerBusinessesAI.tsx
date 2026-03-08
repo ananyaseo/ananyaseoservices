@@ -16,6 +16,23 @@ const SmallerBusinessesAI = () => (
     <p><strong>Should we implement AI immediately… or wait?</strong></p>
     <p>Let's discuss this calmly. Practically. Without hype.</p>
 
+    <div className="aspect-video rounded-xl overflow-hidden shadow-md my-8">
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/n_NDPsL-AyU"
+        title="Should Smaller Businesses Implement AI Immediately?"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="border-0"
+      />
+    </div>
+    <p>
+      <a href="https://www.youtube.com/watch?v=n_NDPsL-AyU" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary hover:underline font-medium">
+        ▶ Watch on YouTube
+      </a>
+    </p>
+
     <h2>Using AI Chatbots for Customer Service</h2>
     <p>Let's assume a company has:</p>
     <ul>
