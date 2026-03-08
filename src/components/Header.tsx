@@ -10,6 +10,7 @@ const navItems = [
       { label: "Home", href: "/" },
       { label: "About Us", href: "/about-us" },
       { label: "Testimonials", href: "/testimonials" },
+      { label: "Microfinance Consulting", href: "/microfinance-consulting" },
     ],
   },
   {

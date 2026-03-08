@@ -15,6 +15,7 @@ import Testimonials from "./pages/Testimonials";
 import NotFound from "./pages/NotFound";
 import GooglePenaltyRecovery from "./pages/GooglePenaltyRecovery";
 import AboutUs from "./pages/AboutUs";
+import MicrofinanceConsulting from "./pages/MicrofinanceConsulting";
 
 // Blog post pages - Page 1
 import SmallerBusinessesAI from "./pages/blog/SmallerBusinessesAI";
@@ -77,6 +78,7 @@ const App = () => (
           <Route path="/seo-pricing" element={<SeoPricing />} />
           <Route path="/google-penalty-recovery" element={<GooglePenaltyRecovery />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/microfinance-consulting" element={<MicrofinanceConsulting />} />
           <Route path="/search-engine-optimization" element={<SeoServices />} />
           <Route path="/ppc-advertising" element={<PpcAdvertising />} />
           <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
