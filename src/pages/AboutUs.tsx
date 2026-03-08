@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/use-seo";
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
