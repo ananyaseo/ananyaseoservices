@@ -27,8 +27,8 @@ const WhyChooseSection = () => (
   <section className="py-20 bg-muted">
     <div className="container">
       <div className="text-center mb-12">
-        <span className="text-primary font-semibold text-sm uppercase tracking-wider">Why Choose Us</span>
-        <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground mt-2 mb-4">
+        <span className="text-primary font-semibold text-base uppercase tracking-wider">Why Choose Us</span>
+        <h2 className="text-2xl md:text-3xl font-bold font-heading text-foreground mt-2 mb-4">
           Affordable Excellence Since 2010
         </h2>
         <p className="text-foreground/80 max-w-3xl mx-auto text-lg">
@@ -50,6 +50,21 @@ const WhyChooseSection = () => (
             <p className="text-foreground/80 text-base leading-relaxed">{reason.description}</p>
           </div>
         ))}
+      </div>
+
+      {/* YouTube Video Widget */}
+      <div className="mt-12 flex justify-center">
+        <div className="w-full max-w-3xl rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/ZjSyw7P3i8I"
+              title="Ananya SEO Services"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
       </div>
     </div>
   </section>
