@@ -30,7 +30,7 @@ const CTASection = () =>
 
         className="inline-flex items-center gap-2 border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-md font-semibold hover:bg-primary-foreground/10 transition-all" href="mailto:sanand.rao@gmail.com">
         
-          <Mail size={18} /> Email: anand@ananyaseo.com
+          <Mail size={18} /> Email: sanand.rao@gmail.com
         </a>
       </div>
     </div>
