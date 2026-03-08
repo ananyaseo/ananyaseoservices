@@ -2,7 +2,8 @@ import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
-import heroImg from "@/assets/blog/seo-nonprofits.png";
+import heroImg from "@/assets/nonprofits-hero.jpg";
+import caseStudyImg from "@/assets/nonprofits-casestudy.jpg";
 import { Search, DollarSign, Share2, FileText, Globe, Mail } from "lucide-react";
 
 const strategies = [
