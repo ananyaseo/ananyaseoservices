@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/use-seo";
 import { CheckCircle, Phone, Mail, ArrowRight, Users, BarChart3, Megaphone, Calendar, Target, Eye } from "lucide-react";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
