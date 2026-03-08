@@ -153,6 +153,7 @@ const AboutUs = () => {
     <CTASection />
     <Footer />
   </div>
-);
+  );
+};
 
 export default AboutUs;

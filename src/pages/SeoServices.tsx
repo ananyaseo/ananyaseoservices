@@ -122,8 +122,14 @@ const seoProcess = [
   },
 ];
 
-const SeoServices = () => (
-  <div className="min-h-screen">
+const SeoServices = () => {
+  useSEO({
+    title: "Affordable SEO Services India | Search Engine Optimization | Ananya SEO",
+    description: "Future-ready SEO services that deliver visibility, traffic & conversions. AI-powered search optimization, E-E-A-T content development, and technical SEO excellence.",
+  });
+
+  return (
+    <div className="min-h-screen">
     <TopBar />
     <Header />
 

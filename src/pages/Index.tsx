@@ -31,6 +31,7 @@ const Index = () => {
     <CTASection />
     <Footer />
   </div>
-);
+  );
+};
 
 export default Index;
