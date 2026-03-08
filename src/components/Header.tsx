@@ -48,8 +48,8 @@ const Header = () => {
               <div
                 key={item.label}
                 className="relative"
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
+                onMouseEnter={() => setOpenDropdown(item.label)}
+                onMouseLeave={() => setOpenDropdown(null)}
               >
                 <a
                   href={item.href}
