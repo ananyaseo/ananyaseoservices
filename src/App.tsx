@@ -23,6 +23,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/seo-pricing" element={<SeoPricing />} />
           <Route path="/search-engine-optimization" element={<SeoServices />} />
+          <Route path="/ppc-advertising" element={<PpcAdvertising />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
