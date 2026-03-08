@@ -65,20 +65,11 @@ const WhyChooseSection = () => (
         ))}
       </div>
 
-      {/* YouTube Video Widget */}
-      <div className="mt-12 flex justify-center">
-        <div className="w-full max-w-3xl rounded-2xl overflow-hidden shadow-lg">
-          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/ZjSyw7P3i8I"
-              title="Ananya SEO Services"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      </div>
+    </div>
+  </section>
+);
+
+export default WhyChooseSection;
     </div>
   </section>
 );
