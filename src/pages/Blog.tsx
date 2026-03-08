@@ -61,7 +61,7 @@ const blogPosts = [
     title: "Empowering Nonprofits through SEO: Ananya SEO Takes Online Fundraising to New Heights",
     date: "2023",
     excerpt: "Empowering Nonprofits through SEO and Fundraising. In the digital age, establishing a strong online presence is crucial for nonprofits seeking support.",
-    image: null,
+    image: nonprofitsSeo,
     link: "/blog/empowering-nonprofits-seo",
   },
   {
