@@ -3,7 +3,14 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const navItems = [
-  { label: "Home", href: "#" },
+  {
+    label: "Home",
+    href: "/",
+    children: [
+      { label: "Home", href: "/" },
+      { label: "Testimonials", href: "/testimonials" },
+    ],
+  },
   {
     label: "Search Engine Optimization",
     href: "#seo",
