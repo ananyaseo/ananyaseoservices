@@ -25,8 +25,14 @@ const process = [
   { icon: Activity, title: "Monitoring & Recovery", desc: "Continuous tracking of rankings, traffic restoration, and ongoing optimization to prevent future penalties." },
 ];
 
-const GooglePenaltyRecovery = () => (
-  <div className="min-h-screen">
+const GooglePenaltyRecovery = () => {
+  useSEO({
+    title: "Google Penalty Recovery Services Bangalore | Ananya SEO",
+    description: "Expert Google penalty recovery services. Fix rankings & restore traffic from algorithmic updates and manual penalties with proven white-hat strategies.",
+  });
+
+  return (
+    <div className="min-h-screen">
     <TopBar />
     <Header />
 
