@@ -10,6 +10,7 @@ import SeoServices from "./pages/SeoServices";
 import PpcAdvertising from "./pages/PpcAdvertising";
 import SocialMediaMarketing from "./pages/SocialMediaMarketing";
 import WebsiteDevelopment from "./pages/WebsiteDevelopment";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
