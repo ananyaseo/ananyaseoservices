@@ -8,6 +8,7 @@ const navItems = [
     href: "/",
     children: [
       { label: "Home", href: "/" },
+      { label: "About Us", href: "/about-us" },
       { label: "Testimonials", href: "/testimonials" },
     ],
   },
