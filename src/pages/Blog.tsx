@@ -9,6 +9,10 @@ import seoTrends from "@/assets/blog/seo-trends-2025.jpg";
 import seoTips from "@/assets/blog/seo-tips-2021.png";
 import instagramSales from "@/assets/blog/instagram-sales.png";
 import seoNonprofits from "@/assets/blog/seo-nonprofits.png";
+import aiToolsFiction from "@/assets/blog/ai-tools-fiction.jpg";
+import seoBangalore from "@/assets/blog/seo-bangalore.jpg";
+import impactInvestors from "@/assets/blog/impact-investors.jpg";
+import nonprofitsSeo from "@/assets/blog/nonprofits-seo.jpg";
 
 const blogPosts = [
   {
