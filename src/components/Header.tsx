@@ -57,7 +57,7 @@ const Header = () => {
                 >
                   {item.label} <ChevronDown size={14} />
                 </a>
-                {dropdownOpen && (
+                {openDropdown === item.label && (
                   <div className="absolute top-full left-0 bg-background shadow-lg rounded-md py-2 min-w-[200px] border">
                     {item.children.map((child) => (
                       <a
