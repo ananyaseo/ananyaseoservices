@@ -140,6 +140,7 @@ const MicrofinanceConsulting = () => {
     <CTASection />
     <Footer />
   </div>
-);
+  );
+};
 
 export default MicrofinanceConsulting;

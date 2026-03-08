@@ -247,6 +247,7 @@ const SeoPricing = () => {
 
     <Footer />
   </div>
-);
+  );
+};
 
 export default SeoPricing;

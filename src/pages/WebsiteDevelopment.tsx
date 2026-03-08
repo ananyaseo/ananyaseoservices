@@ -293,6 +293,7 @@ const WebsiteDevelopment = () => {
 
     <Footer />
   </div>
-);
+  );
+};
 
 export default WebsiteDevelopment;

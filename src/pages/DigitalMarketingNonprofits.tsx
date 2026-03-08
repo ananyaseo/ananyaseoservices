@@ -176,6 +176,7 @@ const DigitalMarketingNonprofits = () => {
     <CTASection />
     <Footer />
   </div>
-);
+  );
+};
 
 export default DigitalMarketingNonprofits;

@@ -112,6 +112,7 @@ const Testimonials = () => {
 
     <Footer />
   </div>
-);
+  );
+};
 
 export default Testimonials;

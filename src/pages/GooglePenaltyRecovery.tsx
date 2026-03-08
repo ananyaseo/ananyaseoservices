@@ -181,6 +181,7 @@ const GooglePenaltyRecovery = () => {
 
     <Footer />
   </div>
-);
+  );
+};
 
 export default GooglePenaltyRecovery;

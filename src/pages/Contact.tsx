@@ -15,6 +15,11 @@ const socialLinks = [
 ];
 
 const Contact = () => {
+  useSEO({
+    title: "Contact Ananya SEO Services | Get in Touch",
+    description: "Connect with Ananya SEO Services for SEO, PPC, social media marketing, and website development services in Bangalore, India.",
+  });
+
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 

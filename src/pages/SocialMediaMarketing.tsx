@@ -447,6 +447,7 @@ const SocialMediaMarketing = () => {
 
     <Footer />
   </div>
-);
+  );
+};
 
 export default SocialMediaMarketing;
