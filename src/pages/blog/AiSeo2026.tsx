@@ -1,11 +1,14 @@
 import BlogPostLayout from "@/components/BlogPostLayout";
 import heroImg from "@/assets/blog/ai-seo-2026.png";
+import presentingImg from "@/assets/blog/ai-seo-presenting.png";
 
 const AiSeo2026 = () => (
   <BlogPostLayout
     title="AI SEO in 2026: What Every Business Owner Must Know to Stay Visible"
     date="February 25, 2026"
     heroImage={heroImg}
+    heroSideImage={presentingImg}
+    youtubeVideoId="ZjSyw7P3i8I"
   >
     <p><strong>The Search Landscape Has Changed — Permanently</strong></p>
     <p>Just a few years ago, SEO meant: add keywords, build backlinks, rank on Google. That version of search is gone.</p>
