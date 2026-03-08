@@ -35,8 +35,8 @@ const WhyChooseSection = () => (
           <p className="text-foreground/80 text-lg flex-1">
             As a leading SEO company in India and trusted digital marketing company, Ananya SEO Services delivers exceptional results without the premium agency pricing. We specialize in helping startups, nonprofits, NGOs, and small to medium-sized businesses achieve measurable online growth.
           </p>
-          <div className="shrink-0 w-48 rounded-xl overflow-hidden shadow-md">
-            <div className="relative w-full" style={{ paddingBottom: '177.78%' }}>
+          <div className="shrink-0 w-64 rounded-xl overflow-hidden shadow-md">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
               <iframe
                 className="absolute inset-0 w-full h-full"
                 src="https://www.youtube.com/embed/ecq6pSv9Se8"
