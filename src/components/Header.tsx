@@ -18,7 +18,7 @@ const navItems = [
   { label: "Social Media Marketing", href: "#smm" },
   { label: "Website Development", href: "#webdev" },
   { label: "Contact", href: "#contact" },
-  { label: "Blog", href: "#blog" },
+  { label: "Blog", href: "/blog" },
 ];
 
 const Header = () => {
