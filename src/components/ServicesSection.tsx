@@ -131,9 +131,9 @@ const ServicesSection = () => (
           <div className={`container flex flex-col ${service.imageRight ? "lg:flex-row" : "lg:flex-row-reverse"} gap-12 items-center`}>
             <div className="flex-1">
               <span className={`font-bold text-lg font-heading ${service.bgClass ? service.textClass : "text-primary"}`}>{service.number}.</span>
-              <h3 className={`text-2xl md:text-3xl font-bold font-heading mt-2 mb-4 ${service.textClass}`}>
+              <h2 className={`text-2xl md:text-3xl font-bold font-heading mt-2 mb-4 ${service.textClass}`}>
                 {service.title}
-              </h3>
+              </h2>
               <p className={`${service.descClass} mb-6 text-lg`}>{service.description}</p>
               <ul className="space-y-3 mb-6">
                 {service.items.map((item) => (
