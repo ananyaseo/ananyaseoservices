@@ -40,7 +40,7 @@ const blogPosts = [
     title: "Unlock Your Creative Potential: Using AI Tools to Write and Publish Fiction",
     date: "2024",
     excerpt: "Using ChatGPT and Kindle Publishing. Unlock Your Creative Potential: Using AI Tools to Write and Publish Fiction. Writing fiction is evolving.",
-    image: null,
+    image: aiToolsFiction,
     link: "/blog/ai-tools-write-publish-fiction",
   },
   {
