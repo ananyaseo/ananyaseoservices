@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/use-seo";
 import { CheckCircle, ArrowRight, Target, BarChart3, Search, Layout, Users, TrendingUp } from "lucide-react";
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";

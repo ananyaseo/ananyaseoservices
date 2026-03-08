@@ -306,6 +306,7 @@ const SeoServices = () => {
 
     <Footer />
   </div>
-);
+  );
+};
 
 export default SeoServices;

@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/use-seo";
 import { Star, Quote } from "lucide-react";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
