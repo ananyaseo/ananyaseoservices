@@ -12,6 +12,7 @@ const navItems = [
       { label: "Off-Page SEO", href: "#" },
       { label: "Technical SEO", href: "#" },
       { label: "Local SEO", href: "#" },
+      { label: "SEO Pricing", href: "/seo-pricing" },
     ],
   },
   { label: "PPC Advertising", href: "#ppc" },
