@@ -36,8 +36,14 @@ const industries = [
   },
 ];
 
-const WebsiteDevelopment = () => (
-  <div className="min-h-screen bg-background">
+const WebsiteDevelopment = () => {
+  useSEO({
+    title: "Website Development Services | WordPress Development | Ananya SEO",
+    description: "Professional, SEO-ready & high-performance WordPress website development services. Responsive web design, e-commerce solutions, and landing page design.",
+  });
+
+  return (
+    <div className="min-h-screen bg-background">
     <TopBar />
     <Header />
 
