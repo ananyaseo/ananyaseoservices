@@ -130,7 +130,7 @@ const ServicesSection = () => (
         <div key={service.id} id={service.id} className={`${service.bgClass} py-16`}>
           <div className={`container flex flex-col ${service.imageRight ? "lg:flex-row" : "lg:flex-row-reverse"} gap-12 items-center`}>
             <div className="flex-1">
-     ervice.icon className={`shrink-0 ${service.bgClass ? service.textClass : "text-primary"}`} size={28} /ber}.</span>
+     <service.icon className={`shrink-0 ${service.bgClass ? service.textClass : "text-primary"}`} size={28} />
               <h2 className={`text-2xl md:text-3xl font-bold font-heading mt-2 mb-4 ${service.textClass}`}>
                 {service.title}
               </h2>
