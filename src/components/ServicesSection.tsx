@@ -51,7 +51,7 @@ const services = [
   },
   {
     id: "ppc",
-    icon: MousePointerClick,
+    icon: MousePointerClickointerClick,
     title: "PPC Advertising Services",
     description: "Get instant visibility and qualified leads with expert PPC advertising management. Our certified Google Ads specialists create high-converting campaigns that maximize your ROI.",
     items: [
@@ -130,7 +130,7 @@ const ServicesSection = () => (
         <div key={service.id} id={service.id} className={`${service.bgClass} py-16`}>
           <div className={`container flex flex-col ${service.imageRight ? "lg:flex-row" : "lg:flex-row-reverse"} gap-12 items-center`}>
             <div className="flex-1">
-              <span className={`font-bold text-lg font-heading ${service.bgClass ? service.textClass : "text-primary"}`}>{service.number}.</span>
+     ervice.icon className={`shrink-0 ${service.bgClass ? service.textClass : "text-primary"}`} size={28} /ber}.</span>
               <h2 className={`text-2xl md:text-3xl font-bold font-heading mt-2 mb-4 ${service.textClass}`}>
                 {service.title}
               </h2>
