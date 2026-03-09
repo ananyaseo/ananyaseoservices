@@ -333,6 +333,30 @@ const SeoServices = () => {
       </div>
     </section>
 
+    {/* FAQ Section */}
+    <section className="py-16 bg-muted">
+      <div className="container max-w-4xl">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground font-heading text-center mb-4">
+          SEO FAQ
+        </h2>
+        <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-10">
+          Common questions about SEO services, timelines, and what to expect when working with us.
+        </p>
+        <Accordion type="single" collapsible className="space-y-4">
+          {seoFaqs.map((faq, index) => (
+            <AccordionItem key={index} value={`faq-${index}`} className="bg-background rounded-lg border px-6">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary py-5">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground whitespace-pre-line pb-5">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </section>
+
     {/* CTA */}
     <section className="py-20 bg-primary">
       <div className="container text-center">
