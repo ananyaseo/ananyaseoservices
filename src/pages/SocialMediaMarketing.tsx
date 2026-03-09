@@ -97,7 +97,11 @@ const SocialMediaMarketing = () => {
       name: "Social Media Marketing Services",
       description: "AI-driven social media marketing strategies for business growth. Facebook, Instagram, LinkedIn marketing services.",
       serviceType: "Social Media Marketing"
-    }
+    },
+    breadcrumbs: [
+      { name: "Home", url: "/" },
+      { name: "Social Media Marketing", url: "/social-media-marketing" },
+    ],
   });
 
   return (

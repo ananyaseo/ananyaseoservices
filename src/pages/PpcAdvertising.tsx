@@ -92,7 +92,11 @@ const PpcAdvertising = () => {
       name: "PPC Advertising Services",
       description: "AI-driven PPC management for maximum ROI. Expert Google Ads, Facebook Ads, and LinkedIn Ads campaign management.",
       serviceType: "PPC Advertising"
-    }
+    },
+    breadcrumbs: [
+      { name: "Home", url: "/" },
+      { name: "PPC Advertising", url: "/ppc-advertising" },
+    ],
   });
 
   return (

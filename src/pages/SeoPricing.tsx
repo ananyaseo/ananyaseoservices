@@ -75,6 +75,10 @@ const SeoPricing = () => {
   useSEO({
     title: "SEO Pricing Packages Bangalore | Affordable SEO Plans | Ananya SEO",
     description: "Affordable SEO pricing packages with 90-day performance guarantee. Starter, Growth, and Enterprise SEO plans for businesses of all sizes.",
+    breadcrumbs: [
+      { name: "Home", url: "/" },
+      { name: "SEO Pricing", url: "/seo-pricing" },
+    ],
   });
 
   return (
