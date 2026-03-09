@@ -1,12 +1,46 @@
 import BlogPostLayout from "@/components/BlogPostLayout";
 import heroImg from "@/assets/blog/ai-smaller-businesses.jpg";
 
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Should Smaller Businesses Implement AI Immediately?",
+  "description": "A practical discussion on whether small and mid-sized businesses should implement AI immediately, focusing on chatbots, AI website builders, and real-world ROI.",
+  "thumbnailUrl": "https://img.youtube.com/vi/n_NDPsL-AyU/maxresdefault.jpg",
+  "uploadDate": "2026-02-27T00:00:00+05:30",
+  "contentUrl": "https://youtu.be/n_NDPsL-AyU",
+  "embedUrl": "https://www.youtube.com/embed/n_NDPsL-AyU",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ananya SEO Services",
+    "url": "https://ananyaseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ananyaseo.com/logo.png"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9845038936",
+      "contactType": "customer service",
+      "email": "sanand.rao@gmail.com",
+      "areaServed": "IN",
+      "availableLanguage": "English"
+    }
+  },
+  "potentialAction": {
+    "@type": "WatchAction",
+    "target": "https://youtu.be/n_NDPsL-AyU"
+  }
+};
+
 const SmallerBusinessesAI = () => (
-  <BlogPostLayout
-    title="Should Smaller Businesses Implement AI Immediately?"
-    date="February 27, 2026"
-    heroImage={heroImg}
-  >
+  <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
+    <BlogPostLayout
+      title="Should Smaller Businesses Implement AI Immediately?"
+      date="February 27, 2026"
+      heroImage={heroImg}
+    >
     <p>There's so much noise around AI right now.</p>
     <p>Everywhere you look:</p>
     <p>"AI will replace teams."</p>
