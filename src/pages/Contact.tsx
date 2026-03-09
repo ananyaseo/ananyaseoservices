@@ -23,13 +23,6 @@ const Contact = () => {
     ],
   });
 
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
 
   return (
     <div className="min-h-screen flex flex-col">
