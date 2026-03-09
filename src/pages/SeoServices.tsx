@@ -3,10 +3,59 @@ import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { CheckCircle, Phone, Mail, Search, Settings, FileText, Link2, MapPin, Bot, Target } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import heroImg from "@/assets/seo-page-hero.jpg";
 import assessmentImg from "@/assets/seo-assessment.jpg";
 import targetImg from "@/assets/seo-target.jpg";
 import strategyImg from "@/assets/seo-strategy.jpg";
+
+const seoFaqs = [
+  {
+    question: "When should we start SEO for our website?",
+    answer: "SEO should ideally start during the website planning and development stage. The SEO foundation begins as soon as you register your domain and start building your website. At this stage, activities such as keyword research, site structure planning, page content writing, internal linking, and technical SEO setup should be implemented.\n\nIt is also helpful to start publishing blog posts early—such as articles about your company launch, services, locations, or industry insights. This helps search engines discover and index your website faster.\n\nFixing SEO issues later on a poorly structured website can be much more difficult and expensive than implementing SEO correctly from the beginning. Your business can also be listed on Google Business Profile and trusted directories to start building online authority even before the website is fully launched."
+  },
+  {
+    question: "I already have an SEO agency. How can I evaluate whether they are doing good SEO?",
+    answer: "A good SEO agency should be transparent and proactive. Here are a few signs to look for:\n\n• Do you receive clear monthly SEO reports showing organic traffic, rankings, and work done?\n• Do they discuss strategy and content ideas with you regularly?\n• Are they improving your Google Search Console and GA4 metrics?\n• Are they helping improve your website content and user experience?\n\nBe cautious if the agency focuses only on rankings without explaining traffic growth, leads, and conversions. SEO today is about improving overall website visibility and authority, not just ranking a few keywords."
+  },
+  {
+    question: "How long does SEO take to show results in Google?",
+    answer: "SEO is a long-term strategy, not a quick fix. For most websites, noticeable improvements usually start appearing within 3–6 months, while strong and stable rankings may take 6–12 months or more, depending on the competition.\n\nNo ethical SEO agency can guarantee first-page rankings in a short time. Search rankings are constantly changing based on competition, user location, device, and Google's algorithm updates.\n\nSustainable SEO focuses on high-quality content, technical optimization, and credible backlinks so that rankings improve steadily and remain stable over time."
+  },
+  {
+    question: "What activities are included in your SEO services?",
+    answer: "Our SEO services typically include:\n\n• Keyword research and search intent analysis\n• Technical SEO and website audit\n• On-page optimization (titles, meta tags, content optimization)\n• Content creation and blog writing\n• Internal linking and site architecture improvements\n• High-quality link building and digital PR\n• Local SEO optimization (Google Business Profile)\n• Performance tracking using Google Analytics 4 and Google Search Console\n\nSEO is an ongoing process focused on improving visibility, traffic, and conversions."
+  },
+  {
+    question: "Do you submit websites to Google and other search engines?",
+    answer: "Modern search engines automatically discover websites through links and crawling. It is generally not necessary to manually submit a website to search engines.\n\nHowever, we do ensure that your website is properly indexed by:\n\n• Submitting an XML sitemap to Google Search Console and Bing Webmaster Tools\n• Optimizing robots.txt and crawl settings\n• Monitoring indexing issues and search performance\n\nThese steps help search engines understand and crawl your website more efficiently."
+  },
+  {
+    question: "What will you need from the client during the SEO project?",
+    answer: "To begin the SEO process, we usually require:\n\n• Access to your website CMS (content management system)\n• Access to Google Search Console and Google Analytics\n• Information about your products, services, and target customers\n• Input on your preferred keywords and target locations\n\nWe may also collaborate with you to create new content or service pages, which you can review and approve before publishing."
+  },
+  {
+    question: "How much do you charge for SEO services?",
+    answer: "We offer affordable SEO services for small and medium businesses, with plans typically starting from around USD 300 per month, depending on the scope of work and competition in your industry.\n\nWe also offer significant discounts for non-profit organizations in India, especially those working to support disadvantaged communities, the elderly, disabled persons, and underprivileged groups.\n\nPlease contact us for a custom SEO proposal tailored to your business goals."
+  },
+  {
+    question: "Where is your office located in Bengaluru?",
+    answer: "Our office is located at:\n\nAnanya SEO Services\nNo. 49, 2nd Main, Arakere MICO Layout 1st Stage\nBannerghatta Road\nBengaluru – 560076\nKarnataka, India\n\nWe work with clients across India and internationally through online meetings as well."
+  }
+];
+
+const faqSchemaData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": seoFaqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer.replace(/\n/g, ' ').replace(/•/g, '').trim()
+    }
+  }))
+};
 
 const whySeoMatters = [
   {
