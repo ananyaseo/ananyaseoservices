@@ -3,12 +3,25 @@ import { useEffect } from "react";
 export function useSEO({
   title,
   description,
+  url,
 }: {
   title: string;
   description: string;
+  url?: string;
 }) {
   useEffect(() => {
     document.title = title;
+
+    const canonicalUrl = `https://ananyaseo.com${url || window.location.pathname}`;
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute("href", canonicalUrl);
+    } else {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      canonical.setAttribute("href", canonicalUrl);
+      document.head.appendChild(canonical);
+    }
 
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
