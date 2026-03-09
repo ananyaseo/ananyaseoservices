@@ -1,4 +1,4 @@
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Search, Share2, MousePointerClick, FileText, Code } from "lucide-react";
 import seoImg from "@/assets/seo-services.jpg";
 import socialImg from "@/assets/social-media.jpg";
 import ppcImg from "@/assets/ppc-advertising.jpg";
@@ -8,7 +8,7 @@ import webdevImg from "@/assets/web-development.jpg";
 const services = [
   {
     id: "seo",
-    number: "01",
+    icon: Search,
     title: "SEO Services",
     description: "Future-proof your online visibility with our affordable SEO services designed for 2025 and beyond. We don't just rank websites—we make your brand the definitive answer across Google's AI Overviews, featured snippets, and traditional search results.",
     items: [
@@ -30,7 +30,7 @@ const services = [
   },
   {
     id: "smm",
-    number: "02",
+    icon: Share2,
     title: "Social Media Marketing",
     description: "Build authentic connections and grow your brand presence across all major platforms. Our social media marketing experts create engaging content strategies that drive real business results.",
     items: [
@@ -51,7 +51,7 @@ const services = [
   },
   {
     id: "ppc",
-    number: "03",
+    icon: MousePointerClick,
     title: "PPC Advertising Services",
     description: "Get instant visibility and qualified leads with expert PPC advertising management. Our certified Google Ads specialists create high-converting campaigns that maximize your ROI.",
     items: [
@@ -73,7 +73,7 @@ const services = [
   },
   {
     id: "content",
-    number: "04",
+    icon: FileText,
     title: "Content Marketing",
     description: "Quality content is the foundation of digital success. Our experienced content writers create SEO-optimized, conversion-focused content that resonates with your audience.",
     items: [
@@ -93,7 +93,7 @@ const services = [
   },
   {
     id: "webdev",
-    number: "05",
+    icon: Code,
     title: "Website Development",
     description: "Get a fast, mobile-friendly, SEO-optimized website that converts visitors into customers. We build websites designed for performance and user experience.",
     items: [
@@ -130,7 +130,7 @@ const ServicesSection = () => (
         <div key={service.id} id={service.id} className={`${service.bgClass} py-16`}>
           <div className={`container flex flex-col ${service.imageRight ? "lg:flex-row" : "lg:flex-row-reverse"} gap-12 items-center`}>
             <div className="flex-1">
-              <span className={`font-bold text-lg font-heading ${service.bgClass ? service.textClass : "text-primary"}`}>{service.number}.</span>
+     <service.icon className={`shrink-0 ${service.bgClass ? service.textClass : "text-primary"}`} size={28} />
               <h2 className={`text-2xl md:text-3xl font-bold font-heading mt-2 mb-4 ${service.textClass}`}>
                 {service.title}
               </h2>
