@@ -40,6 +40,11 @@ const WebsiteDevelopment = () => {
   useSEO({
     title: "Website Development Services | WordPress Development | Ananya SEO",
     description: "Professional, SEO-ready & high-performance WordPress website development services. Responsive web design, e-commerce solutions, and landing page design.",
+    schemaData: {
+      name: "Website Development Services",
+      description: "Professional, SEO-ready & high-performance WordPress website development services. Responsive web design, e-commerce solutions, and landing page design.",
+      serviceType: "Website Development"
+    }
   });
 
   return (
