@@ -93,7 +93,8 @@ const services = [
   },
   {
     id: "webdev",
-    number: "icon: Codele: "Website Development",
+    icon: Code,
+    title: "Website Development",
     description: "Get a fast, mobile-friendly, SEO-optimized website that converts visitors into customers. We build websites designed for performance and user experience.",
     items: [
       "Responsive Web Design",
