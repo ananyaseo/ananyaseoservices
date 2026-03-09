@@ -51,7 +51,8 @@ const services = [
   },
   {
     id: "ppc",
-    icon: MousePointerClickrtising Services",
+    icon: MousePointerClick,
+    title: "PPC Advertising Services",
     description: "Get instant visibility and qualified leads with expert PPC advertising management. Our certified Google Ads specialists create high-converting campaigns that maximize your ROI.",
     items: [
       "Google Search Ads (High-Intent Keywords)",
