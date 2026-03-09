@@ -1,4 +1,4 @@
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Search, Share2, MousePointerClick, FileText, Code } from "lucide-react";
 import seoImg from "@/assets/seo-services.jpg";
 import socialImg from "@/assets/social-media.jpg";
 import ppcImg from "@/assets/ppc-advertising.jpg";
@@ -8,7 +8,7 @@ import webdevImg from "@/assets/web-development.jpg";
 const services = [
   {
     id: "seo",
-    number: "01",
+    icon: Search,
     title: "SEO Services",
     description: "Future-proof your online visibility with our affordable SEO services designed for 2025 and beyond. We don't just rank websites—we make your brand the definitive answer across Google's AI Overviews, featured snippets, and traditional search results.",
     items: [
