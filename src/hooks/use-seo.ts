@@ -5,6 +5,7 @@ export function useSEO({
   description,
   url,
   schemaData,
+  additionalSchema,
 }: {
   title: string;
   description: string;
@@ -15,6 +16,7 @@ export function useSEO({
     serviceType: string;
     url?: string;
   };
+  additionalSchema?: Record<string, unknown>;
 }) {
   useEffect(() => {
     document.title = title;
@@ -128,5 +130,22 @@ export function useSEO({
     }
     orgScript.textContent = JSON.stringify(orgSchema);
 
-  }, [title, description, url, schemaData]);
+    // Update additional JSON-LD schema (e.g., FAQPage)
+    if (additionalSchema) {
+      let additionalScript = document.querySelector('script[type="application/ld+json"][data-type="additional-schema"]');
+      if (!additionalScript) {
+        additionalScript = document.createElement("script");
+        additionalScript.setAttribute("type", "application/ld+json");
+        additionalScript.setAttribute("data-type", "additional-schema");
+        document.head.appendChild(additionalScript);
+      }
+      additionalScript.textContent = JSON.stringify(additionalSchema);
+    } else {
+      const additionalScript = document.querySelector('script[type="application/ld+json"][data-type="additional-schema"]');
+      if (additionalScript) {
+        document.head.removeChild(additionalScript);
+      }
+    }
+
+  }, [title, description, url, schemaData, additionalSchema]);
 }
