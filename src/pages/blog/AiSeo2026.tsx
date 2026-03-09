@@ -44,6 +44,7 @@ const AiSeo2026 = () => (
       heroImage={heroImg}
       heroSideImage={presentingImg}
       youtubeVideoId="ZjSyw7P3i8I"
+      currentPostLink="/blog/ai-seo-in-2026"
     >
     <p><strong>The Search Landscape Has Changed — Permanently</strong></p>
     <p>Just a few years ago, SEO meant: add keywords, build backlinks, rank on Google. That version of search is gone.</p>

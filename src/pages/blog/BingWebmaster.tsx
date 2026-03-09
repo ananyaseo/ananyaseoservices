@@ -6,6 +6,7 @@ const BingWebmaster = () => (
     title="Guide to Bing Webmaster Tools"
     date="2018"
     heroImage={heroImg}
+    currentPostLink="/blog/guide-bing-webmaster-tools"
   >
     <p>Bing Webmaster Tools is truly more advanced than Google Search Console in many ways. With the tips below you can see improvements in your SEO results very soon.</p>
     <p>After you have added your site and verified its ownership, you can access its Site Dashboard from the My Sites page. Submitting a sitemap makes it easier for Bing to crawl and index your site pages. It supports sitemaps in XML, RSS 2.0, Atom 0.3 & 1.0, Yahoo and Bing mRSS and Text formats.</p>

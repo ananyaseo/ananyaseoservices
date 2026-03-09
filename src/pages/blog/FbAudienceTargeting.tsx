@@ -6,6 +6,7 @@ const FbAudienceTargeting = () => (
     title="The Secret Power of Facebook Audience Targeting for Ads"
     date="2017"
     heroImage={heroImg}
+    currentPostLink="/blog/facebook-audience-targeting"
   >
     <p>Reaching users has not been free for businesses on Facebook since couple of years. Users began to complain that their News Feeds were becoming clogged up with promotional content and Facebook listened.</p>
     <p>Over the past few years Facebook has reduced the number of people who actually see a post, even if they are fans of your page. Because of updates to EdgeRank algorithm, only 8 percent of people who "like" your page will see a post. To reach your marketing objectives with Facebook, you need to spend on advertising.</p>

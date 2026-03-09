@@ -6,6 +6,7 @@ const LocalSeo2021 = () => (
     title="Tips for Successful Local SEO in 2021"
     date="2021"
     heroImage={heroImg}
+    currentPostLink="/blog/local-seo-tips-2021"
   >
     <p>Local SEO (Search Engine Optimization) is the process of improving search engine visibility for local businesses, primarily those with brick-and-mortar locations. By following local SEO best practices, businesses can improve organic traffic from searches performed by customers in nearby areas.</p>
 

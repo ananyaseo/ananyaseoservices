@@ -6,6 +6,7 @@ const MessengerBots = () => (
     title="Facebook Messenger Bots are the New Frontier in Digital Marketing"
     date="2018"
     heroImage={heroImg}
+    currentPostLink="/blog/facebook-messenger-bots"
   >
     <p>You may be surprised to know that the top 4 messaging apps (WhatsApp, Messenger, WeChat, and Viber) have more combined monthly users than the top 4 social networking platforms (Facebook, Instagram, Twitter, and LinkedIn). Once you ponder the implications of this statistic, you will realize the enormous potential that chat apps have for marketing your business.</p>
     <p>Facebook opened Messenger to chatbots in April 2016, and currently there are over 100,000 chatbots, a small fraction of the more than 60 million business pages. Early movers in marketing have an enormous advantage over late adopters. This is the best time to give your digital marketing a boost with Messenger chatbots.</p>

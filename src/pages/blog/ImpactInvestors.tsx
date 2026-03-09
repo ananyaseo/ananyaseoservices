@@ -6,6 +6,7 @@ const ImpactInvestors = () => (
     title="Success Stories of Impact Investors in India"
     date="2024"
     heroImage={heroImg}
+    currentPostLink="/blog/impact-investors-india"
   >
     <p>India's vibrant impact investing landscape boasts numerous success stories demonstrating the power of capital to drive positive social and environmental change. These ventures, backed by investors seeking both financial returns and measurable impact, are transforming lives and tackling critical challenges across diverse sectors.</p>
 

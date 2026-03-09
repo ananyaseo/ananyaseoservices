@@ -6,6 +6,7 @@ const MicroInfluencers = () => (
     title="How Small Businesses can Tap into the Power of Micro-influencers"
     date="2018"
     heroImage={heroImg}
+    currentPostLink="/blog/micro-influencers"
   >
     <p>Which would you trust the most – results of the organic search result on Google, a sponsored Ad on search engine/social media or an endorsement by a trusted blogger or social media influencer whom you follow and admire? Influencer marketing is growing rapidly and according to eMarketer the global spend on Instagram alone was $570 million in 2017.</p>
     <p>A common misconception about using influencers for social media marketing is that it can be too expensive for small businesses. You do not need to use celebrities or big influencers with a million followers. <strong>Micro-influencers</strong> can help promote small businesses at a fraction of the cost. They are experts, opinion-shapers and trend-forecasters who have between 1,000 and 50,000 followers.</p>
