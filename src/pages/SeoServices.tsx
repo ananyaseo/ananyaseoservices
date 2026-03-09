@@ -180,7 +180,11 @@ const SeoServices = () => {
       description: "Future-ready SEO services that deliver visibility, traffic & conversions. AI-powered search optimization, E-E-A-T content development, and technical SEO excellence.",
       serviceType: "SEO"
     },
-    additionalSchema: faqSchemaData
+    additionalSchema: faqSchemaData,
+    breadcrumbs: [
+      { name: "Home", url: "/" },
+      { name: "SEO Services", url: "/search-engine-optimization" },
+    ],
   });
 
   return (

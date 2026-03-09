@@ -29,6 +29,10 @@ const GooglePenaltyRecovery = () => {
   useSEO({
     title: "Google Penalty Recovery Services Bangalore | Ananya SEO",
     description: "Expert Google penalty recovery services. Fix rankings & restore traffic from algorithmic updates and manual penalties with proven white-hat strategies.",
+    breadcrumbs: [
+      { name: "Home", url: "/" },
+      { name: "Google Penalty Recovery", url: "/google-penalty-recovery" },
+    ],
   });
 
   return (

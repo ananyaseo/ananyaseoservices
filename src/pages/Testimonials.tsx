@@ -42,6 +42,10 @@ const Testimonials = () => {
   useSEO({
     title: "Client Testimonials | Ananya SEO Services",
     description: "Read testimonials from satisfied clients of Ananya SEO Services. See how we've helped businesses improve their digital presence and search rankings.",
+    breadcrumbs: [
+      { name: "Home", url: "/" },
+      { name: "Testimonials", url: "/testimonials" },
+    ],
   });
 
   return (

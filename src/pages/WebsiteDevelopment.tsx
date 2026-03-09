@@ -44,7 +44,11 @@ const WebsiteDevelopment = () => {
       name: "Website Development Services",
       description: "Professional, SEO-ready & high-performance WordPress website development services. Responsive web design, e-commerce solutions, and landing page design.",
       serviceType: "Website Development"
-    }
+    },
+    breadcrumbs: [
+      { name: "Home", url: "/" },
+      { name: "Website Development", url: "/website-development" },
+    ],
   });
 
   return (

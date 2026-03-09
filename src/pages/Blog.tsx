@@ -178,6 +178,10 @@ const Blog = () => {
   useSEO({
     title: "Insights and Tips on Digital Marketing | Ananya SEO Blog",
     description: "Read our latest articles on SEO, digital marketing, social media marketing, PPC advertising, and more from Ananya SEO experts.",
+    breadcrumbs: [
+      { name: "Home", url: "/" },
+      { name: "Blog", url: "/blog" },
+    ],
   });
 
   const { page } = useParams();

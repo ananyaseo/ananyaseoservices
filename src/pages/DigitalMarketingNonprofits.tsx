@@ -63,6 +63,10 @@ const DigitalMarketingNonprofits = () => {
   useSEO({
     title: "Digital Marketing for Nonprofits & NGOs | Ananya SEO",
     description: "Specialized digital marketing services for nonprofits and NGOs. SEO, PPC with Google Ad Grants, social media marketing at up to 75% discount.",
+    breadcrumbs: [
+      { name: "Home", url: "/" },
+      { name: "Digital Marketing for Nonprofits", url: "/digital-marketing-nonprofits" },
+    ],
   });
 
   return (
