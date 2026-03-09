@@ -1,5 +1,6 @@
 import BlogPostLayout from "@/components/BlogPostLayout";
 import heroImg from "@/assets/blog/ai-smaller-businesses.jpg";
+import { IndianRupee, Building2 } from "lucide-react";
 
 const videoSchema = {
   "@context": "https://schema.org",
