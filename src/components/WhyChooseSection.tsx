@@ -25,17 +25,17 @@ const reasons = [
 
 const WhyChooseSection = () => (
   <section className="py-20 bg-muted">
-    <div className="container">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
         <span className="text-primary font-semibold text-base uppercase tracking-wider">Why Choose Us</span>
-        <h2 className="text-2xl md:text-3xl font-bold font-heading text-foreground mt-2 mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold font-heading text-foreground mt-2 mb-6">
           Affordable Excellence Since 2010
         </h2>
-        <div className="flex flex-col md:flex-row gap-6 items-start max-w-3xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-10 items-start max-w-5xl mx-auto">
           <p className="text-foreground/80 text-lg flex-1">
             As a leading SEO company in India and trusted digital marketing company, Ananya SEO Services delivers exceptional results without the premium agency pricing. We specialize in helping startups, nonprofits, NGOs, and small to medium-sized businesses achieve measurable online growth.
           </p>
-          <div className="shrink-0 w-64 rounded-xl overflow-hidden shadow-md">
+          <div className="shrink-0 w-80 md:w-96 rounded-xl overflow-hidden shadow-md">
             <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
               <iframe
                 className="absolute inset-0 w-full h-full"
