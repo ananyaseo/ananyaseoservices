@@ -1,6 +1,5 @@
 import { useSEO } from "@/hooks/use-seo";
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter, Youtube, Send } from "lucide-react";
-import { useState } from "react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
