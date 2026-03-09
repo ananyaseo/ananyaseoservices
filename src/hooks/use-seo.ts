@@ -92,5 +92,41 @@ export function useSEO({
         document.head.removeChild(script);
       }
     }
+
+    // Update JSON-LD Organization Schema
+    const orgSchema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Ananya SEO Services",
+      "url": "https://www.ananyaseo.com/",
+      "logo": "https://www.ananyaseo.com/logo.png",
+      "description": "Digital Marketing Company offering Search Engine Optimization (SEO), Search Engine Marketing (PPC advertising) and Social Media Marketing (SMM).",
+      "email": "sanand.rao@gmail.com",
+      "telephone": "+91-9845038936",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "49, 2nd Main, Arakere MICO Layout I Stage",
+        "addressLocality": "Bangalore",
+        "addressRegion": "Karnataka",
+        "postalCode": "560076",
+        "addressCountry": "India"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/ananya-seo-services",
+        "https://www.facebook.com/ananya.seo.services",
+        "http://www.youtube.com/c/AnanyaseoservicesBengaluru",
+        "https://twitter.com/ananya_seo"
+      ]
+    };
+
+    let orgScript = document.querySelector('script[type="application/ld+json"][data-type="organization-schema"]');
+    if (!orgScript) {
+      orgScript = document.createElement("script");
+      orgScript.setAttribute("type", "application/ld+json");
+      orgScript.setAttribute("data-type", "organization-schema");
+      document.head.appendChild(orgScript);
+    }
+    orgScript.textContent = JSON.stringify(orgSchema);
+
   }, [title, description, url, schemaData]);
 }
