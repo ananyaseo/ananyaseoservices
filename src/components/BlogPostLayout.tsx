@@ -257,7 +257,7 @@ const BlogPostLayout = ({ title, date, heroImage, heroSideImage, youtubeVideoId,
             className="bg-white rounded-2xl shadow-lg p-8 md:p-12"
             style={{ fontSize: '18px', lineHeight: '1.6', color: '#1a1a1a' }}
           >
-            <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-headings:font-heading prose-headings:mb-4 prose-p:mb-4 prose-p:leading-relaxed prose-li:leading-relaxed prose-strong:text-foreground prose-a:text-primary [&>p]:text-[#1a1a1a] [&>ul]:text-[#1a1a1a] [&>ol]:text-[#1a1a1a] [&>li]:text-[#1a1a1a] [&_li]:text-[#1a1a1a]">
+            <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-headings:font-heading prose-headings:mb-4 prose-h2:text-xl prose-h2:md:text-2xl prose-h3:text-lg prose-h3:md:text-xl prose-p:mb-4 prose-p:leading-relaxed prose-li:leading-relaxed prose-strong:text-foreground prose-a:text-primary [&>p]:text-[#1a1a1a] [&>ul]:text-[#1a1a1a] [&>ol]:text-[#1a1a1a] [&>li]:text-[#1a1a1a] [&_li]:text-[#1a1a1a]">
               {children}
             </div>
           </div>

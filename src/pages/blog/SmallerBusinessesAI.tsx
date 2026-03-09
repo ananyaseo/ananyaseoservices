@@ -137,7 +137,7 @@ const SmallerBusinessesAI = () => (
 
     <hr />
 
-    <h2>🏗 Can It Be Built In-House?</h2>
+    <h2><Building2 className="inline-block mb-1 mr-1" size={22} /> Can It Be Built In-House?</h2>
     <p>If you already have a tech team, maybe. But building from scratch? Rarely advisable.</p>
     <p>Better approach: Use platforms like <strong>Dialogflow</strong>, <strong>Microsoft Bot Framework</strong>, or <strong>Rasa</strong> (open-source).</p>
 
