@@ -1,11 +1,17 @@
 import { useEffect } from "react";
 
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
 export function useSEO({
   title,
   description,
   url,
   schemaData,
   additionalSchema,
+  breadcrumbs,
 }: {
   title: string;
   description: string;
@@ -17,6 +23,7 @@ export function useSEO({
     url?: string;
   };
   additionalSchema?: Record<string, unknown>;
+  breadcrumbs?: BreadcrumbItem[];
 }) {
   useEffect(() => {
     document.title = title;
@@ -147,5 +154,33 @@ export function useSEO({
       }
     }
 
-  }, [title, description, url, schemaData, additionalSchema]);
+    // Update JSON-LD BreadcrumbList Schema
+    if (breadcrumbs && breadcrumbs.length > 0) {
+      const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": breadcrumbs.map((item, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": item.name,
+          "item": `https://ananyaseo.com${item.url}`
+        }))
+      };
+
+      let bcScript = document.querySelector('script[type="application/ld+json"][data-type="breadcrumb-schema"]');
+      if (!bcScript) {
+        bcScript = document.createElement("script");
+        bcScript.setAttribute("type", "application/ld+json");
+        bcScript.setAttribute("data-type", "breadcrumb-schema");
+        document.head.appendChild(bcScript);
+      }
+      bcScript.textContent = JSON.stringify(breadcrumbSchema);
+    } else {
+      const bcScript = document.querySelector('script[type="application/ld+json"][data-type="breadcrumb-schema"]');
+      if (bcScript) {
+        document.head.removeChild(bcScript);
+      }
+    }
+
+  }, [title, description, url, schemaData, additionalSchema, breadcrumbs]);
 }
