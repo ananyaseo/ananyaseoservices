@@ -1,5 +1,6 @@
 import BlogPostLayout from "@/components/BlogPostLayout";
 import heroImg from "@/assets/blog/ai-smaller-businesses.jpg";
+import { IndianRupee, Building2 } from "lucide-react";
 
 const videoSchema = {
   "@context": "https://schema.org",
@@ -96,7 +97,7 @@ const SmallerBusinessesAI = () => (
 
     <hr />
 
-    <h2>💰 What Does It Actually Cost?</h2>
+    <h2><IndianRupee className="inline-block mb-1 mr-1" size={22} /> What Does It Actually Cost?</h2>
     <p>Let's break it down realistically.</p>
 
     <h3>1. Development Cost</h3>
@@ -136,7 +137,7 @@ const SmallerBusinessesAI = () => (
 
     <hr />
 
-    <h2>🏗 Can It Be Built In-House?</h2>
+    <h2><Building2 className="inline-block mb-1 mr-1" size={22} /> Can It Be Built In-House?</h2>
     <p>If you already have a tech team, maybe. But building from scratch? Rarely advisable.</p>
     <p>Better approach: Use platforms like <strong>Dialogflow</strong>, <strong>Microsoft Bot Framework</strong>, or <strong>Rasa</strong> (open-source).</p>
 
