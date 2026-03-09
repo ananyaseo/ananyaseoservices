@@ -45,5 +45,5 @@ export function useSEO({
 
     const twDesc = document.querySelector('meta[name="twitter:description"]');
     if (twDesc) twDesc.setAttribute("content", description);
-  }, [title, description]);
+  }, [title, description, url]);
 }
