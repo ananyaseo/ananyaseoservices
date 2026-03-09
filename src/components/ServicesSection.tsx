@@ -30,7 +30,7 @@ const services = [
   },
   {
     id: "smm",
-    number: "02",
+    icon: Share2,
     title: "Social Media Marketing",
     description: "Build authentic connections and grow your brand presence across all major platforms. Our social media marketing experts create engaging content strategies that drive real business results.",
     items: [
