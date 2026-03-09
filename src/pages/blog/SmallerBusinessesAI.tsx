@@ -200,7 +200,8 @@ const SmallerBusinessesAI = () => (
     <p>Start with content drafting, data analysis, FAQ chatbot, and internal automation. Avoid full AI dependency, blind automation, and replacing human judgment.</p>
     <p><strong>AI rewards strategy. It punishes impatience.</strong></p>
 
-  </BlogPostLayout>
+    </BlogPostLayout>
+  </>
 );
 
 export default SmallerBusinessesAI;
