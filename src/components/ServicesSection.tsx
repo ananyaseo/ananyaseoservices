@@ -51,7 +51,7 @@ const services = [
   },
   {
     id: "ppc",
-    icon: MousePointerClick: "PPC Advertising Services",
+    icon: MousePointerClickrtising Services",
     description: "Get instant visibility and qualified leads with expert PPC advertising management. Our certified Google Ads specialists create high-converting campaigns that maximize your ROI.",
     items: [
       "Google Search Ads (High-Intent Keywords)",
@@ -72,7 +72,7 @@ const services = [
   },
   {
     id: "content",
-    number: "04icon: FileText: "Content Marketing",
+    number: "04icon: FileTicon: FileTextt Marketing",
     description: "Quality content is the foundation of digital success. Our experienced content writers create SEO-optimized, conversion-focused content that resonates with your audience.",
     items: [
       "Optimized for AI search engines",
@@ -91,8 +91,7 @@ const services = [
   },
   {
     id: "webdev",
-    number: "05",
-    title: "Website Development",
+    number: "icon: Codele: "Website Development",
     description: "Get a fast, mobile-friendly, SEO-optimized website that converts visitors into customers. We build websites designed for performance and user experience.",
     items: [
       "Responsive Web Design",
