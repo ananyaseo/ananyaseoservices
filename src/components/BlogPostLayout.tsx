@@ -60,25 +60,32 @@ const BlogPostLayout = ({ title, date, heroImage, heroSideImage, youtubeVideoId,
     )}
 
     {/* Content */}
-    <article className="py-12 md:py-16 bg-background">
-      <div className="container max-w-3xl">
+    <article className="py-16 md:py-20 bg-secondary/30">
+      <div className="container max-w-4xl">
         <a
           href="/blog"
-          className="inline-flex items-center gap-2 text-sm text-primary hover:underline mb-8"
+          className="inline-flex items-center gap-2 text-base text-primary font-medium hover:underline mb-8"
         >
-          <ArrowLeft size={16} /> Back to Blog
+          <ArrowLeft size={18} /> Back to Blog
         </a>
 
         {heroImage && (
-          <img
-            src={heroImage}
-            alt={title}
-            className="w-full rounded-xl mb-10 shadow-md"
-          />
+          <div className="bg-white rounded-2xl shadow-lg p-4 mb-12">
+            <img
+              src={heroImage}
+              alt={title}
+              className="w-full rounded-xl"
+            />
+          </div>
         )}
 
-        <div className="prose prose-lg max-w-none text-foreground prose-headings:text-foreground prose-headings:font-heading prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground prose-a:text-primary">
-          {children}
+        <div 
+          className="bg-white rounded-2xl shadow-lg p-8 md:p-12"
+          style={{ fontSize: '18px', lineHeight: '1.6', color: '#1a1a1a' }}
+        >
+          <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-headings:font-heading prose-headings:mb-4 prose-p:mb-4 prose-p:leading-relaxed prose-li:leading-relaxed prose-strong:text-foreground prose-a:text-primary [&>p]:text-[#1a1a1a] [&>ul]:text-[#1a1a1a] [&>ol]:text-[#1a1a1a] [&>li]:text-[#1a1a1a] [&_li]:text-[#1a1a1a]">
+            {children}
+          </div>
         </div>
       </div>
     </article>
