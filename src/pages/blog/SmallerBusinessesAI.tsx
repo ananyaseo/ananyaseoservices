@@ -97,7 +97,7 @@ const SmallerBusinessesAI = () => (
 
     <hr />
 
-    <h2>💰 What Does It Actually Cost?</h2>
+    <h2><IndianRupee className="inline-block mb-1 mr-1" size={22} /> What Does It Actually Cost?</h2>
     <p>Let's break it down realistically.</p>
 
     <h3>1. Development Cost</h3>
