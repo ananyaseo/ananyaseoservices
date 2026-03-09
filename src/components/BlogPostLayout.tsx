@@ -234,7 +234,7 @@ const BlogPostLayout = ({ title, date, heroImage, heroSideImage, youtubeVideoId,
       )}
 
       {/* Content */}
-      <article className="py-16 md:py-20 bg-secondary/30">
+      <article className="py-16 md:py-20 bg-sky-50">
         <div className="container max-w-4xl">
           <a
             href="/blog"
