@@ -187,6 +187,18 @@ const BlogPostLayout = ({ title, date, heroImage, heroSideImage, youtubeVideoId,
   const prevPost = currentIndex > 0 ? allBlogPosts[currentIndex - 1] : null;
   const nextPost = currentIndex < allBlogPosts.length - 1 ? allBlogPosts[currentIndex + 1] : null;
 
+  // Add breadcrumb schema for blog posts
+  useSEO({
+    title: `${title} | Ananya SEO Blog`,
+    description: allBlogPosts[currentIndex]?.excerpt || title,
+    url: currentPostLink,
+    breadcrumbs: [
+      { name: "Home", url: "/" },
+      { name: "Blog", url: "/blog" },
+      { name: title, url: currentPostLink || "/blog" },
+    ],
+  });
+
   return (
     <div className="min-h-screen">
       <TopBar />
