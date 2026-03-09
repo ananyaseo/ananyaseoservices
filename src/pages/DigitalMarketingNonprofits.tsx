@@ -123,15 +123,22 @@ const DigitalMarketingNonprofits = () => {
     {/* Case Study */}
     <section className="py-16 md:py-20">
       <div className="container max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground text-center mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground text-center mb-12">
           Case Study: SERUDS NGO
         </h2>
-        <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-          We are proud to highlight our impactful partnership with <strong>Sai Educational Rural &amp; Urban Development Society (SERUDS)</strong>, an NGO dedicated to community upliftment. Our comprehensive digital marketing efforts have yielded significant and measurable results for their noble cause:
-        </p>
-
-        <div className="mb-12 rounded-xl overflow-hidden">
-          <img src={caseStudyImg} alt="SERUDS NGO children group" className="w-full h-auto object-cover" />
+        
+        <div className="flex flex-col lg:flex-row gap-10 items-center mb-12">
+          <div className="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-lg order-2 lg:order-1">
+            <img src={caseStudyImg} alt="SERUDS NGO children group" className="w-full h-auto object-cover max-h-[300px]" />
+          </div>
+          <div className="w-full lg:w-1/2 order-1 lg:order-2 text-left">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              We are proud to highlight our impactful partnership with <strong>Sai Educational Rural &amp; Urban Development Society (SERUDS)</strong>, an NGO dedicated to community upliftment.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Our comprehensive digital marketing efforts have yielded significant and measurable results for their noble cause, helping them reach more supporters and scale their impact.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
