@@ -2,14 +2,49 @@ import BlogPostLayout from "@/components/BlogPostLayout";
 import heroImg from "@/assets/blog/ai-seo-2026.png";
 import presentingImg from "@/assets/blog/ai-seo-presenting.png";
 
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Ananya SEO Services",
+  "description": "Ananya SEO Services provides professional SEO, digital marketing, and online growth solutions to help businesses improve search rankings and generate quality leads.",
+  "thumbnailUrl": "https://img.youtube.com/vi/ZjSyw7P3i8I/maxresdefault.jpg",
+  "uploadDate": "2026-02-24T00:00:00+05:30",
+  "duration": "PT8M15S",
+  "contentUrl": "https://youtu.be/ZjSyw7P3i8I",
+  "embedUrl": "https://www.youtube.com/embed/ZjSyw7P3i8I",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ananya SEO Services",
+    "url": "https://ananyaseo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ananyaseo.com/logo.png"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9845038936",
+      "contactType": "customer service",
+      "email": "sanand.rao@gmail.com",
+      "areaServed": "IN",
+      "availableLanguage": "English"
+    }
+  },
+  "potentialAction": {
+    "@type": "WatchAction",
+    "target": "https://youtu.be/ZjSyw7P3i8I"
+  }
+};
+
 const AiSeo2026 = () => (
-  <BlogPostLayout
-    title="AI SEO in 2026: What Every Business Owner Must Know to Stay Visible"
-    date="February 25, 2026"
-    heroImage={heroImg}
-    heroSideImage={presentingImg}
-    youtubeVideoId="ZjSyw7P3i8I"
-  >
+  <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
+    <BlogPostLayout
+      title="AI SEO in 2026: What Every Business Owner Must Know to Stay Visible"
+      date="February 25, 2026"
+      heroImage={heroImg}
+      heroSideImage={presentingImg}
+      youtubeVideoId="ZjSyw7P3i8I"
+    >
     <p><strong>The Search Landscape Has Changed — Permanently</strong></p>
     <p>Just a few years ago, SEO meant: add keywords, build backlinks, rank on Google. That version of search is gone.</p>
     <p>In 2026, <strong>Artificial Intelligence controls how content is discovered, interpreted, and delivered</strong>.</p>
@@ -88,7 +123,8 @@ const AiSeo2026 = () => (
     <p>We combine advanced AI-driven research, human expertise & editorial quality, technical SEO precision, AI answer optimization (AEO / GEO), local & global search strategy, and performance analytics beyond rankings.</p>
     <p>We don't just help you rank. We help you get cited, trusted, and chosen in the rapidly changing AI search landscape.</p>
     <p><strong>If your business wants to grow in 2026 and beyond — we're ready to build your AI-first visibility strategy.</strong></p>
-  </BlogPostLayout>
+    </BlogPostLayout>
+  </>
 );
 
 export default AiSeo2026;
