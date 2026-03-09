@@ -40,6 +40,7 @@ const SmallerBusinessesAI = () => (
       title="Should Smaller Businesses Implement AI Immediately?"
       date="February 27, 2026"
       heroImage={heroImg}
+      currentPostLink="/blog/should-smaller-businesses-implement-ai-immediately"
     >
     <p>There's so much noise around AI right now.</p>
     <p>Everywhere you look:</p>

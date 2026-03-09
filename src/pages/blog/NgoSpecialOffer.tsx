@@ -6,6 +6,7 @@ const NgoSpecialOffer = () => (
     title="Ananya SEO Services announces a special offer for NGOs"
     date="November 22, 2016"
     heroImage={heroImg}
+    currentPostLink="/blog/ngo-special-offer"
   >
     <p><strong>PRESS RELEASE</strong></p>
     <p>Bangalore, India — 22-Nov-16</p>

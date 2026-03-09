@@ -6,6 +6,7 @@ const SeoAgencyHarm = () => (
     title="Is your SEO Agency Helping or Harming your Website"
     date="2017"
     heroImage={heroImg}
+    currentPostLink="/blog/seo-agency-helping-or-harming"
   >
     <p>You may be surprised to hear this: your SEO agency can actually be hurting your website. We have been contacted by many businesses who have invested lot of time and money, and then realize that something is going wrong. They notice that their website rankings have dropped steadily, organic traffic has been on a decline, or even worse, they do not know what their organic traffic is.</p>
 

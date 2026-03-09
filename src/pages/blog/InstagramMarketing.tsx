@@ -6,6 +6,7 @@ const InstagramMarketing = () => (
     title="Instagram Marketing for Small Business"
     date="2017"
     heroImage={heroImg}
+    currentPostLink="/blog/instagram-marketing-small-business"
   >
     <p>Out of all of the newer social networks, Instagram does a lot to set itself apart. With over 500 million monthly active users, Instagram is the fourth-most downloaded app in the US. Since Instagram marketing is still fairly new, some small businesses struggle to gain traction.</p>
     <p>Visuals are the main currency of Instagram. Think about opportunities to snap photos with your phone — office premises, community events, celebrations and customers using your product or service.</p>

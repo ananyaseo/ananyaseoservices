@@ -6,6 +6,7 @@ const FbCoverVideo = () => (
     title="Have you set up a Creative Facebook Cover Video"
     date="2017"
     heroImage={heroImg}
+    currentPostLink="/blog/facebook-cover-video"
   >
     <p>Since May 2017, Users have had the option to turn their cover photo into a cover video. Facebook is focussing on video content, since this is the way that people today prefer to consume content. Videos immediately get attention and your cover photo can help represent your brand and portray your story in just a few seconds.</p>
     <p>Users can upload a cover video in the same way they upload a cover photo now. Facebook requires that cover videos dimensions are at least <strong>820 x 312 pixels</strong>, while the recommended size is <strong>820 x 462 pixels</strong>. Cover videos can be anywhere from 20-90 seconds long and can loop in any way you want. Cover videos are preset to have the sound muted.</p>

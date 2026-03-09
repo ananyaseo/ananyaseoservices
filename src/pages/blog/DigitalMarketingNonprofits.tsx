@@ -6,6 +6,7 @@ const DigitalMarketingNonprofits = () => (
     title="Digital Marketing for Nonprofits"
     date="2021"
     heroImage={heroImg}
+    currentPostLink="/blog/digital-marketing-nonprofits"
   >
     <p>Most small and medium NGOs rely on traditional marketing, despite proven efficacy of digital marketing. They use events, telemarketing, email blasts, outreach for CSR and the like to raise funds for their cause.</p>
     <p>A non-profit organization can implement digital marketing to great benefit at a nominal cost and best ROI. This includes an optimized website, SEO, social media marketing, PPC ads and email marketing.</p>

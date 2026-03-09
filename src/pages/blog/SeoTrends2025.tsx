@@ -6,6 +6,7 @@ const SeoTrends2025 = () => (
     title="SEO Trends and Best Practices for Ranking on Google in 2025"
     date="May 28, 2025"
     heroImage={heroImg}
+    currentPostLink="/blog/seo-trends-2025"
   >
     <p>Artificial intelligence and machine learning have emerged as pivotal components in the evolution of SEO. These technologies are not merely ancillary; they are foundational in shaping how search engines interpret and rank content. Google, with its AI-powered algorithm, BERT, has set the precedent for understanding and processing human language more naturally, prioritizing context over keywords.</p>
 

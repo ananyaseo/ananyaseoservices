@@ -6,6 +6,7 @@ const NonprofitsSeo = () => (
     title="Empowering Nonprofits through SEO: Ananya SEO Takes Online Fundraising to New Heights"
     date="2023"
     heroImage={heroImg}
+    currentPostLink="/blog/empowering-nonprofits-seo"
   >
     <p>In the digital age, establishing a strong online presence is crucial for nonprofits to amplify their impact and reach a wider audience. Search Engine Optimization (SEO) plays a pivotal role in ensuring that these organizations can effectively convey their mission, attract supporters, and raise funds. Ananya SEO Services in Bangalore has emerged as a prominent player in this space.</p>
 

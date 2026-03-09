@@ -6,6 +6,7 @@ const SmmGuide2018 = () => (
     title="Guide to Social Media Marketing for Small Business 2018"
     date="2018"
     heroImage={heroImg}
+    currentPostLink="/blog/social-media-marketing-guide-2018"
   >
     <p>As a small business owner or marketer, you may be wondering if Social Media Marketing would really work for you. It is estimated that 93% of small businesses use social media as a marketing channel, but whether they are doing it effectively and get return on investment is a debatable point.</p>
     <p><strong>Which Social Media Network to use?</strong> Most marketers for small businesses try to throw resources at all popular social networks, but do not realize they have limited time and resources. If you are not clear about which network to use, read the guides below.</p>

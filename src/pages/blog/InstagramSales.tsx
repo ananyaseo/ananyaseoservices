@@ -6,6 +6,7 @@ const InstagramSales = () => (
     title="Tips to Increase Your Sales on Instagram"
     date="2020"
     heroImage={heroImg}
+    currentPostLink="/blog/increase-sales-instagram"
   >
     <p>Brands and businesses can succeed in selling on Instagram with the right strategy. Instagram has over 1 billion active users worldwide.</p>
     <ul>

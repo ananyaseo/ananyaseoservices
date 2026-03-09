@@ -6,6 +6,7 @@ const NgoDiscount = () => (
     title="Special Discount for Non-profits & NGO by Ananya SEO Services"
     date="2018"
     heroImage={heroImg}
+    currentPostLink="/blog/ngo-discount"
   >
     <h2>Discount of up to 75% for Charities, Non-profits</h2>
     <p>Small and Medium Business Enterprises do not have the bandwidth or resources to do full fledged Digital Marketing. They manage to maintain a website and have a token presence in social networking platforms like Facebook and Twitter.</p>
