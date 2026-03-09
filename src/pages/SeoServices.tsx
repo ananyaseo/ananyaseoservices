@@ -2,7 +2,7 @@ import { useSEO } from "@/hooks/use-seo";
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { CheckCircle, Phone, Mail, Search, Settings, FileText, Link2, MapPin, Bot, Target } from "lucide-react";
+import { CheckCircle, Phone, Mail, Settings, FileText, Link2, MapPin, Bot, Target } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import heroImg from "@/assets/seo-page-hero.jpg";
 import assessmentImg from "@/assets/seo-assessment.jpg";
