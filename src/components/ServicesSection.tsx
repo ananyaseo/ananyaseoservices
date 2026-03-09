@@ -73,7 +73,8 @@ const services = [
   },
   {
     id: "content",
-    number: "04icon: FileTicon: FileTextt Marketing",
+    icon: FileText,
+    title: "Content Marketing",
     description: "Quality content is the foundation of digital success. Our experienced content writers create SEO-optimized, conversion-focused content that resonates with your audience.",
     items: [
       "Optimized for AI search engines",
