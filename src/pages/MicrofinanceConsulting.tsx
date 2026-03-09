@@ -80,16 +80,79 @@ const MicrofinanceConsulting = () => {
     <section className="py-16 md:py-20 bg-muted/40">
       <div className="container max-w-4xl">
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">Lalita Rao</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">S Lalita Rao</h2>
           <p className="text-primary font-semibold">Independent Microfinance Consultant</p>
         </div>
         <div className="space-y-4 text-muted-foreground leading-relaxed text-center">
           <p>
-            A seasoned top management executive with over 40 years of experience across microfinance and development banking. Her background as AGM at Small Industries Development Bank of India (SIDBI), and Head of Audit of Ujjivan Financial Services, coupled with more than 18 years of advising and training NBFC MFIs, positions Lalita Rao to deliver significant value through enhanced efficiency, risk mitigation, and strategic growth.
+            A seasoned top management executive with over 40 years of experience across microfinance and development banking. Her background as AGM at Small Industries Development Bank of India (SIDBI), and Head of Audit of Ujjivan Financial Services, coupled with more than 18 years of advising and training NBFC MFIs, positions S Lalita Rao to deliver significant value through enhanced efficiency, risk mitigation, and strategic growth.
           </p>
           <p className="text-sm font-medium text-foreground">
             Individual Lending &bull; Due Diligence &bull; Loan Portfolio Audit &bull; NBFC MFI Advisory
           </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Experience Section */}
+    <section className="py-16 md:py-20">
+      <div className="container max-w-4xl">
+        <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-10">Experience</h2>
+        <p className="text-center text-muted-foreground mb-8">
+          <span className="font-semibold text-foreground">Independent Microfinance Consultant</span> — Past experience from 2004 till 2008 and again, June 2010 onwards
+        </p>
+        <div className="space-y-6">
+          <div className="bg-card border rounded-lg p-6 shadow-sm">
+            <h3 className="font-bold text-lg mb-3 text-foreground">Due Diligence & Wholesale Lending</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Served as a full-time Consultant, for over a year, conducting comprehensive due diligence on NBFCs across India for Ujjivan SFB's wholesale lending initiatives.
+            </p>
+          </div>
+          <div className="bg-card border rounded-lg p-6 shadow-sm">
+            <h3 className="font-bold text-lg mb-3 text-foreground">Strategic Advisory to NBFC-MFI</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              For two years, advised the MD of an all-India NBFC-MFI, offering strategic guidance and process improvements for microfinance lending through regular, detailed branch reviews.
+            </p>
+          </div>
+          <div className="bg-card border rounded-lg p-6 shadow-sm">
+            <h3 className="font-bold text-lg mb-3 text-foreground">Women's World Banking (WWB) Consultant</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Engaged by Women's World Banking (WWB), New York, as a local consultant in India (March 2013 - April 2014; October 2015 - November 2016) to enhance Individual Lending processes for a prominent MFI operating nationwide.
+            </p>
+          </div>
+          <div className="bg-card border rounded-lg p-6 shadow-sm">
+            <h3 className="font-bold text-lg mb-3 text-foreground">Internal Audit Transformation</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Led the transformation of internal audit functions for two NBFC-MFIs by mentoring their Heads of Audit and providing extensive practical and classroom training to their full audit teams. Also developed customized Audit Manuals to institutionalize improved processes.
+            </p>
+          </div>
+          <div className="bg-card border rounded-lg p-6 shadow-sm">
+            <h3 className="font-bold text-lg mb-3 text-foreground">MFIN Enforcement Committee</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Served as an Independent Member on the Enforcement Committee of the Microfinance Institutions Network (MFIN), India.
+            </p>
+          </div>
+          <div className="bg-card border rounded-lg p-6 shadow-sm">
+            <h3 className="font-bold text-lg mb-3 text-foreground">Audit Systems & Training</h3>
+            <ul className="space-y-3 text-muted-foreground leading-relaxed">
+              <li className="flex gap-3 items-start">
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                Designed and implemented comprehensive audit systems
+              </li>
+              <li className="flex gap-3 items-start">
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                Trained pan-India audit teams, handheld each team member with on-the-job trainings
+              </li>
+              <li className="flex gap-3 items-start">
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                Provided ongoing monitoring of audit activities
+              </li>
+              <li className="flex gap-3 items-start">
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                Developed a Branch Risk Profile as a critical monitoring tool
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
