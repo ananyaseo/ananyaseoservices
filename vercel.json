@@ -1,4 +1,23 @@
 {
+  "redirects": [
+    { "source": "/testimonials/", "destination": "/testimonials", "permanent": true },
+    { "source": "/blog/", "destination": "/blog", "permanent": true },
+
+    { "source": "/local-seo-services/", "destination": "/search-engine-optimization", "permanent": true },
+    { "source": "/google-penguin-penalty-recovery/", "destination": "/google-penalty-recovery", "permanent": true },
+    { "source": "/ppc-terms-explained/", "destination": "/ppc-advertising", "permanent": true },
+    { "source": "/inbound-marketing-services/", "destination": "/search-engine-optimization", "permanent": true },
+    { "source": "/faq-on-seo/", "destination": "/search-engine-optimization", "permanent": true },
+    { "source": "/ppc-ad-management/", "destination": "/ppc-advertising", "permanent": true },
+
+    { "source": "/independent-microfinance-consultant-individual-lending-due-diligence/", "destination": "/microfinance-consulting", "permanent": true },
+
+    { "source": "/should-smaller-businesses-implement-ai-immediately/", "destination": "/blog/should-smaller-businesses-implement-ai-immediately", "permanent": true },
+    { "source": "/ai-seo-in-2026-what-every-business-owner-must-know-to-stay-visible/", "destination": "/blog/ai-seo-in-2026", "permanent": true },
+
+    { "source": "/:path*/", "destination": "/:path*", "permanent": true }
+  ],
+
   "rewrites": [
     {
       "source": "/(.*)",
