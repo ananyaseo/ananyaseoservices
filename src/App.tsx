@@ -86,6 +86,7 @@ const App = () => (
           <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
           <Route path="/website-development" element={<WebsiteDevelopment />} />
           <Route path="/digital-marketing-nonprofits" element={<DigitalMarketingNonprofitsPage />} />
+          <Route path="/taj-mahal-chronicles-and-other-stories" element={<TajMahalChronicles />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
