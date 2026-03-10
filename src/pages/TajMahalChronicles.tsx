@@ -13,7 +13,7 @@ import voicesImg from "@/assets/taj-voices.jpg";
 import pandemicImg from "@/assets/taj-pandemic.jpg";
 
 const StarRating = () => (
-  <div className="flex items-center gap-1 text-yellow-500">
+  <div className="flex items-center gap-1 text-accent">
     {[...Array(5)].map((_, i) => (
       <Star key={i} size={18} fill="currentColor" />
     ))}
