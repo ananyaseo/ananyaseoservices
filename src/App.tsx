@@ -17,6 +17,7 @@ import GooglePenaltyRecovery from "./pages/GooglePenaltyRecovery";
 import AboutUs from "./pages/AboutUs";
 import MicrofinanceConsulting from "./pages/MicrofinanceConsulting";
 import DigitalMarketingNonprofitsPage from "./pages/DigitalMarketingNonprofits";
+import TajMahalChronicles from "./pages/TajMahalChronicles";
 
 // Blog post pages - Page 1
 import SmallerBusinessesAI from "./pages/blog/SmallerBusinessesAI";
