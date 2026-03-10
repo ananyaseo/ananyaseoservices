@@ -13,14 +13,12 @@
     { "source": "/independent-microfinance-consultant-individual-lending-due-diligence/", "destination": "/microfinance-consulting", "permanent": true },
 
     { "source": "/should-smaller-businesses-implement-ai-immediately/", "destination": "/blog/should-smaller-businesses-implement-ai-immediately", "permanent": true },
-    { "source": "/ai-seo-in-2026-what-every-business-owner-must-know-to-stay-visible/", "destination": "/blog/ai-seo-in-2026", "permanent": true },
-
-    { "source": "/:path*/", "destination": "/:path*", "permanent": true }
+    { "source": "/ai-seo-in-2026-what-every-business-owner-must-know-to-stay-visible/", "destination": "/blog/ai-seo-in-2026", "permanent": true }
   ],
 
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!.*\\.).*)",
       "destination": "/index.html"
     }
   ]
