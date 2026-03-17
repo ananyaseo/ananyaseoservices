@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
   <url>
     <loc>https://www.ananyaseo.com/</loc>
     <changefreq>weekly</changefreq>
@@ -21,17 +22,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ananyaseo.com/digital-marketing-for-nonprofits</loc>
+    <loc>https://www.ananyaseo.com/search-engine-optimization</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.ananyaseo.com/google-penalty-recovery</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/microfinance-consulting</loc>
+    <loc>https://www.ananyaseo.com/seo-pricing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -41,17 +37,27 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ananyaseo.com/seo-pricing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/seo-services</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.ananyaseo.com/social-media-marketing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/website-development</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/google-penalty-recovery</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/digital-marketing-nonprofits</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/microfinance-consulting</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -61,93 +67,23 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ananyaseo.com/website-development</loc>
+    <loc>https://www.ananyaseo.com/taj-mahal-chronicles-and-other-stories</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <!-- Blog Posts -->
   <url>
-    <loc>https://www.ananyaseo.com/blog/ai-seo-2026</loc>
+    <loc>https://www.ananyaseo.com/blog/seo-bangalore-businesses-2026-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/should-smaller-businesses-implement-ai-immediately</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.ananyaseo.com/blog/ai-tools-fiction</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/blog/bing-webmaster</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/blog/digital-marketing-nonprofits</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/blog/fb-audience-targeting</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/blog/fb-cover-video</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/blog/impact-investors</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/blog/instagram-marketing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/blog/instagram-sales</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/blog/local-seo-2021</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/blog/messenger-bots</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/blog/micro-influencers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/blog/ngo-discount</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/blog/ngo-special-offer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/blog/nonprofits-seo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/blog/seo-agency-harm</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ananyaseo.com/blog/seo-bangalore</loc>
+    <loc>https://www.ananyaseo.com/blog/ai-seo-in-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -157,12 +93,87 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.ananyaseo.com/blog/smaller-businesses-ai</loc>
+    <loc>https://www.ananyaseo.com/blog/ai-tools-write-publish-fiction</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.ananyaseo.com/blog/smm-guide-2018</loc>
+    <loc>https://www.ananyaseo.com/blog/seo-company-in-bangalore</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/impact-investors-india</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/empowering-nonprofits-seo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/local-seo-tips-2021</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/increase-sales-instagram</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/digital-marketing-nonprofits</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/ngo-discount</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/facebook-messenger-bots</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/guide-bing-webmaster-tools</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/micro-influencers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/social-media-marketing-guide-2018</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/instagram-marketing-small-business</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/facebook-cover-video</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/facebook-audience-targeting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/seo-agency-helping-or-harming</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ananyaseo.com/blog/ngo-special-offer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
