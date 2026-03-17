@@ -5,13 +5,13 @@ import technicalImg from "@/assets/blog/seo-blr-technical.jpg";
 import aiImg from "@/assets/blog/seo-blr-ai-seo.jpg";
 import localContentImg from "@/assets/blog/seo-blr-local-content.jpg";
 
-const SeoBangalore2026 = () => (
-  <BlogPostLayout
-    title="The Ultimate 2026 Guide to SEO for Bangalore Businesses"
-    date="March 17, 2026"
-    heroImage={heroImg}
-    currentPostLink="/blog/seo-bangalore-businesses-2026-guide"
-  >
+const SeoBangalore2026 = () =>
+<BlogPostLayout
+  title="The Ultimate 2026 Guide to SEO for Bangalore Businesses"
+  date="March 17, 2026"
+  heroImage={heroImg}
+  currentPostLink="/blog/seo-bangalore-businesses-2026-guide">
+  
     <p>Running a business in Bangalore? Then you already know that getting noticed online is no longer optional — it's survival.</p>
     <p>Bangalore is one of India's most competitive business ecosystems. From tech startups in Whitefield to restaurants in Indiranagar and service companies in Jayanagar, thousands of businesses are competing for the same customers online.</p>
     <p>If your business isn't visible when someone searches on Google, those customers are going to your competitors.</p>
@@ -146,7 +146,7 @@ const SeoBangalore2026 = () => (
     <p>Google prioritizes mobile-first indexing.</p>
 
     <div className="my-10 rounded-xl overflow-hidden shadow-lg">
-      <img src={gbpImg} alt="Google Business Profile optimization for Bangalore businesses" className="w-full" loading="lazy" />
+      <img alt="Google Business Profile optimization for Bangalore businesses" className="w-full" loading="lazy" src="/lovable-uploads/46c38ae5-c827-457b-a6a5-b10912b74b35.png" />
     </div>
 
     <h2>Optimizing Your Google Business Profile</h2>
@@ -303,7 +303,7 @@ const SeoBangalore2026 = () => (
     </ul>
     <p>For Bangalore businesses, SEO offers one of the highest long-term returns in digital marketing. Companies that invest in SEO today will continue attracting customers for years.</p>
     <p><strong>The question is simple: Will customers find your business — or your competitor's?</strong></p>
-  </BlogPostLayout>
-);
+  </BlogPostLayout>;
+
 
 export default SeoBangalore2026;
