@@ -57,6 +57,7 @@ const App = () => (
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/page/:page" element={<Blog />} />
+          <Route path="/blog/seo-bangalore-businesses-2026-guide" element={<SeoBangalore2026 />} />
           <Route path="/blog/should-smaller-businesses-implement-ai-immediately" element={<SmallerBusinessesAI />} />
           <Route path="/blog/ai-seo-in-2026" element={<AiSeo2026 />} />
           <Route path="/blog/seo-trends-2025" element={<SeoTrends2025 />} />

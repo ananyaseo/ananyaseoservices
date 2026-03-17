@@ -31,6 +31,13 @@ import imgNgoOffer from "@/assets/blog/ngo-special-offer.jpg";
 // Blog posts data for navigation
 const allBlogPosts = [
   {
+    title: "The Ultimate 2026 Guide to SEO for Bangalore Businesses",
+    date: "March 17, 2026",
+    excerpt: "Complete guide to SEO for Bangalore businesses in 2026.",
+    image: imgSeoBangalore2026,
+    link: "/blog/seo-bangalore-businesses-2026-guide",
+  },
+  {
     title: "Should Smaller Businesses Implement AI Immediately?",
     date: "February 27, 2026",
     excerpt: "Using AI Chatbots for Customer Service Let's assume a company has: Is a chatbot viable? The Honest Answer: Yes — […]",
