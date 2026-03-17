@@ -6,6 +6,7 @@ import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Import all blog images
+import imgSeoBangalore2026 from "@/assets/blog/seo-bangalore-2026-guide.jpg";
 import imgSmallerBiz from "@/assets/blog/ai-smaller-businesses.jpg";
 import imgAiSeo2026 from "@/assets/blog/ai-seo-2026.png";
 import imgSeoTrends from "@/assets/blog/seo-trends-2025.jpg";
