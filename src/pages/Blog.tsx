@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useParams, Link } from "react-router-dom";
 
+import seoBangalore2026 from "@/assets/blog/seo-bangalore-2026-guide.jpg";
 import aiSmallBiz from "@/assets/blog/ai-smaller-businesses.jpg";
 import aiSeo2026 from "@/assets/blog/ai-seo-2026.png";
 import seoTrends from "@/assets/blog/seo-trends-2025.jpg";
