@@ -20,6 +20,7 @@ import DigitalMarketingNonprofitsPage from "./pages/DigitalMarketingNonprofits";
 import TajMahalChronicles from "./pages/TajMahalChronicles";
 
 // Blog post pages - Page 1
+import SeoBangalore2026 from "./pages/blog/SeoBangalore2026";
 import SmallerBusinessesAI from "./pages/blog/SmallerBusinessesAI";
 import AiSeo2026 from "./pages/blog/AiSeo2026";
 import SeoTrends2025 from "./pages/blog/SeoTrends2025";
