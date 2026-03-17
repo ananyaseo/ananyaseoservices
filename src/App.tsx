@@ -20,6 +20,7 @@ import DigitalMarketingNonprofitsPage from "./pages/DigitalMarketingNonprofits";
 import TajMahalChronicles from "./pages/TajMahalChronicles";
 
 // Blog post pages - Page 1
+import SeoBangalore2026 from "./pages/blog/SeoBangalore2026";
 import SmallerBusinessesAI from "./pages/blog/SmallerBusinessesAI";
 import AiSeo2026 from "./pages/blog/AiSeo2026";
 import SeoTrends2025 from "./pages/blog/SeoTrends2025";
@@ -56,6 +57,7 @@ const App = () => (
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/page/:page" element={<Blog />} />
+          <Route path="/blog/seo-bangalore-businesses-2026-guide" element={<SeoBangalore2026 />} />
           <Route path="/blog/should-smaller-businesses-implement-ai-immediately" element={<SmallerBusinessesAI />} />
           <Route path="/blog/ai-seo-in-2026" element={<AiSeo2026 />} />
           <Route path="/blog/seo-trends-2025" element={<SeoTrends2025 />} />

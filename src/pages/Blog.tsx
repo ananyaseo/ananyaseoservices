@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useParams, Link } from "react-router-dom";
 
+import seoBangalore2026 from "@/assets/blog/seo-bangalore-2026-guide.jpg";
 import aiSmallBiz from "@/assets/blog/ai-smaller-businesses.jpg";
 import aiSeo2026 from "@/assets/blog/ai-seo-2026.png";
 import seoTrends from "@/assets/blog/seo-trends-2025.jpg";
@@ -28,6 +29,13 @@ import ngoSpecialOffer from "@/assets/blog/ngo-special-offer.jpg";
 
 const allBlogPosts = [
   // Page 1
+  {
+    title: "The Ultimate 2026 Guide to SEO for Bangalore Businesses",
+    date: "March 17, 2026",
+    excerpt: "Complete guide to SEO for Bangalore businesses in 2026. Learn local SEO, keyword research, Google Business Profile optimization, technical SEO, and more.",
+    image: seoBangalore2026,
+    link: "/blog/seo-bangalore-businesses-2026-guide",
+  },
   {
     title: "Should Smaller Businesses Implement AI Immediately?",
     date: "February 27, 2026",
