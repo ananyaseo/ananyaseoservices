@@ -5,17 +5,91 @@ import technicalImg from "@/assets/blog/seo-blr-technical.jpg";
 import aiImg from "@/assets/blog/seo-blr-ai-seo.jpg";
 import localContentImg from "@/assets/blog/seo-blr-local-content.jpg";
 
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "SEO Guide 2026 for Bangalore Businesses | Local SEO, GBP & AI Strategies",
+  "description": "This guide explains how SEO works in 2026 for Bangalore businesses, what strategies actually work, and how you can improve your visibility in local search results. Learn why SEO is critical for Bangalore businesses, on-page SEO best practices, how to optimize your Google Business Profile, and how AI is transforming SEO in 2026.",
+  "thumbnailUrl": [
+    "https://img.youtube.com/vi/0Pdaln-TagU/maxresdefault.jpg",
+    "https://img.youtube.com/vi/0Pdaln-TagU/hqdefault.jpg"
+  ],
+  "uploadDate": "2026-03-18",
+  "embedUrl": "https://www.youtube.com/embed/0Pdaln-TagU",
+  "contentUrl": "https://youtu.be/0Pdaln-TagU",
+  "duration": "PT8M00S",
+  "inLanguage": "en-IN",
+  "keywords": "SEO Bangalore 2026, local SEO Bangalore, Google Business Profile optimization, SEO India, SEO strategies 2026, AI in SEO, on-page SEO tips, improve Google rankings Bangalore",
+  "about": ["Search Engine Optimization", "Local SEO", "Google Business Profile", "On-Page SEO", "AI in SEO"],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ananya SEO Services",
+    "logo": { "@type": "ImageObject", "url": "https://www.ananyaseo.com/wp-content/uploads/2018/03/cropped-Ananya_nospace_528x150-1.jpg" }
+  },
+  "creator": { "@type": "Organization", "name": "Ananya SEO Services" },
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Ananya SEO Services",
+    "priceRange": "INR18000 – INR100000",
+    "telephone": "+91-9845038936",
+    "email": "sanand.rao@gmail.com",
+    "url": "https://www.ananyaseo.com/",
+    "logo": "https://www.ananyaseo.com/wp-content/uploads/2018/03/cropped-Ananya_nospace_528x150-1.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "49, 2nd Main, Arakere MICO Layout I Stage",
+      "addressLocality": "Bangalore",
+      "addressRegion": "Karnataka",
+      "postalCode": "560076",
+      "addressCountry": "India"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/ananya-seo-services",
+      "https://www.facebook.com/ananya.seo.services"
+    ]
+  },
+  "potentialAction": {
+    "@type": "SeekToAction",
+    "target": "https://youtu.be/0Pdaln-TagU?t={seek_to_second_number}",
+    "startOffset-input": "required name=seek_to_second_number"
+  },
+  "hasPart": [
+    { "@type": "Clip", "name": "Why SEO Is Critical for Bangalore Businesses", "startOffset": 0, "endOffset": 120, "url": "https://youtu.be/0Pdaln-TagU?t=0" },
+    { "@type": "Clip", "name": "On-Page SEO Best Practices", "startOffset": 120, "endOffset": 300, "url": "https://youtu.be/0Pdaln-TagU?t=120" },
+    { "@type": "Clip", "name": "Optimizing Your Google Business Profile", "startOffset": 300, "endOffset": 480, "url": "https://youtu.be/0Pdaln-TagU?t=300" },
+    { "@type": "Clip", "name": "How AI Is Changing SEO in 2026", "startOffset": 480, "endOffset": 600, "url": "https://youtu.be/0Pdaln-TagU?t=480" }
+  ]
+};
+
 const SeoBangalore2026 = () =>
 <BlogPostLayout
   title="The Ultimate 2026 Guide to SEO for Bangalore Businesses"
   date="March 17, 2026"
   heroImage={heroImg}
-  currentPostLink="/blog/seo-bangalore-businesses-2026-guide">
+  currentPostLink="/blog/seo-bangalore-businesses-2026-guide"
+  additionalSchema={videoSchema}>
   
     <p>Running a business in Bangalore? Then you already know that getting noticed online is no longer optional — it's survival.</p>
     <p>Bangalore is one of India's most competitive business ecosystems. From tech startups in Whitefield to restaurants in Indiranagar and service companies in Jayanagar, thousands of businesses are competing for the same customers online.</p>
     <p>If your business isn't visible when someone searches on Google, those customers are going to your competitors.</p>
     <p>This guide explains how SEO works in 2026 for Bangalore businesses, what strategies actually work, and how you can improve your visibility in local search results.</p>
+
+    {/* Video Widget */}
+    <div className="my-10 rounded-xl overflow-hidden shadow-lg bg-muted/30 border border-border">
+      <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+        <iframe
+          className="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/0Pdaln-TagU"
+          title="SEO Guide 2026 for Bangalore Businesses | Local SEO, GBP & AI Strategies"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+      <div className="px-5 py-4">
+        <p className="text-sm font-semibold text-foreground">🎬 Watch: SEO Guide 2026 for Bangalore Businesses</p>
+        <p className="text-xs text-muted-foreground mt-1">Local SEO, Google Business Profile & AI Strategies explained step by step.</p>
+      </div>
+    </div>
 
     <h2>Why SEO Is Critical for Bangalore Businesses</h2>
     <p>When someone searches for:</p>
