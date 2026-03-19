@@ -186,6 +186,7 @@ interface BlogPostLayoutProps {
   heroSideImage?: string;
   youtubeVideoId?: string;
   currentPostLink?: string;
+  additionalSchema?: Record<string, unknown>;
   children: React.ReactNode;
 }
 
