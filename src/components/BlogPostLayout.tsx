@@ -190,7 +190,7 @@ interface BlogPostLayoutProps {
   children: React.ReactNode;
 }
 
-const BlogPostLayout = ({ title, date, heroImage, heroSideImage, youtubeVideoId, currentPostLink, children }: BlogPostLayoutProps) => {
+const BlogPostLayout = ({ title, date, heroImage, heroSideImage, youtubeVideoId, currentPostLink, additionalSchema, children }: BlogPostLayoutProps) => {
   // Find current post index and get prev/next
   const currentIndex = allBlogPosts.findIndex(post => post.link === currentPostLink);
   const prevPost = currentIndex > 0 ? allBlogPosts[currentIndex - 1] : null;
@@ -201,6 +201,7 @@ const BlogPostLayout = ({ title, date, heroImage, heroSideImage, youtubeVideoId,
     title: `${title} | Ananya SEO Blog`,
     description: allBlogPosts[currentIndex]?.excerpt || title,
     url: currentPostLink,
+    additionalSchema,
     breadcrumbs: [
       { name: "Home", url: "/" },
       { name: "Blog", url: "/blog" },
