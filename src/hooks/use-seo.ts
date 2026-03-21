@@ -28,7 +28,7 @@ export function useSEO({
   useEffect(() => {
     document.title = title;
 
-    const canonicalUrl = `https://ananyaseo.com${url || window.location.pathname}`;
+    const canonicalUrl = `https://www.ananyaseo.com${url || window.location.pathname}`;
     let canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
       canonical.setAttribute("href", canonicalUrl);
