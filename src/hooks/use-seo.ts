@@ -28,7 +28,7 @@ export function useSEO({
   useEffect(() => {
     document.title = title;
 
-    const canonicalUrl = `https://ananyaseo.com${url || window.location.pathname}`;
+    const canonicalUrl = `https://www.ananyaseo.com${url || window.location.pathname}`;
     let canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
       canonical.setAttribute("href", canonicalUrl);
@@ -64,7 +64,7 @@ export function useSEO({
 
     // Update JSON-LD Service Schema
     if (schemaData) {
-      const schemaUrl = `https://ananyaseo.com${schemaData.url || url || window.location.pathname}`;
+      const schemaUrl = `https://www.ananyaseo.com${schemaData.url || url || window.location.pathname}`;
       const schema = {
         "@context": "https://schema.org",
         "@type": "Service",
@@ -73,8 +73,8 @@ export function useSEO({
         "provider": {
           "@type": "Organization",
           "name": "Ananya SEO Services",
-          "url": "https://ananyaseo.com",
-          "logo": "https://ananyaseo.com/logo.png",
+          "url": "https://www.ananyaseo.com",
+          "logo": "https://www.ananyaseo.com/logo.png",
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+91-9845038936",
@@ -163,7 +163,7 @@ export function useSEO({
           "@type": "ListItem",
           "position": index + 1,
           "name": item.name,
-          "item": `https://ananyaseo.com${item.url}`
+          "item": `https://www.ananyaseo.com${item.url}`
         }))
       };
 
