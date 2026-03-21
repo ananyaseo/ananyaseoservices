@@ -163,7 +163,7 @@ export function useSEO({
           "@type": "ListItem",
           "position": index + 1,
           "name": item.name,
-          "item": `https://ananyaseo.com${item.url}`
+          "item": `https://www.ananyaseo.com${item.url}`
         }))
       };
 
