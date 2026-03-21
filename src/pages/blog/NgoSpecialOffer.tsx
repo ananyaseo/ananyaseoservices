@@ -15,7 +15,7 @@ const NgoSpecialOffer = () => (
     <p>Adoption of a strategic digital marketing program – with clearly defined objectives, original content – makes even a small NGO compete with the biggest for attention.</p>
     <p>Having a website and token social media presence is not enough to spread the word. What is needed is a search engine friendly website which converts visitors to advocates, content marketing, engaging the community through social media and search ads.</p>
 
-    <h3>Ananya's digital marketing package for NGOs includes:</h3>
+    <h2>Ananya's digital marketing package for NGOs includes:</h2>
     <ul>
       <li>Search Engine Optimization</li>
       <li>Pay-Per-Click Advertising</li>
@@ -26,7 +26,7 @@ const NgoSpecialOffer = () => (
     <p>Ananya SEO Services has worked on digital marketing with NGOs like Maya Organics in Bangalore and SERUDS in Kurnool. Maya Organic works with lacware cluster in Channapatna, Karnataka to produce high quality wooden lacware toys, handicrafts. SERUDS runs an old age home, crèche for daily workers and an orphanage.</p>
     <p>Interested not-for-profit organizations, NGOs and MFIs may contact Ananya with a brief profile of their NGO to avail of this attractive offer.</p>
 
-    <h3>About Ananya SEO Services</h3>
+    <h2>About Ananya SEO Services</h2>
     <p>Ananya SEO Services is a leading Internet Marketing company based in Bangalore. We provide Digital Marketing Services: Search Engine Optimization (SEO), Social Media Marketing, and Adwords PPC Ads services. Ananya was founded in 2009 and has clients in India, US and UK.</p>
   </BlogPostLayout>
 );
