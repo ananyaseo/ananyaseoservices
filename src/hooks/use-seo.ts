@@ -73,7 +73,7 @@ export function useSEO({
         "provider": {
           "@type": "Organization",
           "name": "Ananya SEO Services",
-          "url": "https://ananyaseo.com",
+          "url": "https://www.ananyaseo.com",
           "logo": "https://ananyaseo.com/logo.png",
           "contactPoint": {
             "@type": "ContactPoint",
