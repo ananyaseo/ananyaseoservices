@@ -64,7 +64,7 @@ export function useSEO({
 
     // Update JSON-LD Service Schema
     if (schemaData) {
-      const schemaUrl = `https://ananyaseo.com${schemaData.url || url || window.location.pathname}`;
+      const schemaUrl = `https://www.ananyaseo.com${schemaData.url || url || window.location.pathname}`;
       const schema = {
         "@context": "https://schema.org",
         "@type": "Service",
