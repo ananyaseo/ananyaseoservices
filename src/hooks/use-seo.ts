@@ -74,7 +74,7 @@ export function useSEO({
           "@type": "Organization",
           "name": "Ananya SEO Services",
           "url": "https://www.ananyaseo.com",
-          "logo": "https://ananyaseo.com/logo.png",
+          "logo": "https://www.ananyaseo.com/logo.png",
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+91-9845038936",
