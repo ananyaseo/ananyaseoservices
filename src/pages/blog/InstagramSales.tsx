@@ -16,10 +16,10 @@ const InstagramSales = () => (
     </ul>
     <p>Here are some key tactics that can help boost your sales using Instagram.</p>
 
-    <h3>1. Use an Instagram Business Profile</h3>
+    <h2>1. Use an Instagram Business Profile</h2>
     <p>If you have been using your personal profile, convert it into a business profile, which gives you access to selling and reporting options including Instagram Insights, CTA buttons, Story links, and Facebook alignment.</p>
 
-    <h3>2. Post Images that Speak to Your Audience</h3>
+    <h2>2. Post Images that Speak to Your Audience</h2>
     <p>Follow the rules of great photography with your smartphone:</p>
     <ul>
       <li>Use natural light whenever you can.</li>
@@ -30,7 +30,7 @@ const InstagramSales = () => (
     </ul>
     <p>Top image editing apps: VSCO, Canva, and A Color Story.</p>
 
-    <h3>3. Run Contests</h3>
+    <h2>3. Run Contests</h2>
     <p>Three great Instagram contest ideas:</p>
     <ul>
       <li><strong>Like, comment, and follow</strong> — Users like your post and follow you to enter.</li>
@@ -39,7 +39,7 @@ const InstagramSales = () => (
     </ul>
     <p>The best type of contest is the UGC contest.</p>
 
-    <h3>4. Leverage Instagram Video</h3>
+    <h2>4. Leverage Instagram Video</h2>
     <ul>
       <li>Keep your videos short and grab attention with movement in the first few seconds.</li>
       <li>Add captions (Instagram videos are mute by default).</li>
@@ -49,22 +49,22 @@ const InstagramSales = () => (
     </ul>
     <p>Instagram videos receive 2x the engagement of other posts.</p>
 
-    <h3>5. Give Exclusive Content with Stories</h3>
+    <h2>5. Give Exclusive Content with Stories</h2>
     <p>Use Instagram stories to show behind-the-scenes action and truly pull those viewers into what your brand does.</p>
 
-    <h3>6. Join Instagram Pods</h3>
+    <h2>6. Join Instagram Pods</h2>
     <p>If you're new to Instagram marketing, join quality Instagram Pods to ramp up your engagements. Pods are groups of Instagram users who band together to increase each other's followers and engagements.</p>
 
-    <h3>7. Use More Hashtags</h3>
+    <h2>7. Use More Hashtags</h2>
     <p>Instagram allows you to use up to 30 hashtags per post. Use the most popular hashtags to get in front of millions of users. Research hashtags via Discover → Search → Tags. Then, create your own customized hashtags once you've established your brand presence.</p>
 
-    <h3>8. Use Instagram Shopping</h3>
+    <h2>8. Use Instagram Shopping</h2>
     <p>Shopping posts look like organic posts, with the exception that when users "tap to view products," product names and prices are revealed. They can click through to a landing page from the product details page.</p>
 
-    <h3>9. Connect with Up & Coming Influencers</h3>
+    <h2>9. Connect with Up & Coming Influencers</h2>
     <p>Select influencers who have real influence in their area, do something relevant to your product, and have followers who will benefit from what you're selling.</p>
 
-    <h3>10. Run Compelling Instagram Ads</h3>
+    <h2>10. Run Compelling Instagram Ads</h2>
     <p>69% of marketers in the U.S. spend their influencer budgets on Instagram ads. Pro tips:</p>
     <ul>
       <li>Know what your audience wants to see.</li>

@@ -57,38 +57,38 @@ const AiSeo2026 = () => (
     <p>Today, search engines don't just index pages. They read your content, evaluate credibility, summarize your expertise, and decide whether your business deserves to be part of the answer.</p>
     <p>That's where <strong>AI SEO</strong> comes in.</p>
 
-    <h3>What Is AI SEO?</h3>
+    <h2>What Is AI SEO?</h2>
     <p>AI SEO is the evolution of traditional search optimization for AI-driven search systems. It includes:</p>
 
-    <h4>1. Optimization for AI-Generated Answers (AEO / GEO)</h4>
+    <h2>1. Optimization for AI-Generated Answers (AEO / GEO)</h2>
     <p>When someone asks "What's the best accounting software for small restaurants?" — AI may answer directly, citing selected sources. To appear there, your content must answer questions clearly and directly, be structured properly, demonstrate authority, and use schema markup.</p>
     <p>This is known as <strong>Answer Engine Optimization (AEO)</strong> and <strong>Generative Engine Optimization (GEO)</strong>.</p>
 
-    <h4>2. AI-Powered Strategy & Content Creation</h4>
+    <h2>2. AI-Powered Strategy & Content Creation</h2>
     <p>Modern agencies use AI tools to identify emerging search trends, analyze competitor content at scale, discover intent-rich keywords, predict topic momentum, and create structured first drafts faster.</p>
     <p>But here's the truth: AI without human expertise creates generic content that search engines increasingly ignore. The winners in 2026 use AI to <strong>accelerate quality</strong>, not mass-produce mediocrity.</p>
 
-    <h4>3. Smarter Ranking Signals</h4>
+    <h2>3. Smarter Ranking Signals</h2>
     <p>Search engines now evaluate topical authority, user engagement, content depth, brand trust signals, and technical performance. Thin content and link manipulation are easier than ever for AI systems to detect.</p>
 
-    <h4>4. Voice, Visual & Multimodal Search</h4>
+    <h2>4. Voice, Visual & Multimodal Search</h2>
     <p>Search is no longer just typed queries. Users now speak to devices, upload images, and combine text + visuals. Optimizing includes conversational phrasing, image alt text, structured data (Schema), FAQ formatting, and fast mobile experience.</p>
 
-    <h3>How AI SEO Helps Businesses Grow</h3>
+    <h2>How AI SEO Helps Businesses Grow</h2>
 
-    <h4>1. Visibility Where Decisions Happen</h4>
+    <h2>1. Visibility Where Decisions Happen</h2>
     <p>Even if users don't click your website, appearing in AI answers builds brand authority, establishes trust, increases branded searches, and drives direct traffic. This is especially powerful for healthcare, legal services, home services, hospitality, and local businesses.</p>
 
-    <h4>2. Faster Content Execution</h4>
+    <h2>2. Faster Content Execution</h2>
     <p>AI reduces production time dramatically. What once took 2 weeks can now take days — without sacrificing quality. For small businesses, this levels the playing field against large corporations.</p>
 
-    <h4>3. Better Targeting & Higher Conversion</h4>
+    <h2>3. Better Targeting & Higher Conversion</h2>
     <p>AI tools identify exact customer questions, decision-stage intent, and high-converting long-tail searches. This improves both organic SEO and paid search campaigns.</p>
 
-    <h4>4. Competitive Intelligence at Scale</h4>
+    <h2>4. Competitive Intelligence at Scale</h2>
     <p>AI can continuously monitor competitor rankings, content structure, topic gaps, and link growth patterns. Businesses that act on data outperform those relying on guesswork.</p>
 
-    <h3>What Business Owners Must Understand in 2026</h3>
+    <h2>What Business Owners Must Understand in 2026</h2>
 
     <p><strong>Quality Beats Quantity (More Than Ever)</strong></p>
     <p>500 low-quality AI articles = Risk. 50 authoritative, structured articles = Authority. AI systems reward expertise, original insights, clear structure, and real-world experience.</p>
@@ -102,7 +102,7 @@ const AiSeo2026 = () => (
     <p><strong>Analytics Has Changed</strong></p>
     <p>Zero-click searches are increasing. Tracking must now include brand impressions, AI citation frequency, share of voice, direct traffic growth, and engagement signals.</p>
 
-    <h3>Questions to Ask Your Digital Marketing Agency</h3>
+    <h2>Questions to Ask Your Digital Marketing Agency</h2>
     <ol>
       <li>How are you optimizing for AI Overviews and AI answers?</li>
       <li>What is your AI content quality control process?</li>
@@ -115,11 +115,11 @@ const AiSeo2026 = () => (
     </ol>
     <p>If they can't answer confidently — they're operating in 2019.</p>
 
-    <h3>Conclusion: The Future Belongs to AI-Ready Businesses</h3>
+    <h2>Conclusion: The Future Belongs to AI-Ready Businesses</h2>
     <p>AI SEO in 2026 isn't optional. It's the foundation of digital visibility. The fundamentals still matter — quality content, technical excellence, authority, trust — but the environment has changed dramatically.</p>
     <p>Businesses that adapt will dominate. Businesses that delay will disappear from AI-driven discovery.</p>
 
-    <h3>Why Ananya SEO?</h3>
+    <h2>Why Ananya SEO?</h2>
     <p>At <strong>Ananya SEO</strong>, we are not just a traditional SEO agency. We are an <strong>AI-powered digital marketing agency</strong> built for the new search ecosystem.</p>
     <p>We combine advanced AI-driven research, human expertise & editorial quality, technical SEO precision, AI answer optimization (AEO / GEO), local & global search strategy, and performance analytics beyond rankings.</p>
     <p>We don't just help you rank. We help you get cited, trusted, and chosen in the rapidly changing AI search landscape.</p>
