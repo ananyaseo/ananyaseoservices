@@ -6,11 +6,35 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "react-snap",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "include": [
+      "/",
+      "/search-engine-optimization",
+      "/ppc-advertising",
+      "/social-media-marketing",
+      "/website-development",
+      "/blog",
+      "/blog/seo-bangalore-businesses-2026-guide",
+      "/seo-pricing",
+      "/google-penalty-recovery",
+      "/about-us",
+      "/contact",
+      "/testimonials",
+      "/microfinance-consulting",
+      "/digital-marketing-nonprofits",
+      "/taj-mahal-chronicles-and-other-stories"
+    ],
+    "inlineCss": false,
+    "skipThirdPartyRequests": true
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -56,11 +80,13 @@
     "react-hook-form": "^7.61.1",
     "react-resizable-panels": "^2.1.9",
     "react-router-dom": "^6.30.1",
+    "react-snap": "^1.23.0",
     "recharts": "^2.15.4",
     "sonner": "^1.7.4",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.9",
+    "vite-prerender-plugin": "^0.5.13",
     "zod": "^3.25.76"
   },
   "devDependencies": {
