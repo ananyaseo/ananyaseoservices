@@ -6,11 +6,35 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "react-snap",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "include": [
+      "/",
+      "/search-engine-optimization",
+      "/ppc-advertising",
+      "/social-media-marketing",
+      "/website-development",
+      "/blog",
+      "/blog/seo-bangalore-businesses-2026-guide",
+      "/seo-pricing",
+      "/google-penalty-recovery",
+      "/about-us",
+      "/contact",
+      "/testimonials",
+      "/microfinance-consulting",
+      "/digital-marketing-nonprofits",
+      "/taj-mahal-chronicles-and-other-stories"
+    ],
+    "inlineCss": false,
+    "skipThirdPartyRequests": true
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
