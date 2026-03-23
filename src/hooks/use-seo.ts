@@ -9,6 +9,7 @@ export function useSEO({
   title,
   description,
   url,
+  canonicalUrl: canonicalUrlOverride,
   schemaData,
   additionalSchema,
   breadcrumbs,
@@ -16,6 +17,7 @@ export function useSEO({
   title: string;
   description: string;
   url?: string;
+  canonicalUrl?: string;
   schemaData?: {
     name: string;
     description: string;
@@ -28,7 +30,7 @@ export function useSEO({
   useEffect(() => {
     document.title = title;
 
-    const canonicalUrl = `https://www.ananyaseo.com${url || window.location.pathname}`;
+    const canonicalUrl = canonicalUrlOverride || `https://www.ananyaseo.com${url || window.location.pathname}`;
     let canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
       canonical.setAttribute("href", canonicalUrl);
