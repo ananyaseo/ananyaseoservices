@@ -90,6 +90,9 @@
     "vite-prerender-plugin": "^0.5.13",
     "zod": "^3.25.76"
   },
+  "dependencies": {
+  "puppeteer": "^21.0.0"
+}
   "devDependencies": {
     "@eslint/js": "^9.32.0",
     "@testing-library/jest-dom": "^6.6.0",
