@@ -35,13 +35,12 @@ const videoSchema = {
 };
 
 const SmallerBusinessesAI = () => (
-  <>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
     <BlogPostLayout
       title="Should Smaller Businesses Implement AI Immediately?"
       date="February 27, 2026"
       heroImage={heroImg}
       currentPostLink="/blog/should-smaller-businesses-implement-ai-immediately"
+      additionalSchema={videoSchema}
     >
     <p>There's so much noise around AI right now.</p>
     <p>Everywhere you look:</p>
