@@ -199,6 +199,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen">
+      {seoSchemas}
       <TopBar />
       <Header />
 

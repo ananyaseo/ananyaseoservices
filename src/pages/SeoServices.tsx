@@ -172,7 +172,7 @@ const seoProcess = [
 ];
 
 const SeoServices = () => {
-  useSEO({
+  const seoSchemas = useSEO({
     title: "Affordable SEO Services India | Search Engine Optimization | Ananya SEO",
     description: "Future-ready SEO services that deliver visibility, traffic & conversions. AI-powered search optimization, E-E-A-T content development, and technical SEO excellence.",
     schemaData: {
@@ -189,6 +189,7 @@ const SeoServices = () => {
 
   return (
     <div className="min-h-screen">
+    {seoSchemas}
     <TopBar />
     <Header />
 

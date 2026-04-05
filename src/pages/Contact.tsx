@@ -14,7 +14,7 @@ const socialLinks = [
 ];
 
 const Contact = () => {
-  useSEO({
+  const seoSchemas = useSEO({
     title: "Contact Ananya SEO Services | Get in Touch",
     description: "Connect with Ananya SEO Services for SEO, PPC, social media marketing, and website development services in Bangalore, India.",
     breadcrumbs: [
@@ -23,9 +23,9 @@ const Contact = () => {
     ],
   });
 
-
   return (
     <div className="min-h-screen flex flex-col">
+      {seoSchemas}
       <TopBar />
       <Header />
 

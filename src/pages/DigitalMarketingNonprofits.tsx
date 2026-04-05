@@ -60,7 +60,7 @@ const caseStudyResults = [
 ];
 
 const DigitalMarketingNonprofits = () => {
-  useSEO({
+  const seoSchemas = useSEO({
     title: "Digital Marketing for Nonprofits & NGOs | Ananya SEO",
     description: "Specialized digital marketing services for nonprofits and NGOs. SEO, PPC with Google Ad Grants, social media marketing at up to 75% discount.",
     breadcrumbs: [
@@ -71,6 +71,7 @@ const DigitalMarketingNonprofits = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+    {seoSchemas}
     <TopBar />
     <Header />
 

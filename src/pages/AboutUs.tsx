@@ -29,7 +29,7 @@ const expertise = [
 ];
 
 const AboutUs = () => {
-  useSEO({
+  const seoSchemas = useSEO({
     title: "About Ananya SEO Services | Digital Marketing Agency Bangalore",
     description: "Learn about Ananya SEO Services - a Bangalore-based digital marketing agency founded in 2009 by an IIM Ahmedabad alumnus, offering SEO, PPC, and social media marketing.",
     breadcrumbs: [
@@ -40,6 +40,7 @@ const AboutUs = () => {
 
   return (
     <div className="min-h-screen">
+    {seoSchemas}
     <TopBar />
     <Header />
 

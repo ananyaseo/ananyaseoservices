@@ -90,7 +90,7 @@ const faqs = [
 ];
 
 const SocialMediaMarketing = () => {
-  useSEO({
+  const seoSchemas = useSEO({
     title: "Social Media Marketing Services Bangalore | Ananya SEO",
     description: "AI-driven social media marketing strategies for business growth. Facebook, Instagram, LinkedIn marketing services by Ananya SEO in Bangalore.",
     schemaData: {
@@ -106,6 +106,7 @@ const SocialMediaMarketing = () => {
 
   return (
     <div className="min-h-screen bg-background">
+    {seoSchemas}
     <TopBar />
     <Header />
 
