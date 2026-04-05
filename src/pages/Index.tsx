@@ -12,7 +12,7 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
-  useSEO({
+  const seoSchemas = useSEO({
     title: "SEO & Digital Marketing Agency India | Ananya SEO",
     description: "Grow your business with Ananya SEO. We provide SEO, responsive WordPress web development, and digital marketing solutions across industries.",
     canonicalUrl: "https://www.ananyaseo.com",
@@ -69,6 +69,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+    {seoSchemas}
     <TopBar />
     <Header />
     <HeroSection />

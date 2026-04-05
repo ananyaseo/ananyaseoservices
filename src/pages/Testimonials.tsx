@@ -39,7 +39,7 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-  useSEO({
+  const seoSchemas = useSEO({
     title: "Client Testimonials | Ananya SEO Services",
     description: "Read testimonials from satisfied clients of Ananya SEO Services. See how we've helped businesses improve their digital presence and search rankings.",
     breadcrumbs: [
@@ -50,6 +50,7 @@ const Testimonials = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+    {seoSchemas}
     <TopBar />
     <Header />
 

@@ -49,7 +49,7 @@ const highlights = [
 ];
 
 const MicrofinanceConsulting = () => {
-  useSEO({
+  const seoSchemas = useSEO({
     title: "Microfinance Consulting | NBFC MFI Advisory | Ananya SEO",
     description: "Expert microfinance consulting services for NBFCs and MFIs. Diagnostic assessment, due diligence, risk management, loan portfolio audit, and capacity building.",
     breadcrumbs: [
@@ -60,6 +60,7 @@ const MicrofinanceConsulting = () => {
 
   return (
     <div className="min-h-screen">
+    {seoSchemas}
     <TopBar />
     <Header />
 

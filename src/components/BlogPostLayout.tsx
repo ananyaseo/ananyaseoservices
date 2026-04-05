@@ -197,7 +197,7 @@ const BlogPostLayout = ({ title, date, heroImage, heroSideImage, youtubeVideoId,
   const nextPost = currentIndex < allBlogPosts.length - 1 ? allBlogPosts[currentIndex + 1] : null;
 
   // Add breadcrumb schema for blog posts
-  useSEO({
+  const seoSchemas = useSEO({
     title: `${title} | Ananya SEO Blog`,
     description: allBlogPosts[currentIndex]?.excerpt || title,
     url: currentPostLink,
@@ -211,6 +211,7 @@ const BlogPostLayout = ({ title, date, heroImage, heroSideImage, youtubeVideoId,
 
   return (
     <div className="min-h-screen">
+      {seoSchemas}
       <TopBar />
       <Header />
 

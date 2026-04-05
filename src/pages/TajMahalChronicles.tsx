@@ -56,7 +56,7 @@ const stories = [
 ];
 
 const TajMahalChronicles = () => {
-  useSEO({
+  const seoSchemas = useSEO({
     title: "Taj Mahal Chronicles and Other Stories | Ananya SEO",
     description: "Experience the power of masterful storytelling with Taj Mahal Chronicles and Other Stories — five compelling short stories depicting people facing crises in their lives.",
     url: "/taj-mahal-chronicles-and-other-stories",
@@ -68,6 +68,7 @@ const TajMahalChronicles = () => {
 
   return (
     <div className="min-h-screen">
+      {seoSchemas}
       <TopBar />
       <Header />
 

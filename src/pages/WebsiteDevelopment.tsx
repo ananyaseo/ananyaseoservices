@@ -37,7 +37,7 @@ const industries = [
 ];
 
 const WebsiteDevelopment = () => {
-  useSEO({
+  const seoSchemas = useSEO({
     title: "Website Development Services | WordPress Development | Ananya SEO",
     description: "Professional, SEO-ready & high-performance WordPress website development services. Responsive web design, e-commerce solutions, and landing page design.",
     schemaData: {
@@ -53,6 +53,7 @@ const WebsiteDevelopment = () => {
 
   return (
     <div className="min-h-screen bg-background">
+    {seoSchemas}
     <TopBar />
     <Header />
 

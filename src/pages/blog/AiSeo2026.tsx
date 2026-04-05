@@ -36,8 +36,6 @@ const videoSchema = {
 };
 
 const AiSeo2026 = () => (
-  <>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
     <BlogPostLayout
       title="AI SEO in 2026: What Every Business Owner Must Know to Stay Visible"
       date="February 25, 2026"
@@ -45,6 +43,7 @@ const AiSeo2026 = () => (
       heroSideImage={presentingImg}
       youtubeVideoId="ZjSyw7P3i8I"
       currentPostLink="/blog/ai-seo-in-2026"
+      additionalSchema={videoSchema}
     >
     <p><strong>The Search Landscape Has Changed — Permanently</strong></p>
     <p>Just a few years ago, SEO meant: add keywords, build backlinks, rank on Google. That version of search is gone.</p>
@@ -125,7 +124,6 @@ const AiSeo2026 = () => (
     <p>We don't just help you rank. We help you get cited, trusted, and chosen in the rapidly changing AI search landscape.</p>
     <p><strong>If your business wants to grow in 2026 and beyond — we're ready to build your AI-first visibility strategy.</strong></p>
     </BlogPostLayout>
-  </>
 );
 
 export default AiSeo2026;

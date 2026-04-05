@@ -85,7 +85,7 @@ const whyChoose = [
 ];
 
 const PpcAdvertising = () => {
-  useSEO({
+  const seoSchemas = useSEO({
     title: "PPC Advertising Agency Bangalore | Google Ads Management | Ananya SEO",
     description: "AI-driven PPC management for maximum ROI. Expert Google Ads, Facebook Ads, and LinkedIn Ads campaign management in Bangalore.",
     schemaData: {
@@ -101,6 +101,7 @@ const PpcAdvertising = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      {seoSchemas}
       <TopBar />
       <Header />
 
