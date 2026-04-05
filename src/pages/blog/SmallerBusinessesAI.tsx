@@ -202,7 +202,6 @@ const SmallerBusinessesAI = () => (
     <p><strong>AI rewards strategy. It punishes impatience.</strong></p>
 
     </BlogPostLayout>
-  </>
 );
 
 export default SmallerBusinessesAI;

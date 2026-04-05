@@ -124,7 +124,6 @@ const AiSeo2026 = () => (
     <p>We don't just help you rank. We help you get cited, trusted, and chosen in the rapidly changing AI search landscape.</p>
     <p><strong>If your business wants to grow in 2026 and beyond — we're ready to build your AI-first visibility strategy.</strong></p>
     </BlogPostLayout>
-  </>
 );
 
 export default AiSeo2026;
