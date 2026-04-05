@@ -10,11 +10,15 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "postbuild": "react-snap"
   },
   "reactSnap": {
     "source": "dist",
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
     "include": [
       "/",
       "/search-engine-optimization",
@@ -23,16 +27,37 @@
       "/website-development",
       "/blog",
       "/blog/seo-bangalore-businesses-2026-guide",
+      "/blog/should-smaller-businesses-implement-ai-immediately",
+      "/blog/ai-seo-in-2026",
+      "/blog/seo-trends-2025",
+      "/blog/ai-tools-write-publish-fiction",
+      "/blog/seo-company-in-bangalore",
+      "/blog/impact-investors-india",
+      "/blog/empowering-nonprofits-seo",
+      "/blog/local-seo-tips-2021",
+      "/blog/increase-sales-instagram",
+      "/blog/digital-marketing-nonprofits",
+      "/blog/ngo-discount",
+      "/blog/facebook-messenger-bots",
+      "/blog/guide-bing-webmaster-tools",
+      "/blog/micro-influencers",
+      "/blog/social-media-marketing-guide-2018",
+      "/blog/instagram-marketing-small-business",
+      "/blog/facebook-cover-video",
+      "/blog/facebook-audience-targeting",
+      "/blog/seo-agency-helping-or-harming",
+      "/blog/ngo-special-offer",
+      "/testimonials",
       "/seo-pricing",
       "/google-penalty-recovery",
       "/about-us",
-      "/contact",
-      "/testimonials",
       "/microfinance-consulting",
-      "/digital-marketing-nonprofits",
-      "/taj-mahal-chronicles-and-other-stories"
+      "/taj-mahal-chronicles-and-other-stories",
+      "/contact"
     ],
-    "inlineCss": false,
+    "inlineCss": true,
+    "headless": true,
+    "crawl": false,
     "skipThirdPartyRequests": true
   },
   "dependencies": {
