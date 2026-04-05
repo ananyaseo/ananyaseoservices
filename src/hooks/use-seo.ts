@@ -1,19 +1,12 @@
 import { useEffect } from "react";
+import React from "react";
 
 interface BreadcrumbItem {
   name: string;
   url: string;
 }
 
-export function useSEO({
-  title,
-  description,
-  url,
-  canonicalUrl: canonicalUrlOverride,
-  schemaData,
-  additionalSchema,
-  breadcrumbs,
-}: {
+interface UseSEOOptions {
   title: string;
   description: string;
   url?: string;
@@ -26,7 +19,17 @@ export function useSEO({
   };
   additionalSchema?: Record<string, unknown>;
   breadcrumbs?: BreadcrumbItem[];
-}) {
+}
+
+export function useSEO({
+  title,
+  description,
+  url,
+  canonicalUrl: canonicalUrlOverride,
+  schemaData,
+  additionalSchema,
+  breadcrumbs,
+}: UseSEOOptions): React.ReactElement | null {
   useEffect(() => {
     document.title = title;
 
@@ -63,126 +66,108 @@ export function useSEO({
 
     const twDesc = document.querySelector('meta[name="twitter:description"]');
     if (twDesc) twDesc.setAttribute("content", description);
+  }, [title, description, url, canonicalUrlOverride]);
 
-    // Update JSON-LD Service Schema
-    if (schemaData) {
-      const schemaUrl = `https://www.ananyaseo.com${schemaData.url || url || window.location.pathname}`;
-      const schema = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": schemaData.name,
-        "description": schemaData.description,
-        "provider": {
-          "@type": "Organization",
-          "name": "Ananya SEO Services",
-          "url": "https://www.ananyaseo.com",
-          "logo": "https://www.ananyaseo.com/logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-9845038936",
-            "email": "sanand.rao@gmail.com",
-            "contactType": "customer service"
-          }
-        },
-        "areaServed": "India",
-        "serviceType": schemaData.serviceType,
-        "url": schemaUrl
-      };
+  // Build all JSON-LD schemas as inline JSX elements
+  const schemas: React.ReactElement[] = [];
 
-      let script = document.querySelector('script[type="application/ld+json"][data-type="service-schema"]');
-      if (!script) {
-        script = document.createElement("script");
-        script.setAttribute("type", "application/ld+json");
-        script.setAttribute("data-type", "service-schema");
-        document.head.appendChild(script);
-      }
-      script.textContent = JSON.stringify(schema);
-    } else {
-      const script = document.querySelector('script[type="application/ld+json"][data-type="service-schema"]');
-      if (script) {
-        document.head.removeChild(script);
-      }
-    }
+  // Organization schema
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ananya SEO Services",
+    "url": "https://www.ananyaseo.com/",
+    "logo": "https://www.ananyaseo.com/logo.png",
+    "description": "Digital Marketing Company offering Search Engine Optimization (SEO), Search Engine Marketing (PPC advertising) and Social Media Marketing (SMM).",
+    "email": "sanand.rao@gmail.com",
+    "telephone": "+91-9845038936",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "49, 2nd Main, Arakere MICO Layout I Stage",
+      "addressLocality": "Bangalore",
+      "addressRegion": "Karnataka",
+      "postalCode": "560076",
+      "addressCountry": "India"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/ananya-seo-services",
+      "https://www.facebook.com/ananya.seo.services",
+      "http://www.youtube.com/c/AnanyaseoservicesBengaluru",
+      "https://twitter.com/ananya_seo"
+    ]
+  };
+  schemas.push(
+    React.createElement("script", {
+      key: "org-schema",
+      type: "application/ld+json",
+      dangerouslySetInnerHTML: { __html: JSON.stringify(orgSchema) }
+    })
+  );
 
-    // Update JSON-LD Organization Schema
-    const orgSchema = {
+  // Service schema
+  if (schemaData) {
+    const schemaUrl = `https://www.ananyaseo.com${schemaData.url || url || ""}`;
+    const serviceSchema = {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Ananya SEO Services",
-      "url": "https://www.ananyaseo.com/",
-      "logo": "https://www.ananyaseo.com/logo.png",
-      "description": "Digital Marketing Company offering Search Engine Optimization (SEO), Search Engine Marketing (PPC advertising) and Social Media Marketing (SMM).",
-      "email": "sanand.rao@gmail.com",
-      "telephone": "+91-9845038936",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "49, 2nd Main, Arakere MICO Layout I Stage",
-        "addressLocality": "Bangalore",
-        "addressRegion": "Karnataka",
-        "postalCode": "560076",
-        "addressCountry": "India"
+      "@type": "Service",
+      "name": schemaData.name,
+      "description": schemaData.description,
+      "provider": {
+        "@type": "Organization",
+        "name": "Ananya SEO Services",
+        "url": "https://www.ananyaseo.com",
+        "logo": "https://www.ananyaseo.com/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-9845038936",
+          "email": "sanand.rao@gmail.com",
+          "contactType": "customer service"
+        }
       },
-      "sameAs": [
-        "https://www.linkedin.com/company/ananya-seo-services",
-        "https://www.facebook.com/ananya.seo.services",
-        "http://www.youtube.com/c/AnanyaseoservicesBengaluru",
-        "https://twitter.com/ananya_seo"
-      ]
+      "areaServed": "India",
+      "serviceType": schemaData.serviceType,
+      "url": schemaUrl
     };
+    schemas.push(
+      React.createElement("script", {
+        key: "service-schema",
+        type: "application/ld+json",
+        dangerouslySetInnerHTML: { __html: JSON.stringify(serviceSchema) }
+      })
+    );
+  }
 
-    let orgScript = document.querySelector('script[type="application/ld+json"][data-type="organization-schema"]');
-    if (!orgScript) {
-      orgScript = document.createElement("script");
-      orgScript.setAttribute("type", "application/ld+json");
-      orgScript.setAttribute("data-type", "organization-schema");
-      document.head.appendChild(orgScript);
-    }
-    orgScript.textContent = JSON.stringify(orgSchema);
+  // Additional schema (VideoObject, FAQPage, etc.)
+  if (additionalSchema) {
+    schemas.push(
+      React.createElement("script", {
+        key: "additional-schema",
+        type: "application/ld+json",
+        dangerouslySetInnerHTML: { __html: JSON.stringify(additionalSchema) }
+      })
+    );
+  }
 
-    // Update additional JSON-LD schema (e.g., FAQPage)
-    if (additionalSchema) {
-      let additionalScript = document.querySelector('script[type="application/ld+json"][data-type="additional-schema"]');
-      if (!additionalScript) {
-        additionalScript = document.createElement("script");
-        additionalScript.setAttribute("type", "application/ld+json");
-        additionalScript.setAttribute("data-type", "additional-schema");
-        document.head.appendChild(additionalScript);
-      }
-      additionalScript.textContent = JSON.stringify(additionalSchema);
-    } else {
-      const additionalScript = document.querySelector('script[type="application/ld+json"][data-type="additional-schema"]');
-      if (additionalScript) {
-        document.head.removeChild(additionalScript);
-      }
-    }
+  // Breadcrumb schema
+  if (breadcrumbs && breadcrumbs.length > 0) {
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbs.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "name": item.name,
+        "item": `https://www.ananyaseo.com${item.url}`
+      }))
+    };
+    schemas.push(
+      React.createElement("script", {
+        key: "breadcrumb-schema",
+        type: "application/ld+json",
+        dangerouslySetInnerHTML: { __html: JSON.stringify(breadcrumbSchema) }
+      })
+    );
+  }
 
-    // Update JSON-LD BreadcrumbList Schema
-    if (breadcrumbs && breadcrumbs.length > 0) {
-      const breadcrumbSchema = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": breadcrumbs.map((item, index) => ({
-          "@type": "ListItem",
-          "position": index + 1,
-          "name": item.name,
-          "item": `https://www.ananyaseo.com${item.url}`
-        }))
-      };
-
-      let bcScript = document.querySelector('script[type="application/ld+json"][data-type="breadcrumb-schema"]');
-      if (!bcScript) {
-        bcScript = document.createElement("script");
-        bcScript.setAttribute("type", "application/ld+json");
-        bcScript.setAttribute("data-type", "breadcrumb-schema");
-        document.head.appendChild(bcScript);
-      }
-      bcScript.textContent = JSON.stringify(breadcrumbSchema);
-    } else {
-      const bcScript = document.querySelector('script[type="application/ld+json"][data-type="breadcrumb-schema"]');
-      if (bcScript) {
-        document.head.removeChild(bcScript);
-      }
-    }
-
-  }, [title, description, url, schemaData, additionalSchema, breadcrumbs]);
+  return schemas.length > 0 ? React.createElement(React.Fragment, null, ...schemas) : null;
 }
