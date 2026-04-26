@@ -1,6 +1,5 @@
 import { Phone, Mail, Send } from "lucide-react";
 import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import ctaBg from "@/assets/cta-bg.jpg";
 
@@ -21,23 +20,18 @@ const CTASection = () => {
     }
     setLoading(true);
     try {
-      // Save to DB
-      await supabase.from("contact_submissions").insert({
-        full_name: form.fullName,
-        phone: form.phone,
-        email: form.email,
-        message: form.message,
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
       });
 
-      // Send email notification
-      await supabase.functions.invoke("send-contact-email", {
-        body: form,
-      });
+      if (!res.ok) throw new Error("Request failed");
 
       toast({ title: "Message sent!", description: "We'll get back to you soon." });
       setForm({ fullName: "", phone: "", email: "", message: "" });
     } catch {
-      toast({ title: "Something went wrong", variant: "destructive" });
+      toast({ title: "Something went wrong", description: "Please try again or email us directly.", variant: "destructive" });
     } finally {
       setLoading(false);
     }
