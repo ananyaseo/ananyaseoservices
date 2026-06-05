@@ -87,6 +87,7 @@ const App = () => (
           <Route path="/search-engine-optimization" element={<SeoServices />} />
           <Route path="/ppc-advertising" element={<PpcAdvertising />} />
           <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
+          <Route path="/video-production" element={<VideoProduction />} />
           <Route path="/website-development" element={<WebsiteDevelopment />} />
           <Route path="/digital-marketing-nonprofits" element={<DigitalMarketingNonprofitsPage />} />
           <Route path="/taj-mahal-chronicles-and-other-stories" element={<TajMahalChronicles />} />
