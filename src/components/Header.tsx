@@ -24,7 +24,14 @@ const navItems = [
     ],
   },
   { label: "PPC Advertising", href: "/ppc-advertising" },
-  { label: "Social Media Marketing", href: "/social-media-marketing" },
+  {
+    label: "Social Media Marketing",
+    href: "/social-media-marketing",
+    children: [
+      { label: "Social Media Marketing", href: "/social-media-marketing" },
+      { label: "Video Production", href: "/video-production" },
+    ],
+  },
   { label: "Website Development", href: "/website-development" },
   { label: "Contact", href: "/contact" },
   { label: "Blog", href: "/blog" },
