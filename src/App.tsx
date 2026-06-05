@@ -18,6 +18,7 @@ import AboutUs from "./pages/AboutUs";
 import MicrofinanceConsulting from "./pages/MicrofinanceConsulting";
 import DigitalMarketingNonprofitsPage from "./pages/DigitalMarketingNonprofits";
 import TajMahalChronicles from "./pages/TajMahalChronicles";
+import VideoProduction from "./pages/VideoProduction";
 
 // Blog post pages - Page 1
 import SeoBangalore2026 from "./pages/blog/SeoBangalore2026";
