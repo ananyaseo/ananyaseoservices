@@ -48,6 +48,7 @@ const Footer = () => (
               { label: "SEO Services", href: "/search-engine-optimization" },
               { label: "PPC Advertising", href: "/ppc-advertising" },
               { label: "Social Media", href: "/social-media-marketing" },
+              { label: "Affordable Web Development", href: "/affordable-website-development" },
               { label: "Contact", href: "/contact" },
             ].map((l) => (
               <li key={l.label}>

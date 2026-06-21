@@ -19,6 +19,7 @@ import MicrofinanceConsulting from "./pages/MicrofinanceConsulting";
 import DigitalMarketingNonprofitsPage from "./pages/DigitalMarketingNonprofits";
 import TajMahalChronicles from "./pages/TajMahalChronicles";
 import VideoProduction from "./pages/VideoProduction";
+import AffordableWebsiteDevelopment from "./pages/AffordableWebsiteDevelopment";
 
 // Blog post pages - Page 1
 import SeoBangalore2026 from "./pages/blog/SeoBangalore2026";
@@ -89,6 +90,7 @@ const App = () => (
           <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
           <Route path="/video-production" element={<VideoProduction />} />
           <Route path="/website-development" element={<WebsiteDevelopment />} />
+          <Route path="/affordable-website-development" element={<AffordableWebsiteDevelopment />} />
           <Route path="/digital-marketing-nonprofits" element={<DigitalMarketingNonprofitsPage />} />
           <Route path="/taj-mahal-chronicles-and-other-stories" element={<TajMahalChronicles />} />
           <Route path="/contact" element={<Contact />} />
