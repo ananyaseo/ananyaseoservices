@@ -176,8 +176,8 @@ const AffordableWebsiteDevelopment = () => {
       <TopBar />
       <Header />
 
-      {/* Hero with cycling video background */}
-      <HeroVideo />
+      {/* Hero with devices showcase */}
+      <HeroDevices />
 
 
       {/* Features strip */}
