@@ -1,11 +1,22 @@
+import { useEffect, useRef, useState } from "react";
 import { useSEO } from "@/hooks/use-seo";
 import { CheckCircle, Phone, Mail, ArrowRight, Rocket, IndianRupee, Cpu, Search, Smartphone, Edit3, LifeBuoy, Briefcase, Image as ImageIcon, Heart, Home, Database, Users, Code2 } from "lucide-react";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
-import heroBg from "@/assets/affordable-web-hero.jpg";
 import fastImg from "@/assets/affordable-web-fast.jpg";
 import typesImg from "@/assets/affordable-web-types.jpg";
+
+const heroVideos = [
+  // Charity / children
+  "https://videos.pexels.com/video-files/6646776/6646776-hd_1920_1080_25fps.mp4",
+  // Digital marketing / analytics
+  "https://videos.pexels.com/video-files/3196284/3196284-uhd_2560_1440_25fps.mp4",
+  // Real estate / apartment building
+  "https://videos.pexels.com/video-files/8961583/8961583-hd_1920_1080_25fps.mp4",
+  // Web / coding
+  "https://videos.pexels.com/video-files/3252100/3252100-uhd_2560_1440_25fps.mp4",
+];
 import ctaBg from "@/assets/smm-cta-bg.jpg";
 
 const features = [
@@ -111,6 +122,87 @@ const included = [
   "Speed Optimization",
 ];
 
+const HeroVideo = () => {
+  const [index, setIndex] = useState(0);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % heroVideos.length);
+    }, 6000);
+    return () => clearInterval(id);
+  }, []);
+
+  useEffect(() => {
+    const v = videoRefs.current[index];
+    if (v) {
+      v.currentTime = 0;
+      v.play().catch(() => {});
+    }
+  }, [index]);
+
+  return (
+    <section className="relative min-h-[600px] lg:min-h-[640px] overflow-hidden">
+      {/* Cycling videos */}
+      <div className="absolute inset-0">
+        {heroVideos.map((src, i) => (
+          <video
+            key={src}
+            ref={(el) => (videoRefs.current[i] = el)}
+            src={src}
+            autoPlay={i === 0}
+            muted
+            playsInline
+            loop
+            preload="auto"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === index ? "opacity-100" : "opacity-0"}`}
+          />
+        ))}
+      </div>
+
+      {/* Diagonal dark overlay — covers left, fades out diagonally to right */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(110deg, hsl(var(--navy) / 0.92) 0%, hsl(var(--navy) / 0.88) 38%, hsl(var(--navy) / 0.55) 55%, hsl(var(--navy) / 0.05) 68%, transparent 78%)",
+        }}
+      />
+
+      {/* Content — left aligned */}
+      <div className="relative z-10 container py-20 lg:py-28 px-4">
+        <div className="max-w-2xl text-left">
+          <p className="text-primary font-semibold text-lg mb-3">
+            Launch Your Professional Website in 7 Days or Less
+          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-foreground mb-6 font-heading leading-tight">
+            Affordable Website Development<br />Starting at ₹15,000
+          </h1>
+          <p className="text-lg text-navy-foreground/90 mb-8">
+            Modern, mobile-friendly websites for businesses, NGOs, startups, real estate, education and healthcare — delivered in as little as 7 days.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a
+              href="tel:+919845038936"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-semibold text-lg hover:brightness-110 transition-all"
+            >
+              <Phone size={20} /> Call: 9845038936
+            </a>
+            <a
+              href="#packages"
+              className="inline-flex items-center justify-center gap-2 border-2 border-navy-foreground/60 text-navy-foreground px-8 py-4 rounded-md font-semibold text-lg hover:bg-navy-foreground/10 transition-all backdrop-blur-sm"
+            >
+              View Packages <ArrowRight size={20} />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+
 const AffordableWebsiteDevelopment = () => {
   const seoSchemas = useSEO({
     title: "Affordable Website Development Starting at ₹15,000 | 7-Day Delivery",
@@ -132,30 +224,9 @@ const AffordableWebsiteDevelopment = () => {
       <TopBar />
       <Header />
 
-      {/* Hero */}
-      <section
-        className="relative min-h-[560px] flex items-center justify-center text-center"
-        style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center" }}
-      >
-        <div className="absolute inset-0 bg-navy/80" />
-        <div className="relative z-10 container py-20 px-4">
-          <p className="text-primary font-semibold text-lg mb-3">Launch Your Professional Website in 7 Days or Less</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-foreground mb-6 font-heading">
-            Affordable Website Development<br />Starting at ₹15,000
-          </h1>
-          <p className="text-lg text-navy-foreground/90 max-w-3xl mx-auto mb-8">
-            Need a modern, mobile-friendly website without spending lakhs or waiting months? We build professional websites for businesses, consultants, NGOs, startups, educational institutions, healthcare providers, real estate firms, and service companies — delivered in as little as 7 days.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+919845038936" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-semibold text-lg hover:brightness-110 transition-all">
-              <Phone size={20} /> Call: 9845038936
-            </a>
-            <a href="#packages" className="inline-flex items-center gap-2 border-2 border-navy-foreground/50 text-navy-foreground px-8 py-4 rounded-md font-semibold text-lg hover:bg-navy-foreground/10 transition-all">
-              View Packages <ArrowRight size={20} />
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* Hero with cycling video background */}
+      <HeroVideo />
+
 
       {/* Features strip */}
       <section className="py-16 md:py-20">
