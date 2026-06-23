@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import fastImg from "@/assets/affordable-web-fast.jpg";
 import typesImg from "@/assets/affordable-web-types.jpg";
 import heroFallback from "@/assets/affordable-web-hero.jpg";
-import heroVideoAsset from "../../public/videos/hero-city.mp4.asset.json";
+import heroVideoAsset from "../../public/videos/hero-abstract.mp4.asset.json";
 import ctaBg from "@/assets/smm-cta-bg.jpg";
 
 const HERO_VIDEO_URL = heroVideoAsset.url;
