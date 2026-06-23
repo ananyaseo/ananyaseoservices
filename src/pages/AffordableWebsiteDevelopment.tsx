@@ -113,24 +113,15 @@ const included = [
 
 const HeroVideo = () => {
   return (
-    <section
-      className="relative min-h-[600px] lg:min-h-[640px] overflow-hidden bg-navy"
-      style={{
-        backgroundImage: `url(${heroFallback})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      {/* Single video background */}
-      <video
-        src={HERO_VIDEO_URL}
-        poster={heroFallback}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        className="absolute inset-0 w-full h-full object-cover"
+    <section className="relative min-h-[600px] lg:min-h-[640px] overflow-hidden bg-navy">
+      {/* Animated hero background image */}
+      <div
+        className="absolute inset-0 w-full h-full animate-hero-kenburns"
+        style={{
+          backgroundImage: `url(${heroFallback})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       />
 
       {/* Diagonal dark overlay — covers left, fades out diagonally to right */}
