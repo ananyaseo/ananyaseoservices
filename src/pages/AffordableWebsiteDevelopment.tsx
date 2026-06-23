@@ -6,6 +6,7 @@ import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import fastImg from "@/assets/affordable-web-fast.jpg";
 import typesImg from "@/assets/affordable-web-types.jpg";
+import heroFallback from "@/assets/affordable-web-hero.jpg";
 
 // Smaller SD-sized MP4s stream more reliably across browsers + Vercel CDN
 const heroVideos = [
