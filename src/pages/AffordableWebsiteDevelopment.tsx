@@ -5,8 +5,7 @@ import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import fastImg from "@/assets/affordable-web-fast.jpg";
 import typesImg from "@/assets/affordable-web-types.jpg";
-import heroFallback from "@/assets/affordable-web-hero.jpg";
-import heroNew from "@/assets/affordable-web-hero-new.jpg";
+import heroDevices from "@/assets/affordable-web-hero-devices.jpg";
 import ctaBg from "@/assets/smm-cta-bg.jpg";
 
 const features = [
@@ -112,24 +111,24 @@ const included = [
   "Speed Optimization",
 ];
 
-const HeroVideo = () => {
+const HeroDevices = () => {
   return (
-    <section
-      className="relative min-h-[600px] lg:min-h-[640px] overflow-hidden"
-      style={{
-        backgroundImage: `url(${heroNew})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      {/* Content wrapper with dark overlay only on the left text area */}
-      <div className="relative z-10 container py-20 lg:py-28 px-4">
-        <div className="max-w-2xl text-left bg-navy/80 backdrop-blur-sm p-8 md:p-10 rounded-xl">
+    <section className="relative">
+      {/* Full-width hero image showcasing devices */}
+      <div
+        className="w-full bg-cover bg-top min-h-[420px] sm:min-h-[520px] md:min-h-[600px] lg:min-h-[680px]"
+        style={{
+          backgroundImage: `url(${heroDevices})`,
+        }}
+      />
+      {/* Text panel overlapping bottom of image and extending below */}
+      <div className="relative z-10 container px-4 pb-2">
+        <div className="max-w-3xl bg-navy/95 backdrop-blur-md rounded-xl p-8 md:p-12 shadow-2xl -mt-28 sm:-mt-36 md:-mt-44">
           <p className="text-primary font-semibold text-lg mb-3">
             Launch Your Professional Website in 7 Days or Less
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-foreground mb-6 font-heading leading-tight">
-            Affordable Website Development<br />Starting at ₹15,000
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-foreground mb-5 font-heading leading-tight">
+            Affordable Website Development Starting at ₹15,000
           </h1>
           <p className="text-lg text-navy-foreground/90 mb-8">
             Modern, mobile-friendly websites for businesses, NGOs, startups, real estate, education and healthcare — delivered in as little as 7 days.
@@ -143,7 +142,7 @@ const HeroVideo = () => {
             </a>
             <a
               href="#packages"
-              className="inline-flex items-center justify-center gap-2 border-2 border-navy-foreground/60 text-navy-foreground px-8 py-4 rounded-md font-semibold text-lg hover:bg-navy-foreground/10 transition-all backdrop-blur-sm"
+              className="inline-flex items-center justify-center gap-2 border-2 border-navy-foreground/60 text-navy-foreground px-8 py-4 rounded-md font-semibold text-lg hover:bg-navy-foreground/10 transition-all"
             >
               View Packages <ArrowRight size={20} />
             </a>
@@ -177,8 +176,8 @@ const AffordableWebsiteDevelopment = () => {
       <TopBar />
       <Header />
 
-      {/* Hero with cycling video background */}
-      <HeroVideo />
+      {/* Hero with devices showcase */}
+      <HeroDevices />
 
 
       {/* Features strip */}
