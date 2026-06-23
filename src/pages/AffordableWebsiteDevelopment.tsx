@@ -113,24 +113,30 @@ const included = [
 
 const HeroDevices = () => {
   return (
-    <section className="relative">
-      {/* Full-width hero image showcasing devices */}
+    <section
+      className="relative w-full bg-cover bg-right min-h-[480px] sm:min-h-[560px] md:min-h-[640px] lg:min-h-[720px]"
+      style={{
+        backgroundImage: `url(${heroDigital})`,
+      }}
+    >
+      {/* Gradient overlay only on the left ~45% for text readability */}
       <div
-        className="w-full bg-cover bg-top min-h-[420px] sm:min-h-[520px] md:min-h-[600px] lg:min-h-[680px]"
+        className="absolute inset-y-0 left-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2"
         style={{
-          backgroundImage: `url(${heroDevices})`,
+          background:
+            "linear-gradient(to right, rgba(10,18,35,0.92) 0%, rgba(10,18,35,0.75) 60%, rgba(10,18,35,0) 100%)",
         }}
       />
-      {/* Text panel overlapping bottom of image and extending below */}
-      <div className="relative z-10 container px-4 pb-2">
-        <div className="max-w-3xl bg-navy/95 backdrop-blur-md rounded-xl p-8 md:p-12 shadow-2xl -mt-28 sm:-mt-36 md:-mt-44">
+      {/* Text content positioned on the left */}
+      <div className="relative z-10 container px-4 h-full flex items-center">
+        <div className="max-w-xl py-16 md:py-20">
           <p className="text-primary font-semibold text-lg mb-3">
             Launch Your Professional Website in 7 Days or Less
           </p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-foreground mb-5 font-heading leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 font-heading leading-tight">
             Affordable Website Development Starting at ₹15,000
           </h1>
-          <p className="text-lg text-navy-foreground/90 mb-8">
+          <p className="text-lg text-white/90 mb-8">
             Modern, mobile-friendly websites for businesses, NGOs, startups, real estate, education and healthcare — delivered in as little as 7 days.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -142,7 +148,7 @@ const HeroDevices = () => {
             </a>
             <a
               href="#packages"
-              className="inline-flex items-center justify-center gap-2 border-2 border-navy-foreground/60 text-navy-foreground px-8 py-4 rounded-md font-semibold text-lg hover:bg-navy-foreground/10 transition-all"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white/60 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-white/10 transition-all"
             >
               View Packages <ArrowRight size={20} />
             </a>
