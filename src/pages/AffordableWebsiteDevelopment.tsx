@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import { useSEO } from "@/hooks/use-seo";
 import { CheckCircle, Phone, Mail, ArrowRight, Rocket, IndianRupee, Cpu, Search, Smartphone, Edit3, LifeBuoy, Briefcase, Image as ImageIcon, Heart, Home, Database, Users, Code2 } from "lucide-react";
 import Header from "@/components/Header";
@@ -7,19 +6,10 @@ import Footer from "@/components/Footer";
 import fastImg from "@/assets/affordable-web-fast.jpg";
 import typesImg from "@/assets/affordable-web-types.jpg";
 import heroFallback from "@/assets/affordable-web-hero.jpg";
-
-// Smaller SD-sized MP4s stream more reliably across browsers + Vercel CDN
-const heroVideos = [
-  // Charity / children smiling
-  "https://videos.pexels.com/video-files/6646776/6646776-sd_640_360_25fps.mp4",
-  // Digital marketing / analytics dashboard
-  "https://videos.pexels.com/video-files/3196284/3196284-sd_640_360_25fps.mp4",
-  // Real estate / city apartments aerial
-  "https://videos.pexels.com/video-files/8961583/8961583-sd_640_360_25fps.mp4",
-  // Web / coding on screen
-  "https://videos.pexels.com/video-files/3252100/3252100-sd_640_360_25fps.mp4",
-];
+import heroVideoAsset from "../../public/videos/hero-city.mp4.asset.json";
 import ctaBg from "@/assets/smm-cta-bg.jpg";
+
+const HERO_VIDEO_URL = heroVideoAsset.url;
 
 const features = [
   "Professional Design",
@@ -125,27 +115,6 @@ const included = [
 ];
 
 const HeroVideo = () => {
-  const [index, setIndex] = useState(0);
-  const [videosReady, setVideosReady] = useState<boolean[]>(() => heroVideos.map(() => false));
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-
-  useEffect(() => {
-    const id = setInterval(() => {
-      setIndex((i) => (i + 1) % heroVideos.length);
-    }, 6000);
-    return () => clearInterval(id);
-  }, []);
-
-  useEffect(() => {
-    const v = videoRefs.current[index];
-    if (v) {
-      v.currentTime = 0;
-      v.play().catch(() => {});
-    }
-    const next = videoRefs.current[(index + 1) % heroVideos.length];
-    if (next) next.play().catch(() => {});
-  }, [index]);
-
   return (
     <section
       className="relative min-h-[600px] lg:min-h-[640px] overflow-hidden bg-navy"
@@ -155,32 +124,17 @@ const HeroVideo = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* Cycling videos */}
-      <div className="absolute inset-0">
-        {heroVideos.map((src, i) => (
-          <video
-            key={src}
-            ref={(el) => (videoRefs.current[i] = el)}
-            src={src}
-            autoPlay
-            muted
-            playsInline
-            loop
-            preload="auto"
-            onCanPlay={() =>
-              setVideosReady((prev) => {
-                if (prev[i]) return prev;
-                const next = [...prev];
-                next[i] = true;
-                return next;
-              })
-            }
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-              i === index && videosReady[i] ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
-      </div>
+      {/* Single video background */}
+      <video
+        src={HERO_VIDEO_URL}
+        poster={heroFallback}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
       {/* Diagonal dark overlay — covers left, fades out diagonally to right */}
       <div
