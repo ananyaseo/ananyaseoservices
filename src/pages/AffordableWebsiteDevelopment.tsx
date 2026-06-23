@@ -6,16 +6,18 @@ import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import fastImg from "@/assets/affordable-web-fast.jpg";
 import typesImg from "@/assets/affordable-web-types.jpg";
+import heroFallback from "@/assets/affordable-web-hero.jpg";
 
+// Smaller SD-sized MP4s stream more reliably across browsers + Vercel CDN
 const heroVideos = [
-  // Charity / children
-  "https://videos.pexels.com/video-files/6646776/6646776-hd_1920_1080_25fps.mp4",
-  // Digital marketing / analytics
-  "https://videos.pexels.com/video-files/3196284/3196284-uhd_2560_1440_25fps.mp4",
-  // Real estate / apartment building
-  "https://videos.pexels.com/video-files/8961583/8961583-hd_1920_1080_25fps.mp4",
-  // Web / coding
-  "https://videos.pexels.com/video-files/3252100/3252100-uhd_2560_1440_25fps.mp4",
+  // Charity / children smiling
+  "https://videos.pexels.com/video-files/6646776/6646776-sd_640_360_25fps.mp4",
+  // Digital marketing / analytics dashboard
+  "https://videos.pexels.com/video-files/3196284/3196284-sd_640_360_25fps.mp4",
+  // Real estate / city apartments aerial
+  "https://videos.pexels.com/video-files/8961583/8961583-sd_640_360_25fps.mp4",
+  // Web / coding on screen
+  "https://videos.pexels.com/video-files/3252100/3252100-sd_640_360_25fps.mp4",
 ];
 import ctaBg from "@/assets/smm-cta-bg.jpg";
 
@@ -124,6 +126,7 @@ const included = [
 
 const HeroVideo = () => {
   const [index, setIndex] = useState(0);
+  const [videosReady, setVideosReady] = useState<boolean[]>(() => heroVideos.map(() => false));
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   useEffect(() => {
@@ -139,10 +142,19 @@ const HeroVideo = () => {
       v.currentTime = 0;
       v.play().catch(() => {});
     }
+    const next = videoRefs.current[(index + 1) % heroVideos.length];
+    if (next) next.play().catch(() => {});
   }, [index]);
 
   return (
-    <section className="relative min-h-[600px] lg:min-h-[640px] overflow-hidden">
+    <section
+      className="relative min-h-[600px] lg:min-h-[640px] overflow-hidden bg-navy"
+      style={{
+        backgroundImage: `url(${heroFallback})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       {/* Cycling videos */}
       <div className="absolute inset-0">
         {heroVideos.map((src, i) => (
@@ -150,12 +162,22 @@ const HeroVideo = () => {
             key={src}
             ref={(el) => (videoRefs.current[i] = el)}
             src={src}
-            autoPlay={i === 0}
+            autoPlay
             muted
             playsInline
             loop
             preload="auto"
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === index ? "opacity-100" : "opacity-0"}`}
+            onCanPlay={() =>
+              setVideosReady((prev) => {
+                if (prev[i]) return prev;
+                const next = [...prev];
+                next[i] = true;
+                return next;
+              })
+            }
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              i === index && videosReady[i] ? "opacity-100" : "opacity-0"
+            }`}
           />
         ))}
       </div>
