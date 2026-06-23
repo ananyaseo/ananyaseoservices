@@ -1,11 +1,22 @@
+import { useEffect, useRef, useState } from "react";
 import { useSEO } from "@/hooks/use-seo";
 import { CheckCircle, Phone, Mail, ArrowRight, Rocket, IndianRupee, Cpu, Search, Smartphone, Edit3, LifeBuoy, Briefcase, Image as ImageIcon, Heart, Home, Database, Users, Code2 } from "lucide-react";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
-import heroBg from "@/assets/affordable-web-hero.jpg";
 import fastImg from "@/assets/affordable-web-fast.jpg";
 import typesImg from "@/assets/affordable-web-types.jpg";
+
+const heroVideos = [
+  // Charity / children
+  "https://videos.pexels.com/video-files/6646776/6646776-hd_1920_1080_25fps.mp4",
+  // Digital marketing / analytics
+  "https://videos.pexels.com/video-files/3196284/3196284-uhd_2560_1440_25fps.mp4",
+  // Real estate / apartment building
+  "https://videos.pexels.com/video-files/8961583/8961583-hd_1920_1080_25fps.mp4",
+  // Web / coding
+  "https://videos.pexels.com/video-files/3252100/3252100-uhd_2560_1440_25fps.mp4",
+];
 import ctaBg from "@/assets/smm-cta-bg.jpg";
 
 const features = [
