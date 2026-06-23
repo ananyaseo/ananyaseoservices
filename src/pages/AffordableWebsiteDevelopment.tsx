@@ -125,6 +125,7 @@ const included = [
 
 const HeroVideo = () => {
   const [index, setIndex] = useState(0);
+  const [videosReady, setVideosReady] = useState<boolean[]>(() => heroVideos.map(() => false));
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   useEffect(() => {
@@ -140,10 +141,19 @@ const HeroVideo = () => {
       v.currentTime = 0;
       v.play().catch(() => {});
     }
+    const next = videoRefs.current[(index + 1) % heroVideos.length];
+    if (next) next.play().catch(() => {});
   }, [index]);
 
   return (
-    <section className="relative min-h-[600px] lg:min-h-[640px] overflow-hidden">
+    <section
+      className="relative min-h-[600px] lg:min-h-[640px] overflow-hidden bg-navy"
+      style={{
+        backgroundImage: `url(${heroFallback})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       {/* Cycling videos */}
       <div className="absolute inset-0">
         {heroVideos.map((src, i) => (
@@ -151,12 +161,22 @@ const HeroVideo = () => {
             key={src}
             ref={(el) => (videoRefs.current[i] = el)}
             src={src}
-            autoPlay={i === 0}
+            autoPlay
             muted
             playsInline
             loop
             preload="auto"
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === index ? "opacity-100" : "opacity-0"}`}
+            onCanPlay={() =>
+              setVideosReady((prev) => {
+                if (prev[i]) return prev;
+                const next = [...prev];
+                next[i] = true;
+                return next;
+              })
+            }
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              i === index && videosReady[i] ? "opacity-100" : "opacity-0"
+            }`}
           />
         ))}
       </div>
