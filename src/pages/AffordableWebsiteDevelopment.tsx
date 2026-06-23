@@ -7,15 +7,16 @@ import Footer from "@/components/Footer";
 import fastImg from "@/assets/affordable-web-fast.jpg";
 import typesImg from "@/assets/affordable-web-types.jpg";
 
+// Smaller SD-sized MP4s stream more reliably across browsers + Vercel CDN
 const heroVideos = [
-  // Charity / children
-  "https://videos.pexels.com/video-files/6646776/6646776-hd_1920_1080_25fps.mp4",
-  // Digital marketing / analytics
-  "https://videos.pexels.com/video-files/3196284/3196284-uhd_2560_1440_25fps.mp4",
-  // Real estate / apartment building
-  "https://videos.pexels.com/video-files/8961583/8961583-hd_1920_1080_25fps.mp4",
-  // Web / coding
-  "https://videos.pexels.com/video-files/3252100/3252100-uhd_2560_1440_25fps.mp4",
+  // Charity / children smiling
+  "https://videos.pexels.com/video-files/6646776/6646776-sd_640_360_25fps.mp4",
+  // Digital marketing / analytics dashboard
+  "https://videos.pexels.com/video-files/3196284/3196284-sd_640_360_25fps.mp4",
+  // Real estate / city apartments aerial
+  "https://videos.pexels.com/video-files/8961583/8961583-sd_640_360_25fps.mp4",
+  // Web / coding on screen
+  "https://videos.pexels.com/video-files/3252100/3252100-sd_640_360_25fps.mp4",
 ];
 import ctaBg from "@/assets/smm-cta-bg.jpg";
 
