@@ -143,30 +143,9 @@ const AffordableWebsiteDevelopment = () => {
       <TopBar />
       <Header />
 
-      {/* Hero */}
-      <section
-        className="relative min-h-[560px] flex items-center justify-center text-center"
-        style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center" }}
-      >
-        <div className="absolute inset-0 bg-navy/80" />
-        <div className="relative z-10 container py-20 px-4">
-          <p className="text-primary font-semibold text-lg mb-3">Launch Your Professional Website in 7 Days or Less</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-foreground mb-6 font-heading">
-            Affordable Website Development<br />Starting at ₹15,000
-          </h1>
-          <p className="text-lg text-navy-foreground/90 max-w-3xl mx-auto mb-8">
-            Need a modern, mobile-friendly website without spending lakhs or waiting months? We build professional websites for businesses, consultants, NGOs, startups, educational institutions, healthcare providers, real estate firms, and service companies — delivered in as little as 7 days.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+919845038936" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-semibold text-lg hover:brightness-110 transition-all">
-              <Phone size={20} /> Call: 9845038936
-            </a>
-            <a href="#packages" className="inline-flex items-center gap-2 border-2 border-navy-foreground/50 text-navy-foreground px-8 py-4 rounded-md font-semibold text-lg hover:bg-navy-foreground/10 transition-all">
-              View Packages <ArrowRight size={20} />
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* Hero with cycling video background */}
+      <HeroVideo />
+
 
       {/* Features strip */}
       <section className="py-16 md:py-20">
