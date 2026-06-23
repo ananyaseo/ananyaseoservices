@@ -114,29 +114,17 @@ const included = [
 
 const HeroVideo = () => {
   return (
-    <section className="relative min-h-[600px] lg:min-h-[640px] overflow-hidden bg-navy">
-      {/* Animated hero background image */}
-      <div
-        className="absolute inset-0 w-full h-full animate-hero-kenburns"
-        style={{
-          backgroundImage: `url(${heroFallback})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-
-      {/* Diagonal dark overlay — covers left, fades out diagonally to right */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(110deg, hsl(var(--navy) / 0.92) 0%, hsl(var(--navy) / 0.88) 38%, hsl(var(--navy) / 0.55) 55%, hsl(var(--navy) / 0.05) 68%, transparent 78%)",
-        }}
-      />
-
-      {/* Content — left aligned */}
+    <section
+      className="relative min-h-[600px] lg:min-h-[640px] overflow-hidden"
+      style={{
+        backgroundImage: `url(${heroNew})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Content wrapper with dark overlay only on the left text area */}
       <div className="relative z-10 container py-20 lg:py-28 px-4">
-        <div className="max-w-2xl text-left">
+        <div className="max-w-2xl text-left bg-navy/80 backdrop-blur-sm p-8 md:p-10 rounded-xl">
           <p className="text-primary font-semibold text-lg mb-3">
             Launch Your Professional Website in 7 Days or Less
           </p>
