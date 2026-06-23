@@ -122,6 +122,87 @@ const included = [
   "Speed Optimization",
 ];
 
+const HeroVideo = () => {
+  const [index, setIndex] = useState(0);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % heroVideos.length);
+    }, 6000);
+    return () => clearInterval(id);
+  }, []);
+
+  useEffect(() => {
+    const v = videoRefs.current[index];
+    if (v) {
+      v.currentTime = 0;
+      v.play().catch(() => {});
+    }
+  }, [index]);
+
+  return (
+    <section className="relative min-h-[600px] lg:min-h-[640px] overflow-hidden">
+      {/* Cycling videos */}
+      <div className="absolute inset-0">
+        {heroVideos.map((src, i) => (
+          <video
+            key={src}
+            ref={(el) => (videoRefs.current[i] = el)}
+            src={src}
+            autoPlay={i === 0}
+            muted
+            playsInline
+            loop
+            preload="auto"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === index ? "opacity-100" : "opacity-0"}`}
+          />
+        ))}
+      </div>
+
+      {/* Diagonal dark overlay — covers left, fades out diagonally to right */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(110deg, hsl(var(--navy) / 0.92) 0%, hsl(var(--navy) / 0.88) 38%, hsl(var(--navy) / 0.55) 55%, hsl(var(--navy) / 0.05) 68%, transparent 78%)",
+        }}
+      />
+
+      {/* Content — left aligned */}
+      <div className="relative z-10 container py-20 lg:py-28 px-4">
+        <div className="max-w-2xl text-left">
+          <p className="text-primary font-semibold text-lg mb-3">
+            Launch Your Professional Website in 7 Days or Less
+          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-foreground mb-6 font-heading leading-tight">
+            Affordable Website Development<br />Starting at ₹15,000
+          </h1>
+          <p className="text-lg text-navy-foreground/90 mb-8">
+            Modern, mobile-friendly websites for businesses, NGOs, startups, real estate, education and healthcare — delivered in as little as 7 days.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a
+              href="tel:+919845038936"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-semibold text-lg hover:brightness-110 transition-all"
+            >
+              <Phone size={20} /> Call: 9845038936
+            </a>
+            <a
+              href="#packages"
+              className="inline-flex items-center justify-center gap-2 border-2 border-navy-foreground/60 text-navy-foreground px-8 py-4 rounded-md font-semibold text-lg hover:bg-navy-foreground/10 transition-all backdrop-blur-sm"
+            >
+              View Packages <ArrowRight size={20} />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+
 const AffordableWebsiteDevelopment = () => {
   const seoSchemas = useSEO({
     title: "Affordable Website Development Starting at ₹15,000 | 7-Day Delivery",
