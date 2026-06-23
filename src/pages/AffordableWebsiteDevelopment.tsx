@@ -5,7 +5,7 @@ import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import fastImg from "@/assets/affordable-web-fast.jpg";
 import typesImg from "@/assets/affordable-web-types.jpg";
-import heroDevices from "@/assets/affordable-web-hero-devices.jpg";
+import heroDigital from "@/assets/affordable-web-hero-digital.jpg";
 import ctaBg from "@/assets/smm-cta-bg.jpg";
 
 const features = [
