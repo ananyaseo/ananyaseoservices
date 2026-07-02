@@ -128,9 +128,10 @@ const included = [
 const HeroDevices = () => {
   return (
     <section
-      className="relative w-full bg-cover bg-right min-h-[480px] sm:min-h-[560px] md:min-h-[640px] lg:min-h-[720px]"
+      className="relative w-full bg-cover bg-right min-h-[520px] sm:min-h-[600px] md:min-h-[680px] lg:min-h-[760px]"
       style={{
-        backgroundImage: `url(${heroDigital})`,
+        backgroundImage: `url(${heroDevices})`,
+        backgroundColor: "#0a1223",
       }}
     >
       {/* Gradient overlay only on the left ~45% for text readability */}
@@ -138,25 +139,36 @@ const HeroDevices = () => {
         className="absolute inset-y-0 left-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2"
         style={{
           background:
-            "linear-gradient(to right, rgba(10,18,35,0.92) 0%, rgba(10,18,35,0.75) 60%, rgba(10,18,35,0) 100%)",
+            "linear-gradient(to right, rgba(10,18,35,0.95) 0%, rgba(10,18,35,0.80) 55%, rgba(10,18,35,0) 100%)",
         }}
       />
       {/* Text content positioned on the left */}
       <div className="relative z-10 container px-4 h-full flex items-center">
         <div className="max-w-xl py-16 md:py-20">
-          <p className="text-primary font-semibold text-lg mb-3">
-            Launch Your Professional Website in 7 Days or Less
-          </p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 font-heading leading-tight">
-            Affordable Website Development Starting at ₹15,000
+          {/* Impactful G-Ads style headline banner */}
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-emerald-500 text-white px-4 py-2 rounded-full mb-5 shadow-lg shadow-primary/30 animate-pulse">
+            <Rocket size={18} />
+            <span className="text-sm font-bold uppercase tracking-wide">Limited Time Offer</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 font-heading leading-[1.05] drop-shadow-lg">
+            Launch Your Professional Website in{" "}
+            <span className="bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-300 bg-clip-text text-transparent">
+              7 Days
+            </span>{" "}
+            or Less
+          </h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-primary to-orange-400 rounded-full mb-5" />
+          <h1 className="text-xl md:text-2xl font-bold text-white/95 mb-5 font-heading">
+            Affordable Website Development Starting at{" "}
+            <span className="text-orange-400">₹15,000</span>
           </h1>
-          <p className="text-lg text-white/90 mb-8">
+          <p className="text-base md:text-lg text-white/85 mb-8">
             Modern, mobile-friendly websites for businesses, NGOs, startups, real estate, education and healthcare — delivered in as little as 7 days.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="tel:+919845038936"
-              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-semibold text-lg hover:brightness-110 transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-semibold text-lg hover:brightness-110 transition-all shadow-lg shadow-primary/40"
             >
               <Phone size={20} /> Call: 9845038936
             </a>
