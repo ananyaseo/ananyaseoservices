@@ -244,8 +244,10 @@ const AffordableWebsiteDevelopment = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whatWeBuild.map((b) => (
-              <div key={b.title} className="bg-background p-8 rounded-lg shadow-md border hover:shadow-lg transition-shadow">
-                <b.icon className="text-primary mb-4" size={36} />
+              <div key={b.title} className={`${b.color} p-8 rounded-lg shadow-md border-2 hover:shadow-xl hover:-translate-y-1 transition-all`}>
+                <div className={`${b.iconBg} w-14 h-14 rounded-lg flex items-center justify-center mb-4 shadow-md`}>
+                  <b.icon className="text-white" size={28} />
+                </div>
                 <h3 className="text-xl font-bold text-foreground font-heading mb-3">{b.title}</h3>
                 <p className="text-base text-foreground/80 mb-3">{b.desc}</p>
                 {b.items.length > 0 && (
