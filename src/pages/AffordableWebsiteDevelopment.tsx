@@ -5,7 +5,7 @@ import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import fastImg from "@/assets/affordable-web-fast.jpg";
 import typesImg from "@/assets/affordable-web-types.jpg";
-import heroDigital from "@/assets/affordable-web-hero-digital.jpg";
+import heroDevices from "@/assets/affordable-web-hero-devices-v2.jpg";
 import ctaBg from "@/assets/smm-cta-bg.jpg";
 
 const features = [
@@ -25,42 +25,56 @@ const whatWeBuild = [
     title: "Business Websites",
     desc: "Perfect for local businesses, consultants, professionals, agencies, and service providers.",
     items: ["CA & Accounting Firms", "Doctors & Clinics", "Architects & Interior Designers", "Educational Institutions", "NGOs & Charitable Trusts", "Travel Agencies", "Manufacturing Companies", "Construction Firms"],
+    color: "bg-blue-50 border-blue-200",
+    iconBg: "bg-blue-500",
   },
   {
     icon: ImageIcon,
     title: "Portfolio Websites",
     desc: "Showcase your expertise, projects, achievements, and services.",
     items: ["Consultants", "Freelancers", "Trainers", "Authors", "Speakers", "Photographers"],
+    color: "bg-purple-50 border-purple-200",
+    iconBg: "bg-purple-500",
   },
   {
     icon: Heart,
     title: "NGO & Charity Websites",
     desc: "Donation pages, project showcases, volunteer forms, impact reports, and fundraising campaigns.",
     items: [],
+    color: "bg-rose-50 border-rose-200",
+    iconBg: "bg-rose-500",
   },
   {
     icon: Home,
     title: "Real Estate Websites",
     desc: "Property listings, advanced property search, location filters, inquiry forms, and lead management.",
     items: [],
+    color: "bg-amber-50 border-amber-200",
+    iconBg: "bg-amber-500",
   },
   {
     icon: Search,
     title: "Directory & Search Websites",
     desc: "Interactive search systems for multiple industries.",
     items: ["Real Estate", "Products", "Educational Institutions", "Hospitals", "Service Providers", "NGOs", "Job Listings", "Business Directories"],
+    color: "bg-teal-50 border-teal-200",
+    iconBg: "bg-teal-500",
   },
   {
     icon: Users,
     title: "Membership Websites",
     desc: "User registration, member dashboards, content access, and document libraries.",
     items: [],
+    color: "bg-emerald-50 border-emerald-200",
+    iconBg: "bg-emerald-500",
   },
   {
     icon: Code2,
     title: "Custom Web Applications",
     desc: "Interactive portals tailored to your business processes and customer requirements.",
     items: [],
+    color: "bg-indigo-50 border-indigo-200",
+    iconBg: "bg-indigo-500",
   },
 ];
 
@@ -114,9 +128,10 @@ const included = [
 const HeroDevices = () => {
   return (
     <section
-      className="relative w-full bg-cover bg-right min-h-[480px] sm:min-h-[560px] md:min-h-[640px] lg:min-h-[720px]"
+      className="relative w-full bg-cover bg-right min-h-[520px] sm:min-h-[600px] md:min-h-[680px] lg:min-h-[760px]"
       style={{
-        backgroundImage: `url(${heroDigital})`,
+        backgroundImage: `url(${heroDevices})`,
+        backgroundColor: "#0a1223",
       }}
     >
       {/* Gradient overlay only on the left ~45% for text readability */}
@@ -124,25 +139,36 @@ const HeroDevices = () => {
         className="absolute inset-y-0 left-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2"
         style={{
           background:
-            "linear-gradient(to right, rgba(10,18,35,0.92) 0%, rgba(10,18,35,0.75) 60%, rgba(10,18,35,0) 100%)",
+            "linear-gradient(to right, rgba(10,18,35,0.95) 0%, rgba(10,18,35,0.80) 55%, rgba(10,18,35,0) 100%)",
         }}
       />
       {/* Text content positioned on the left */}
       <div className="relative z-10 container px-4 h-full flex items-center">
         <div className="max-w-xl py-16 md:py-20">
-          <p className="text-primary font-semibold text-lg mb-3">
-            Launch Your Professional Website in 7 Days or Less
-          </p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 font-heading leading-tight">
-            Affordable Website Development Starting at ₹15,000
+          {/* Impactful G-Ads style headline banner */}
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-emerald-500 text-white px-4 py-2 rounded-full mb-5 shadow-lg shadow-primary/30 animate-pulse">
+            <Rocket size={18} />
+            <span className="text-sm font-bold uppercase tracking-wide">Limited Time Offer</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 font-heading leading-[1.05] drop-shadow-lg">
+            Launch Your Professional Website in{" "}
+            <span className="bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-300 bg-clip-text text-transparent">
+              7 Days
+            </span>{" "}
+            or Less
+          </h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-primary to-orange-400 rounded-full mb-5" />
+          <h1 className="text-xl md:text-2xl font-bold text-white/95 mb-5 font-heading">
+            Affordable Website Development Starting at{" "}
+            <span className="text-orange-400">₹15,000</span>
           </h1>
-          <p className="text-lg text-white/90 mb-8">
+          <p className="text-base md:text-lg text-white/85 mb-8">
             Modern, mobile-friendly websites for businesses, NGOs, startups, real estate, education and healthcare — delivered in as little as 7 days.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="tel:+919845038936"
-              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-semibold text-lg hover:brightness-110 transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-semibold text-lg hover:brightness-110 transition-all shadow-lg shadow-primary/40"
             >
               <Phone size={20} /> Call: 9845038936
             </a>
@@ -218,8 +244,10 @@ const AffordableWebsiteDevelopment = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whatWeBuild.map((b) => (
-              <div key={b.title} className="bg-background p-8 rounded-lg shadow-md border hover:shadow-lg transition-shadow">
-                <b.icon className="text-primary mb-4" size={36} />
+              <div key={b.title} className={`${b.color} p-8 rounded-lg shadow-md border-2 hover:shadow-xl hover:-translate-y-1 transition-all`}>
+                <div className={`${b.iconBg} w-14 h-14 rounded-lg flex items-center justify-center mb-4 shadow-md`}>
+                  <b.icon className="text-white" size={28} />
+                </div>
                 <h3 className="text-xl font-bold text-foreground font-heading mb-3">{b.title}</h3>
                 <p className="text-base text-foreground/80 mb-3">{b.desc}</p>
                 {b.items.length > 0 && (
