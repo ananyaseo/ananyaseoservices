@@ -5,7 +5,35 @@ import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import fastImg from "@/assets/affordable-web-fast.jpg";
 import typesImg from "@/assets/affordable-web-types.jpg";
-import heroDevices from "@/assets/affordable-web-hero-devices-v2.jpg";
+import heroDevices from "@/assets/affordable-web-hero-devices-v3.jpg";
+
+const featureColors = [
+  "bg-blue-100 border-blue-300",
+  "bg-purple-100 border-purple-300",
+  "bg-amber-100 border-amber-300",
+  "bg-emerald-100 border-emerald-300",
+  "bg-rose-100 border-rose-300",
+  "bg-teal-100 border-teal-300",
+  "bg-indigo-100 border-indigo-300",
+  "bg-orange-100 border-orange-300",
+];
+
+const whyChooseColors = [
+  "bg-blue-100 border-blue-300",
+  "bg-emerald-100 border-emerald-300",
+  "bg-purple-100 border-purple-300",
+  "bg-amber-100 border-amber-300",
+  "bg-rose-100 border-rose-300",
+  "bg-teal-100 border-teal-300",
+  "bg-indigo-100 border-indigo-300",
+];
+
+const packageColors = [
+  "bg-sky-100 border-sky-300",
+  "bg-emerald-100 border-emerald-400",
+  "bg-amber-100 border-amber-300",
+  "bg-purple-100 border-purple-300",
+];
 import ctaBg from "@/assets/smm-cta-bg.jpg";
 
 const features = [
@@ -144,7 +172,7 @@ const HeroDevices = () => {
       />
       {/* Text content positioned on the left */}
       <div className="relative z-10 container px-4 h-full flex items-center">
-        <div className="max-w-xl py-16 md:py-20">
+        <div className="max-w-xl py-16 md:py-20 pl-[50px] md:pl-[80px]">
           {/* Impactful G-Ads style headline banner */}
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-emerald-500 text-white px-4 py-2 rounded-full mb-5 shadow-lg shadow-primary/30 animate-pulse">
             <Rocket size={18} />
@@ -220,10 +248,10 @@ const AffordableWebsiteDevelopment = () => {
             <p className="text-lg text-foreground/80">Everything your business needs to go online — professionally built, fully responsive, and ready to grow.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            {features.map((f) => (
-              <div key={f} className="flex items-start gap-3 bg-muted/30 p-4 rounded-lg border">
+            {features.map((f, idx) => (
+              <div key={f} className={`flex items-start gap-3 p-4 rounded-lg border-2 shadow-sm ${featureColors[idx % featureColors.length]}`}>
                 <CheckCircle className="text-primary mt-0.5 shrink-0" size={20} />
-                <span className="text-base text-foreground font-medium">{f}</span>
+                <span className="text-base text-foreground font-semibold">{f}</span>
               </div>
             ))}
           </div>
@@ -279,8 +307,8 @@ const AffordableWebsiteDevelopment = () => {
             </div>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {whyChoose.map((w) => (
-              <div key={w.title} className="bg-background p-6 rounded-lg shadow-md border hover:shadow-lg hover:-translate-y-1 transition-all">
+            {whyChoose.map((w, idx) => (
+              <div key={w.title} className={`p-6 rounded-lg shadow-md border-2 hover:shadow-lg hover:-translate-y-1 transition-all ${whyChooseColors[idx % whyChooseColors.length]}`}>
                 <w.icon className="text-primary mb-3" size={32} />
                 <h3 className="text-lg font-bold text-foreground font-heading mb-2">{w.title}</h3>
                 <p className="text-sm text-foreground/80">{w.desc}</p>
@@ -298,10 +326,10 @@ const AffordableWebsiteDevelopment = () => {
             <p className="text-lg text-foreground/80">Transparent pricing with no hidden costs. Choose a package that fits your goals, or get a custom quote.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {packages.map((p) => (
+            {packages.map((p, idx) => (
               <div
                 key={p.name}
-                className={`bg-background p-8 rounded-lg shadow-md border-2 flex flex-col ${p.highlight ? "border-primary shadow-lg relative" : "border-border"}`}
+                className={`p-8 rounded-lg shadow-md border-2 flex flex-col ${packageColors[idx % packageColors.length]} ${p.highlight ? "ring-2 ring-primary shadow-lg relative" : ""}`}
               >
                 {p.highlight && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</span>
