@@ -8,31 +8,31 @@ import typesImg from "@/assets/affordable-web-types.jpg";
 import heroDevices from "@/assets/affordable-web-hero-devices-v3.jpg";
 
 const featureColors = [
-  "bg-blue-100 border-blue-300",
-  "bg-purple-100 border-purple-300",
-  "bg-amber-100 border-amber-300",
-  "bg-emerald-100 border-emerald-300",
-  "bg-rose-100 border-rose-300",
-  "bg-teal-100 border-teal-300",
-  "bg-indigo-100 border-indigo-300",
-  "bg-orange-100 border-orange-300",
+  "bg-slate-800 border-slate-700",
+  "bg-slate-900 border-slate-800",
+  "bg-navy border-navy-light",
+  "bg-slate-800 border-slate-700",
+  "bg-slate-900 border-slate-800",
+  "bg-navy border-navy-light",
+  "bg-slate-800 border-slate-700",
+  "bg-slate-900 border-slate-800",
 ];
 
 const whyChooseColors = [
-  "bg-blue-100 border-blue-300",
-  "bg-emerald-100 border-emerald-300",
-  "bg-purple-100 border-purple-300",
-  "bg-amber-100 border-amber-300",
-  "bg-rose-100 border-rose-300",
-  "bg-teal-100 border-teal-300",
-  "bg-indigo-100 border-indigo-300",
+  "bg-slate-800 border-slate-700",
+  "bg-slate-900 border-slate-800",
+  "bg-navy border-navy-light",
+  "bg-slate-800 border-slate-700",
+  "bg-slate-900 border-slate-800",
+  "bg-navy border-navy-light",
+  "bg-slate-800 border-slate-700",
 ];
 
 const packageColors = [
-  "bg-sky-100 border-sky-300",
-  "bg-emerald-100 border-emerald-400",
-  "bg-amber-100 border-amber-300",
-  "bg-purple-100 border-purple-300",
+  "bg-slate-800 border-slate-700",
+  "bg-navy border-navy-light",
+  "bg-slate-900 border-slate-800",
+  "bg-slate-800 border-slate-700",
 ];
 import ctaBg from "@/assets/smm-cta-bg.jpg";
 
@@ -251,7 +251,7 @@ const AffordableWebsiteDevelopment = () => {
             {features.map((f, idx) => (
               <div key={f} className={`flex items-start gap-3 p-4 rounded-lg border-2 shadow-sm ${featureColors[idx % featureColors.length]}`}>
                 <CheckCircle className="text-primary mt-0.5 shrink-0" size={20} />
-                <span className="text-base text-foreground font-semibold">{f}</span>
+                <span className="text-base text-white font-semibold">{f}</span>
               </div>
             ))}
           </div>
@@ -310,8 +310,8 @@ const AffordableWebsiteDevelopment = () => {
             {whyChoose.map((w, idx) => (
               <div key={w.title} className={`p-6 rounded-lg shadow-md border-2 hover:shadow-lg hover:-translate-y-1 transition-all ${whyChooseColors[idx % whyChooseColors.length]}`}>
                 <w.icon className="text-primary mb-3" size={32} />
-                <h3 className="text-lg font-bold text-foreground font-heading mb-2">{w.title}</h3>
-                <p className="text-sm text-foreground/80">{w.desc}</p>
+                <h3 className="text-lg font-bold text-white font-heading mb-2">{w.title}</h3>
+                <p className="text-sm text-white/80">{w.desc}</p>
               </div>
             ))}
           </div>
@@ -334,13 +334,13 @@ const AffordableWebsiteDevelopment = () => {
                 {p.highlight && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</span>
                 )}
-                <h3 className="text-xl font-bold text-foreground font-heading mb-2">{p.name}</h3>
-                <p className="text-3xl font-bold text-primary mb-5">{p.price}</p>
+                <h3 className="text-xl font-bold text-white font-heading mb-2">{p.name}</h3>
+                <p className="text-3xl font-bold text-orange-400 mb-5">{p.price}</p>
                 <ul className="space-y-2 mb-6 flex-1">
                   {p.items.map((i) => (
                     <li key={i} className="flex items-start gap-2">
                       <CheckCircle className="text-primary mt-0.5 shrink-0" size={16} />
-                      <span className="text-sm text-foreground">{i}</span>
+                      <span className="text-sm text-white/90">{i}</span>
                     </li>
                   ))}
                 </ul>
