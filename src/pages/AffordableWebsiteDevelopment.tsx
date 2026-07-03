@@ -334,13 +334,13 @@ const AffordableWebsiteDevelopment = () => {
                 {p.highlight && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</span>
                 )}
-                <h3 className="text-xl font-bold text-foreground font-heading mb-2">{p.name}</h3>
-                <p className="text-3xl font-bold text-primary mb-5">{p.price}</p>
+                <h3 className="text-xl font-bold text-white font-heading mb-2">{p.name}</h3>
+                <p className="text-3xl font-bold text-orange-400 mb-5">{p.price}</p>
                 <ul className="space-y-2 mb-6 flex-1">
                   {p.items.map((i) => (
                     <li key={i} className="flex items-start gap-2">
                       <CheckCircle className="text-primary mt-0.5 shrink-0" size={16} />
-                      <span className="text-sm text-foreground">{i}</span>
+                      <span className="text-sm text-white/90">{i}</span>
                     </li>
                   ))}
                 </ul>
