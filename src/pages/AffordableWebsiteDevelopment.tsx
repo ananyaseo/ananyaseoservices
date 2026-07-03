@@ -8,31 +8,31 @@ import typesImg from "@/assets/affordable-web-types.jpg";
 import heroDevices from "@/assets/affordable-web-hero-devices-v3.jpg";
 
 const featureColors = [
-  "bg-blue-100 border-blue-300",
-  "bg-purple-100 border-purple-300",
-  "bg-amber-100 border-amber-300",
-  "bg-emerald-100 border-emerald-300",
-  "bg-rose-100 border-rose-300",
-  "bg-teal-100 border-teal-300",
-  "bg-indigo-100 border-indigo-300",
-  "bg-orange-100 border-orange-300",
+  "bg-slate-800 border-slate-700",
+  "bg-slate-900 border-slate-800",
+  "bg-navy border-navy-light",
+  "bg-slate-800 border-slate-700",
+  "bg-slate-900 border-slate-800",
+  "bg-navy border-navy-light",
+  "bg-slate-800 border-slate-700",
+  "bg-slate-900 border-slate-800",
 ];
 
 const whyChooseColors = [
-  "bg-blue-100 border-blue-300",
-  "bg-emerald-100 border-emerald-300",
-  "bg-purple-100 border-purple-300",
-  "bg-amber-100 border-amber-300",
-  "bg-rose-100 border-rose-300",
-  "bg-teal-100 border-teal-300",
-  "bg-indigo-100 border-indigo-300",
+  "bg-slate-800 border-slate-700",
+  "bg-slate-900 border-slate-800",
+  "bg-navy border-navy-light",
+  "bg-slate-800 border-slate-700",
+  "bg-slate-900 border-slate-800",
+  "bg-navy border-navy-light",
+  "bg-slate-800 border-slate-700",
 ];
 
 const packageColors = [
-  "bg-sky-100 border-sky-300",
-  "bg-emerald-100 border-emerald-400",
-  "bg-amber-100 border-amber-300",
-  "bg-purple-100 border-purple-300",
+  "bg-slate-800 border-slate-700",
+  "bg-navy border-navy-light",
+  "bg-slate-900 border-slate-800",
+  "bg-slate-800 border-slate-700",
 ];
 import ctaBg from "@/assets/smm-cta-bg.jpg";
 
