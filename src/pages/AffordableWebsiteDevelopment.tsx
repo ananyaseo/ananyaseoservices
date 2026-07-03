@@ -251,7 +251,7 @@ const AffordableWebsiteDevelopment = () => {
             {features.map((f, idx) => (
               <div key={f} className={`flex items-start gap-3 p-4 rounded-lg border-2 shadow-sm ${featureColors[idx % featureColors.length]}`}>
                 <CheckCircle className="text-primary mt-0.5 shrink-0" size={20} />
-                <span className="text-base text-foreground font-semibold">{f}</span>
+                <span className="text-base text-white font-semibold">{f}</span>
               </div>
             ))}
           </div>
@@ -310,8 +310,8 @@ const AffordableWebsiteDevelopment = () => {
             {whyChoose.map((w, idx) => (
               <div key={w.title} className={`p-6 rounded-lg shadow-md border-2 hover:shadow-lg hover:-translate-y-1 transition-all ${whyChooseColors[idx % whyChooseColors.length]}`}>
                 <w.icon className="text-primary mb-3" size={32} />
-                <h3 className="text-lg font-bold text-foreground font-heading mb-2">{w.title}</h3>
-                <p className="text-sm text-foreground/80">{w.desc}</p>
+                <h3 className="text-lg font-bold text-white font-heading mb-2">{w.title}</h3>
+                <p className="text-sm text-white/80">{w.desc}</p>
               </div>
             ))}
           </div>
