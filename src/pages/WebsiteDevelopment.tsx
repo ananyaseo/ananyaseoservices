@@ -59,24 +59,33 @@ const WebsiteDevelopment = () => {
 
     {/* Hero */}
     <section
-      className="relative min-h-[500px] flex items-center justify-center text-center"
-      style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center" }}
+      className="relative w-full bg-cover bg-right min-h-[520px] sm:min-h-[600px] md:min-h-[680px] lg:min-h-[760px]"
+      style={{ backgroundImage: `url(${heroBg})`, backgroundColor: "#0a1223" }}
     >
-      <div className="absolute inset-0 bg-navy/80" />
-      <div className="relative z-10 container py-20 px-4">
-        <p className="text-primary font-semibold text-lg mb-2">Professional, SEO-Ready & High-Performance Websites</p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-foreground mb-6 font-heading">
-          Website Development Services
-        </h1>
-        <p className="text-lg text-navy-foreground/90 max-w-3xl mx-auto mb-8">
-          We build modern, fast, and SEO-optimized websites that not only look professional but also convert visitors into customers.
-        </p>
-        <a
-          href="#contact-webdev"
-          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-semibold text-lg hover:brightness-110 transition-all"
-        >
-          Get a Free Consultation <ArrowRight size={20} />
-        </a>
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to right, rgba(10,18,35,0.95) 0%, rgba(10,18,35,0.78) 45%, rgba(10,18,35,0.25) 75%, rgba(10,18,35,0) 100%)",
+        }}
+      />
+      <div className="relative z-10 container px-4">
+        <div className="max-w-xl py-16 md:py-20 pl-[50px] md:pl-[80px]">
+          <p className="text-primary font-semibold text-lg mb-3">Professional, SEO-Ready & High-Performance Websites</p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-foreground mb-5 font-heading leading-tight">
+            Website Development Services
+          </h1>
+          <div className="h-1 w-24 bg-gradient-to-r from-primary to-orange-400 rounded-full mb-5" />
+          <p className="text-lg text-navy-foreground/90 mb-8">
+            We build modern, fast, and SEO-optimized websites that not only look professional but also convert visitors into customers.
+          </p>
+          <a
+            href="#contact-webdev"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-semibold text-lg hover:brightness-110 transition-all"
+          >
+            Get a Free Consultation <ArrowRight size={20} />
+          </a>
+        </div>
       </div>
     </section>
 
