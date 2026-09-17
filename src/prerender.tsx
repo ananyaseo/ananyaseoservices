@@ -20,7 +20,8 @@ export async function prerender(data: { url: string }) {
   const description =
     ssrHead.description ??
     "Grow your business with Ananya SEO. We provide SEO, responsive WordPress web development, and digital marketing solutions across industries.";
-  const canonical = ssrHead.canonical ?? `${SITE}${data.url === "/" ? "" : data.url}`;
+  // The route itself is always the canonical URL for that page.
+  const canonical = `${SITE}${data.url === "/" ? "" : data.url}`;
 
   const elements = new Set([
     { type: "meta", props: { name: "description", content: description } },
