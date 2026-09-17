@@ -95,18 +95,19 @@ export const AppRoutes = () => (
 );
 
 interface AppProps {
-  /** When provided (static prerendering), routing is resolved from this URL. */
+  /** When provided (static prerendering at build time), routing resolves from this URL. */
   url?: string;
-  router?: (children: React.ReactNode) => React.ReactElement;
 }
 
-const App = ({ url, router }: AppProps = {}) => (
+const App = ({ url }: AppProps = {}) => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      {router ? (
-        router(<AppRoutes />)
+      {url ? (
+        <StaticRouter location={url}>
+          <AppRoutes />
+        </StaticRouter>
       ) : (
         <BrowserRouter>
           <AppRoutes />
