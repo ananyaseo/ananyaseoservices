@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { StaticRouter } from "react-router-dom/server";
 import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import SeoPricing from "./pages/SeoPricing";
@@ -48,56 +49,71 @@ import NgoSpecialOffer from "./pages/blog/NgoSpecialOffer";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+export const AppRoutes = () => (
+  <Routes>
+    <Route path="/" element={<Index />} />
+    <Route path="/testimonials" element={<Testimonials />} />
+    <Route path="/blog" element={<Blog />} />
+    <Route path="/blog/page/:page" element={<Blog />} />
+    <Route path="/blog/seo-bangalore-businesses-2026-guide" element={<SeoBangalore2026 />} />
+    <Route path="/blog/should-smaller-businesses-implement-ai-immediately" element={<SmallerBusinessesAI />} />
+    <Route path="/blog/ai-seo-in-2026" element={<AiSeo2026 />} />
+    <Route path="/blog/seo-trends-2025" element={<SeoTrends2025 />} />
+    <Route path="/blog/ai-tools-write-publish-fiction" element={<AiToolsFiction />} />
+    <Route path="/blog/seo-company-in-bangalore" element={<SeoBangalore />} />
+    <Route path="/blog/impact-investors-india" element={<ImpactInvestors />} />
+    <Route path="/blog/empowering-nonprofits-seo" element={<NonprofitsSeo />} />
+    <Route path="/blog/local-seo-tips-2021" element={<LocalSeo2021 />} />
+    <Route path="/blog/increase-sales-instagram" element={<InstagramSales />} />
+    <Route path="/blog/digital-marketing-nonprofits" element={<DigitalMarketingNonprofits />} />
+    {/* Page 2 blog posts */}
+    <Route path="/blog/ngo-discount" element={<NgoDiscount />} />
+    <Route path="/blog/facebook-messenger-bots" element={<MessengerBots />} />
+    <Route path="/blog/guide-bing-webmaster-tools" element={<BingWebmaster />} />
+    <Route path="/blog/micro-influencers" element={<MicroInfluencers />} />
+    <Route path="/blog/social-media-marketing-guide-2018" element={<SmmGuide2018 />} />
+    <Route path="/blog/instagram-marketing-small-business" element={<InstagramMarketing />} />
+    <Route path="/blog/facebook-cover-video" element={<FbCoverVideo />} />
+    <Route path="/blog/facebook-audience-targeting" element={<FbAudienceTargeting />} />
+    <Route path="/blog/seo-agency-helping-or-harming" element={<SeoAgencyHarm />} />
+    <Route path="/blog/ngo-special-offer" element={<NgoSpecialOffer />} />
+    <Route path="/seo-pricing" element={<SeoPricing />} />
+    <Route path="/google-penalty-recovery" element={<GooglePenaltyRecovery />} />
+    <Route path="/about-us" element={<AboutUs />} />
+    <Route path="/microfinance-consulting" element={<MicrofinanceConsulting />} />
+    <Route path="/search-engine-optimization" element={<SeoServices />} />
+    <Route path="/ppc-advertising" element={<PpcAdvertising />} />
+    <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
+    <Route path="/video-production" element={<VideoProduction />} />
+    <Route path="/website-development" element={<WebsiteDevelopment />} />
+    <Route path="/affordable-website-development" element={<AffordableWebsiteDevelopment />} />
+    <Route path="/digital-marketing-nonprofits" element={<DigitalMarketingNonprofitsPage />} />
+    <Route path="/taj-mahal-chronicles-and-other-stories" element={<TajMahalChronicles />} />
+    <Route path="/contact" element={<Contact />} />
+    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+    <Route path="*" element={<NotFound />} />
+  </Routes>
+);
+
+interface AppProps {
+  /** When provided (static prerendering at build time), routing resolves from this URL. */
+  url?: string;
+}
+
+const App = ({ url }: AppProps = {}) => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/page/:page" element={<Blog />} />
-          <Route path="/blog/seo-bangalore-businesses-2026-guide" element={<SeoBangalore2026 />} />
-          <Route path="/blog/should-smaller-businesses-implement-ai-immediately" element={<SmallerBusinessesAI />} />
-          <Route path="/blog/ai-seo-in-2026" element={<AiSeo2026 />} />
-          <Route path="/blog/seo-trends-2025" element={<SeoTrends2025 />} />
-          <Route path="/blog/ai-tools-write-publish-fiction" element={<AiToolsFiction />} />
-          <Route path="/blog/seo-company-in-bangalore" element={<SeoBangalore />} />
-          <Route path="/blog/impact-investors-india" element={<ImpactInvestors />} />
-          <Route path="/blog/empowering-nonprofits-seo" element={<NonprofitsSeo />} />
-          <Route path="/blog/local-seo-tips-2021" element={<LocalSeo2021 />} />
-          <Route path="/blog/increase-sales-instagram" element={<InstagramSales />} />
-          <Route path="/blog/digital-marketing-nonprofits" element={<DigitalMarketingNonprofits />} />
-          {/* Page 2 blog posts */}
-          <Route path="/blog/ngo-discount" element={<NgoDiscount />} />
-          <Route path="/blog/facebook-messenger-bots" element={<MessengerBots />} />
-          <Route path="/blog/guide-bing-webmaster-tools" element={<BingWebmaster />} />
-          <Route path="/blog/micro-influencers" element={<MicroInfluencers />} />
-          <Route path="/blog/social-media-marketing-guide-2018" element={<SmmGuide2018 />} />
-          <Route path="/blog/instagram-marketing-small-business" element={<InstagramMarketing />} />
-          <Route path="/blog/facebook-cover-video" element={<FbCoverVideo />} />
-          <Route path="/blog/facebook-audience-targeting" element={<FbAudienceTargeting />} />
-          <Route path="/blog/seo-agency-helping-or-harming" element={<SeoAgencyHarm />} />
-          <Route path="/blog/ngo-special-offer" element={<NgoSpecialOffer />} />
-          <Route path="/seo-pricing" element={<SeoPricing />} />
-          <Route path="/google-penalty-recovery" element={<GooglePenaltyRecovery />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/microfinance-consulting" element={<MicrofinanceConsulting />} />
-          <Route path="/search-engine-optimization" element={<SeoServices />} />
-          <Route path="/ppc-advertising" element={<PpcAdvertising />} />
-          <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
-          <Route path="/video-production" element={<VideoProduction />} />
-          <Route path="/website-development" element={<WebsiteDevelopment />} />
-          <Route path="/affordable-website-development" element={<AffordableWebsiteDevelopment />} />
-          <Route path="/digital-marketing-nonprofits" element={<DigitalMarketingNonprofitsPage />} />
-          <Route path="/taj-mahal-chronicles-and-other-stories" element={<TajMahalChronicles />} />
-          <Route path="/contact" element={<Contact />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      {url ? (
+        <StaticRouter location={url}>
+          <AppRoutes />
+        </StaticRouter>
+      ) : (
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
+      )}
     </TooltipProvider>
   </QueryClientProvider>
 );

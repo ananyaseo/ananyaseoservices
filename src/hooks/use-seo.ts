@@ -1,5 +1,13 @@
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import React from "react";
+
+// Captured during static prerendering (no DOM available) so the build can
+// write the real title/description/canonical into the static HTML head.
+export const ssrHead: {
+  title?: string;
+  description?: string;
+  canonical?: string;
+} = {};
 
 interface BreadcrumbItem {
   name: string;
@@ -30,6 +38,13 @@ export function useSEO({
   additionalSchema,
   breadcrumbs,
 }: UseSEOOptions): React.ReactElement | null {
+  if (typeof window === "undefined") {
+    ssrHead.title = title;
+    ssrHead.description = description;
+    ssrHead.canonical =
+      canonicalUrlOverride || `https://www.ananyaseo.com${url || ""}`;
+  }
+
   useEffect(() => {
     document.title = title;
 

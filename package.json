@@ -10,8 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest",
-    "postbuild": "if [ -z \"$VERCEL\" ]; then react-snap; else echo 'Skipping react-snap on Vercel'; fi"
+    "test:watch": "vitest"
   },
   "reactSnap": {
     "source": "dist",
