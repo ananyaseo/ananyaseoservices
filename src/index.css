@@ -96,3 +96,41 @@
 .animate-hero-kenburns {
   animation: hero-kenburns 20s ease-in-out infinite alternate;
 }
+
+/* ============ Ananya Company Deck ============ */
+/* Slides render at fixed 1920x1080 and are scaled down via transform. */
+.ananya-slide-content {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+  background: hsl(var(--navy));
+  color: hsl(var(--navy-foreground));
+  font-family: var(--font-body);
+
+  --as-title-lg: 92px;
+  --as-title: 66px;
+  --as-subtitle: 38px;
+  --as-body-lg: 32px;
+  --as-body: 27px;
+  --as-caption: 22px;
+  --as-kicker: 22px;
+  --as-chrome: 19px;
+}
+.as-kicker   { font-size: var(--as-kicker);   line-height: 1.2; letter-spacing: 0.18em; text-transform: uppercase; }
+.as-title-lg { font-family: var(--font-heading); font-size: var(--as-title-lg); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; }
+.as-title    { font-family: var(--font-heading); font-size: var(--as-title);    font-weight: 700; line-height: 1.08; letter-spacing: -0.015em; }
+.as-subtitle { font-size: var(--as-subtitle); line-height: 1.3; }
+.as-body-lg  { font-size: var(--as-body-lg);  line-height: 1.25; }
+.as-body     { font-size: var(--as-body);     line-height: 1.35; }
+.as-caption  { font-size: var(--as-caption);  line-height: 1.35; }
+.as-chrome   { font-size: var(--as-chrome);   line-height: 1.2; white-space: nowrap; }
+
+/* Print route: one 1920x1080 page per slide */
+.as-print-root { background: hsl(var(--navy)); }
+.as-print-page { width: 1920px; height: 1080px; position: relative; overflow: hidden; background: hsl(var(--navy)); }
+@media print {
+  @page { size: 1920px 1080px; margin: 0; }
+  body { margin: 0 !important; }
+  .as-print-page { page-break-after: always; break-after: page; }
+}

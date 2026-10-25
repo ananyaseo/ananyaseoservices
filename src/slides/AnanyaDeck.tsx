@@ -1,0 +1,226 @@
+import { useCallback, useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  ChevronLeft,
+  ChevronRight,
+  FileDown,
+  FileText,
+  Pause,
+  Play,
+} from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { deckSlides } from "./deck-data";
+import SlideCanvas from "./SlideCanvas";
+import { downloadDeckPptx } from "./pptx-export";
+
+const AUTOPLAY_MS = 6000;
+
+const slideVariants = {
+  enter: (dir: number) => ({ opacity: 0, x: dir >= 0 ? 120 : -120, scale: 0.98 }),
+  center: { opacity: 1, x: 0, scale: 1 },
+  exit: (dir: number) => ({ opacity: 0, x: dir >= 0 ? -120 : 120, scale: 0.98 }),
+};
+
+/** Renders the fixed 1920x1080 slide, scaled to fit the container width. */
+const SlideFrame = ({ children }: { children: React.ReactNode }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(0);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const update = () => setScale(el.clientWidth / 1920);
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} className="absolute inset-0 overflow-hidden">
+      <div
+        className="ananya-slide-content absolute left-1/2 top-1/2"
+        style={{
+          transform: `translate(-50%, -50%) scale(${scale || 0.001})`,
+          transformOrigin: "center center",
+          opacity: scale ? 1 : 0,
+        }}
+      >
+        {children}
+      </div>
+    </div>
+  );
+};
+
+const AnanyaDeck = () => {
+  const [[index, dir], setState] = useState<[number, number]>([0, 1]);
+  const [playing, setPlaying] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  const [inView, setInView] = useState(false);
+  const [exporting, setExporting] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  const autoStarted = useRef(false);
+  const { toast } = useToast();
+
+  // Start autoplay the first time the deck scrolls into view.
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+        if (entry.isIntersecting && !autoStarted.current) {
+          autoStarted.current = true;
+          setPlaying(true);
+        }
+      },
+      { threshold: 0.35 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  const go = useCallback((next: number, direction: number) => {
+    setState(() => [(next + deckSlides.length) % deckSlides.length, direction]);
+  }, []);
+
+  // Advance automatically while playing, visible and not hovered.
+  useEffect(() => {
+    if (!inView || hovered || !playing) return;
+    const t = setInterval(() => go(index + 1, 1), AUTOPLAY_MS);
+    return () => clearInterval(t);
+  }, [inView, hovered, playing, index, go]);
+
+  const handlePptx = async () => {
+    setExporting(true);
+    try {
+      await downloadDeckPptx();
+      toast({ title: "PowerPoint downloaded", description: "ananya-seo-services-deck.pptx" });
+    } catch {
+      toast({
+        title: "Export failed",
+        description: "Please try again in a moment.",
+        variant: "destructive",
+      });
+    } finally {
+      setExporting(false);
+    }
+  };
+
+  return (
+    <section ref={sectionRef} id="deck" className="relative py-20 bg-navy overflow-hidden">
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(900px 500px at 80% 0%, hsl(var(--navy-light) / 0.6), transparent 70%)",
+        }}
+      />
+      <div className="container relative z-10">
+        <div className="text-center mb-10">
+          <span className="text-primary font-semibold text-base uppercase tracking-wider">
+            Company Deck
+          </span>
+          <h2 className="text-2xl md:text-3xl font-bold font-heading text-navy-foreground mt-2 mb-3">
+            Ananya SEO Services at a Glance
+          </h2>
+          <p className="text-navy-foreground/75 text-lg max-w-2xl mx-auto">
+            Who we are, what we do and how we grow businesses — in ten quick slides.
+          </p>
+        </div>
+
+        <div
+          className="relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/15"
+          style={{ aspectRatio: "16 / 9" }}
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+        >
+          <AnimatePresence initial={false} custom={dir}>
+            <motion.div
+              key={index}
+              custom={dir}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute inset-0 bg-navy"
+            >
+              <SlideFrame>
+                <SlideCanvas slide={deckSlides[index]} />
+              </SlideFrame>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Controls */}
+        <div className="flex flex-wrap items-center gap-4 mt-5">
+          <button
+            type="button"
+            aria-label="Previous slide"
+            onClick={() => go(index - 1, -1)}
+            className="p-2.5 rounded-full bg-white/10 text-white hover:bg-white/25 transition-colors"
+          >
+            <ChevronLeft size={20} />
+          </button>
+          <button
+            type="button"
+            aria-label={playing ? "Pause slideshow" : "Play slideshow"}
+            onClick={() => setPlaying((p) => !p)}
+            className="p-2.5 rounded-full bg-white/10 text-white hover:bg-white/25 transition-colors"
+          >
+            {playing ? <Pause size={20} /> : <Play size={20} />}
+          </button>
+          <button
+            type="button"
+            aria-label="Next slide"
+            onClick={() => go(index + 1, 1)}
+            className="p-2.5 rounded-full bg-white/10 text-white hover:bg-white/25 transition-colors"
+          >
+            <ChevronRight size={20} />
+          </button>
+
+          <div className="flex items-center gap-2 mx-1">
+            {deckSlides.map((s, i) => (
+              <button
+                key={s.id}
+                type="button"
+                aria-label={`Go to slide ${i + 1}`}
+                onClick={() => go(i, i > index ? 1 : -1)}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  i === index ? "w-7 bg-primary" : "w-2.5 bg-white/30 hover:bg-white/60"
+                }`}
+              />
+            ))}
+          </div>
+
+          <span className="text-white/70 text-sm font-medium tabular-nums">
+            {String(index + 1).padStart(2, "0")} / {deckSlides.length}
+          </span>
+
+          <div className="flex items-center gap-3 ml-auto">
+            <button
+              type="button"
+              onClick={handlePptx}
+              disabled={exporting}
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:brightness-110 transition-all disabled:opacity-60"
+            >
+              <FileDown size={18} />
+              {exporting ? "Preparing..." : "PowerPoint"}
+            </button>
+            <button
+              type="button"
+              onClick={() => window.open("/deck-print?print=1", "_blank")}
+              className="inline-flex items-center gap-2 border border-white/30 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-white/10 transition-all"
+            >
+              <FileText size={18} />
+              PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AnanyaDeck;
