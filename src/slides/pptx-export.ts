@@ -293,7 +293,7 @@ const buildSlide = (
           fontFace: "Open Sans",
           fontSize: 13.5,
           color: BRAND.white,
-          bullet: { characterCode: "2713", color: BRAND.green },
+          bullet: { characterCode: "2713" },
         });
       });
       if (slide.link) {
