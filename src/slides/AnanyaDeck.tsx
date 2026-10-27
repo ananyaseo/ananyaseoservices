@@ -86,7 +86,7 @@ const AnanyaDeck = () => {
   }, [inView, hovered, playing, index, go]);
 
   return (
-    <section ref={sectionRef} id="deck" className="relative py-20 bg-navy overflow-hidden">
+    <section ref={sectionRef} id="deck" className="relative py-10 bg-navy overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -95,21 +95,22 @@ const AnanyaDeck = () => {
         }}
       />
       <div className="container relative z-10">
-        <div className="text-center mb-10">
+        <div className="text-center mb-6">
           <span className="text-primary font-semibold text-base uppercase tracking-wider">
             Company Deck
           </span>
-          <h2 className="text-2xl md:text-3xl font-bold font-heading text-navy-foreground mt-2 mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold font-heading text-navy-foreground mt-2 mb-2">
             Ananya SEO Services at a Glance
           </h2>
-          <p className="text-navy-foreground/75 text-lg max-w-2xl mx-auto">
-            Who we are, what we do and how we grow businesses — in ten quick slides.
-          </p>
         </div>
 
         <div
-          className="relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/15"
-          style={{ aspectRatio: "16 / 9" }}
+          className="relative mx-auto rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/15"
+          style={{
+            aspectRatio: "16 / 9",
+            width: "min(100%, calc(68vh * 16 / 9))",
+            maxHeight: "68vh",
+          }}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
@@ -176,25 +177,6 @@ const AnanyaDeck = () => {
             {String(index + 1).padStart(2, "0")} / {deckSlides.length}
           </span>
 
-          <div className="flex items-center gap-3 ml-auto">
-            <button
-              type="button"
-              onClick={handlePptx}
-              disabled={exporting}
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:brightness-110 transition-all disabled:opacity-60"
-            >
-              <FileDown size={18} />
-              {exporting ? "Preparing..." : "PowerPoint"}
-            </button>
-            <button
-              type="button"
-              onClick={() => window.open("/deck-print?print=1", "_blank")}
-              className="inline-flex items-center gap-2 border border-white/30 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-white/10 transition-all"
-            >
-              <FileText size={18} />
-              PDF
-            </button>
-          </div>
         </div>
       </div>
     </section>
