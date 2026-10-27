@@ -133,7 +133,7 @@ const AnanyaDeck = () => {
         </div>
 
         {/* Controls */}
-        <div className="flex flex-wrap items-center gap-4 mt-5">
+        <div className="flex flex-wrap items-center gap-4 mt-4">
           <button
             type="button"
             aria-label="Previous slide"
