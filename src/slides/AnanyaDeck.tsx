@@ -53,12 +53,10 @@ const AnanyaDeck = () => {
   const [playing, setPlaying] = useState(false);
   const [hovered, setHovered] = useState(false);
   const [inView, setInView] = useState(false);
-  const [exporting, setExporting] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const autoStarted = useRef(false);
-  const { toast } = useToast();
 
-  // Start autoplay the first time the deck scrolls into view.
+  // Start autoplay as soon as any part of the deck scrolls into view.
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
@@ -70,7 +68,7 @@ const AnanyaDeck = () => {
           setPlaying(true);
         }
       },
-      { threshold: 0.35 }
+      { threshold: 0.1 }
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -86,22 +84,6 @@ const AnanyaDeck = () => {
     const t = setInterval(() => go(index + 1, 1), AUTOPLAY_MS);
     return () => clearInterval(t);
   }, [inView, hovered, playing, index, go]);
-
-  const handlePptx = async () => {
-    setExporting(true);
-    try {
-      await downloadDeckPptx();
-      toast({ title: "PowerPoint downloaded", description: "ananya-seo-services-deck.pptx" });
-    } catch {
-      toast({
-        title: "Export failed",
-        description: "Please try again in a moment.",
-        variant: "destructive",
-      });
-    } finally {
-      setExporting(false);
-    }
-  };
 
   return (
     <section ref={sectionRef} id="deck" className="relative py-20 bg-navy overflow-hidden">
