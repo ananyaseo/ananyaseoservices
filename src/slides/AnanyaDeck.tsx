@@ -3,15 +3,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   ChevronLeft,
   ChevronRight,
-  FileDown,
-  FileText,
   Pause,
   Play,
 } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 import { deckSlides } from "./deck-data";
 import SlideCanvas from "./SlideCanvas";
-import { downloadDeckPptx } from "./pptx-export";
 
 const AUTOPLAY_MS = 6000;
 
