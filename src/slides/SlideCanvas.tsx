@@ -190,7 +190,6 @@ const AudienceSlide = ({ slide }: { slide: DeckSlideData }) => (
         src={slide.image}
         alt={slide.imageAlt || ""}
         className="absolute right-[100px] top-[300px] w-[660px] h-[660px] object-cover rounded-3xl shadow-2xl"
-        loading="lazy"
       />
     )}
     <Chrome />
@@ -273,7 +272,6 @@ const ImageBlock = ({ slide }: { slide: DeckSlideData }) => (
     src={slide.image}
     alt={slide.imageAlt || ""}
     className="w-[740px] h-[560px] object-cover rounded-3xl shadow-2xl shrink-0"
-    loading="lazy"
   />
 );
 

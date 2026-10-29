@@ -53,6 +53,17 @@
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Open Sans', sans-serif;
 
+    /* Deck typography scale — also used by the /deck-print route,
+       which renders slides without the .ananya-slide-content wrapper. */
+    --as-title-lg: 92px;
+    --as-title: 66px;
+    --as-subtitle: 38px;
+    --as-body-lg: 32px;
+    --as-body: 27px;
+    --as-caption: 22px;
+    --as-kicker: 22px;
+    --as-chrome: 19px;
+
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
