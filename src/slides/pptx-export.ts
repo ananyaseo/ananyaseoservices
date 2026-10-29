@@ -112,6 +112,55 @@ const addCard = (
   });
 };
 
+/** Compact horizontal card (icon left, title + text right) for short cards. */
+const addRowCard = (
+  s: ReturnType<PptxGenJS["addSlide"]>,
+  card: { icon?: string; title: string; text: string },
+  x: number,
+  y: number,
+  w: number,
+  h: number
+) => {
+  s.addShape("roundRect", {
+    x,
+    y,
+    w,
+    h,
+    fill: { color: BRAND.navyLight },
+    line: { color: BRAND.white, transparency: 85 },
+    rectRadius: 0.12,
+  });
+  const iconSize = 0.55;
+  s.addShape("roundRect", {
+    x: x + 0.35,
+    y: y + (h - iconSize) / 2,
+    w: iconSize,
+    h: iconSize,
+    fill: { color: BRAND.green, transparency: 70 },
+    line: { color: BRAND.green },
+    rectRadius: 0.1,
+  });
+  s.addText(card.title, {
+    x: x + 1.15,
+    y: y + 0.22,
+    w: w - 1.5,
+    h: 0.45,
+    fontFace: "Poppins",
+    fontSize: 16,
+    bold: true,
+    color: BRAND.white,
+  });
+  s.addText(card.text, {
+    x: x + 1.15,
+    y: y + 0.68,
+    w: w - 1.5,
+    h: h - 0.85,
+    fontFace: "Open Sans",
+    fontSize: 12,
+    color: BRAND.softText,
+  });
+};
+
 const buildSlide = (
   pptx: PptxGenJS,
   slide: DeckSlideData,
@@ -215,7 +264,7 @@ const buildSlide = (
     case "audience": {
       const s = addHeader(pptx, slide);
       (slide.cards || []).forEach((card, i) =>
-        addCard(s, card, 0.7, 2.9 + i * 1.45, 7.4, 1.3)
+        addRowCard(s, card, 0.7, 2.9 + i * 1.45, 7.4, 1.3)
       );
       if (slide.image && images.has(slide.image)) {
         s.addImage({
@@ -315,7 +364,7 @@ const buildSlide = (
       (slide.cards || []).forEach((card, i) => {
         const col = i % 2;
         const row = Math.floor(i / 2);
-        addCard(s, card, 0.7 + col * 6.15, 2.8 + row * 2.05, 5.9, 1.9);
+        addRowCard(s, card, 0.7 + col * 6.15, 2.8 + row * 2.05, 5.9, 1.9);
       });
       break;
     }

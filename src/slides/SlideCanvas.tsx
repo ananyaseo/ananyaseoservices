@@ -190,7 +190,6 @@ const AudienceSlide = ({ slide }: { slide: DeckSlideData }) => (
         src={slide.image}
         alt={slide.imageAlt || ""}
         className="absolute right-[100px] top-[300px] w-[660px] h-[660px] object-cover rounded-3xl shadow-2xl"
-        loading="lazy"
       />
     )}
     <Chrome />
@@ -240,7 +239,7 @@ const ServiceSlide = ({ slide }: { slide: DeckSlideData }) => {
   return (
     <>
       <Header slide={slide} />
-      <div className="absolute left-[100px] top-[330px] w-[1720px] flex gap-20 items-start">
+      <div className="absolute left-[100px] top-[420px] w-[1720px] flex gap-20 items-start">
         {!imageRight && slide.image && <ImageBlock slide={slide} />}
         <motion.div variants={item} className="flex-1 pt-2">
           <ul className="space-y-5">
@@ -273,7 +272,6 @@ const ImageBlock = ({ slide }: { slide: DeckSlideData }) => (
     src={slide.image}
     alt={slide.imageAlt || ""}
     className="w-[740px] h-[560px] object-cover rounded-3xl shadow-2xl shrink-0"
-    loading="lazy"
   />
 );
 
