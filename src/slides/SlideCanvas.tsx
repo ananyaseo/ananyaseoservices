@@ -239,7 +239,7 @@ const ServiceSlide = ({ slide }: { slide: DeckSlideData }) => {
   return (
     <>
       <Header slide={slide} />
-      <div className="absolute left-[100px] top-[330px] w-[1720px] flex gap-20 items-start">
+      <div className="absolute left-[100px] top-[420px] w-[1720px] flex gap-20 items-start">
         {!imageRight && slide.image && <ImageBlock slide={slide} />}
         <motion.div variants={item} className="flex-1 pt-2">
           <ul className="space-y-5">
