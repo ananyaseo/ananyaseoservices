@@ -264,7 +264,7 @@ const buildSlide = (
     case "audience": {
       const s = addHeader(pptx, slide);
       (slide.cards || []).forEach((card, i) =>
-        addCard(s, card, 0.7, 2.9 + i * 1.45, 7.4, 1.3)
+        addRowCard(s, card, 0.7, 2.9 + i * 1.45, 7.4, 1.3)
       );
       if (slide.image && images.has(slide.image)) {
         s.addImage({
@@ -364,7 +364,7 @@ const buildSlide = (
       (slide.cards || []).forEach((card, i) => {
         const col = i % 2;
         const row = Math.floor(i / 2);
-        addCard(s, card, 0.7 + col * 6.15, 2.8 + row * 2.05, 5.9, 1.9);
+        addRowCard(s, card, 0.7 + col * 6.15, 2.8 + row * 2.05, 5.9, 1.9);
       });
       break;
     }
