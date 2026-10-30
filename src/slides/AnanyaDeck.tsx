@@ -86,30 +86,14 @@ const AnanyaDeck = () => {
   }, [inView, hovered, playing, index, go]);
 
   return (
-    <section ref={sectionRef} id="deck" className="relative py-10 bg-navy overflow-hidden">
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(900px 500px at 80% 0%, hsl(var(--navy-light) / 0.6), transparent 70%)",
-        }}
-      />
+    <section ref={sectionRef} id="deck" className="relative py-10 bg-muted overflow-hidden">
       <div className="container relative z-10">
-        <div className="text-center mb-6">
-          <span className="text-primary font-semibold text-base uppercase tracking-wider">
-            Company Deck
-          </span>
-          <h2 className="text-2xl md:text-3xl font-bold font-heading text-navy-foreground mt-2 mb-2">
-            Ananya SEO Services at a Glance
-          </h2>
-        </div>
-
         <div
-          className="relative mx-auto rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/15"
+          className="relative mx-auto rounded-2xl overflow-hidden shadow-2xl ring-1 ring-navy/10"
           style={{
             aspectRatio: "16 / 9",
-            width: "min(100%, calc(68vh * 16 / 9))",
-            maxHeight: "68vh",
+            width: "min(100%, calc(74vh * 16 / 9))",
+            maxHeight: "74vh",
           }}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
