@@ -1,4 +1,5 @@
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.png";
 import aboutTeam from "@/assets/about-team.jpg";
 import seoImg from "@/assets/seo-services.jpg";
 import socialImg from "@/assets/social-media.jpg";
@@ -37,6 +38,7 @@ export interface DeckSlideData {
   kicker?: string;
   title: string;
   subtitle?: string;
+  logo?: string;
   bullets?: string[];
   cards?: DeckCard[];
   stats?: { value: string; label: string }[];
