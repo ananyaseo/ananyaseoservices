@@ -134,7 +134,7 @@ const TitleSlide = ({ slide }: { slide: DeckSlideData }) => (
     >
       {(slide.stats || []).map((s) => (
         <motion.div key={s.label} variants={item}>
-          <div className="text-[64px] leading-none font-heading font-bold text-primary">
+          <div className="text-[78px] leading-none font-heading font-bold text-primary">
             {s.value}
           </div>
           <div className="as-caption text-navy-foreground/75 mt-2">{s.label}</div>
@@ -176,7 +176,7 @@ const CapabilitiesSlide = ({ slide }: { slide: DeckSlideData }) => (
 const AudienceSlide = ({ slide }: { slide: DeckSlideData }) => (
   <>
     <Header slide={slide} />
-    <div className="absolute left-[100px] top-[330px] w-[980px] flex flex-col gap-6">
+    <div className="absolute left-[100px] top-[380px] w-[980px] flex flex-col gap-6">
       {(slide.cards || []).map((card) => (
         <motion.div
           key={card.title}
