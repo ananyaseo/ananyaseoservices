@@ -68,7 +68,7 @@ const Header = ({ slide }: { slide: DeckSlideData }) => (
 const Chrome = () => (
   <div className="absolute bottom-[34px] left-[100px] right-[100px] flex items-center justify-between">
     <span className="as-chrome text-navy-foreground/45">
-      Ananya SEO Services · ananyaseo.com
+      Ananya SEO Services at a Glance · ananyaseo.com
     </span>
     <span className="as-chrome text-navy-foreground/45">Affordable Excellence Since 2010</span>
   </div>
@@ -107,7 +107,7 @@ const TitleSlide = ({ slide }: { slide: DeckSlideData }) => (
       variants={container}
       initial="hidden"
       animate="show"
-      className="absolute left-[100px] top-[220px] max-w-[980px]"
+      className="absolute left-[100px] top-[180px] max-w-[980px]"
     >
       <motion.p variants={item} className="as-kicker text-accent font-semibold mb-6">
         {slide.kicker}
@@ -118,12 +118,19 @@ const TitleSlide = ({ slide }: { slide: DeckSlideData }) => (
       <motion.p variants={item} className="as-subtitle text-primary mt-6 font-semibold">
         {slide.subtitle}
       </motion.p>
+      {slide.logo && (
+        <motion.div variants={item} className="mt-8">
+          <div className="inline-flex bg-white rounded-3xl p-5 shadow-lg">
+            <img src={slide.logo} alt="Ananya SEO Services logo" className="h-[100px] w-auto" />
+          </div>
+        </motion.div>
+      )}
     </motion.div>
     <motion.div
       variants={container}
       initial="hidden"
       animate="show"
-      className="absolute left-[100px] bottom-[130px] flex gap-16"
+      className="absolute left-[100px] bottom-[110px] flex gap-16"
     >
       {(slide.stats || []).map((s) => (
         <motion.div key={s.label} variants={item}>
