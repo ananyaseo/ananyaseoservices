@@ -55,14 +55,14 @@
 
     /* Deck typography scale — also used by the /deck-print route,
        which renders slides without the .ananya-slide-content wrapper. */
-    --as-title-lg: 92px;
-    --as-title: 66px;
-    --as-subtitle: 38px;
-    --as-body-lg: 32px;
-    --as-body: 27px;
-    --as-caption: 22px;
-    --as-kicker: 22px;
-    --as-chrome: 19px;
+    --as-title-lg: 115px;
+    --as-title: 83px;
+    --as-subtitle: 48px;
+    --as-body-lg: 40px;
+    --as-body: 34px;
+    --as-caption: 27px;
+    --as-kicker: 27px;
+    --as-chrome: 22px;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -119,14 +119,14 @@
   color: hsl(var(--navy-foreground));
   font-family: var(--font-body);
 
-  --as-title-lg: 92px;
-  --as-title: 66px;
-  --as-subtitle: 38px;
-  --as-body-lg: 32px;
-  --as-body: 27px;
-  --as-caption: 22px;
-  --as-kicker: 22px;
-  --as-chrome: 19px;
+  --as-title-lg: 115px;
+  --as-title: 83px;
+  --as-subtitle: 48px;
+  --as-body-lg: 40px;
+  --as-body: 34px;
+  --as-caption: 27px;
+  --as-kicker: 27px;
+  --as-chrome: 22px;
 }
 .as-kicker   { font-size: var(--as-kicker);   line-height: 1.2; letter-spacing: 0.18em; text-transform: uppercase; }
 .as-title-lg { font-family: var(--font-heading); font-size: var(--as-title-lg); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; }

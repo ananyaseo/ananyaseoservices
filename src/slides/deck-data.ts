@@ -1,4 +1,5 @@
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.png";
 import aboutTeam from "@/assets/about-team.jpg";
 import seoImg from "@/assets/seo-services.jpg";
 import socialImg from "@/assets/social-media.jpg";
@@ -37,6 +38,7 @@ export interface DeckSlideData {
   kicker?: string;
   title: string;
   subtitle?: string;
+  logo?: string;
   bullets?: string[];
   cards?: DeckCard[];
   stats?: { value: string; label: string }[];
@@ -59,6 +61,7 @@ export const deckSlides: DeckSlideData[] = [
     kicker: "Established in Bangalore · Since 2010",
     title: "Ananya SEO Services",
     subtitle: "Your One-Stop Solution for Digital Marketing Success",
+    logo,
     stats: [
       { value: "500+", label: "Clients Consulted" },
       { value: "14+", label: "Years of Excellence" },

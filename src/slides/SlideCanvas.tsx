@@ -68,7 +68,7 @@ const Header = ({ slide }: { slide: DeckSlideData }) => (
 const Chrome = () => (
   <div className="absolute bottom-[34px] left-[100px] right-[100px] flex items-center justify-between">
     <span className="as-chrome text-navy-foreground/45">
-      Ananya SEO Services · ananyaseo.com
+      Ananya SEO Services at a Glance · ananyaseo.com
     </span>
     <span className="as-chrome text-navy-foreground/45">Affordable Excellence Since 2010</span>
   </div>
@@ -107,7 +107,7 @@ const TitleSlide = ({ slide }: { slide: DeckSlideData }) => (
       variants={container}
       initial="hidden"
       animate="show"
-      className="absolute left-[100px] top-[220px] max-w-[980px]"
+      className="absolute left-[100px] top-[180px] max-w-[980px]"
     >
       <motion.p variants={item} className="as-kicker text-accent font-semibold mb-6">
         {slide.kicker}
@@ -118,16 +118,23 @@ const TitleSlide = ({ slide }: { slide: DeckSlideData }) => (
       <motion.p variants={item} className="as-subtitle text-primary mt-6 font-semibold">
         {slide.subtitle}
       </motion.p>
+      {slide.logo && (
+        <motion.div variants={item} className="mt-8">
+          <div className="inline-flex bg-white rounded-3xl p-5 shadow-lg">
+            <img src={slide.logo} alt="Ananya SEO Services logo" className="h-[100px] w-auto" />
+          </div>
+        </motion.div>
+      )}
     </motion.div>
     <motion.div
       variants={container}
       initial="hidden"
       animate="show"
-      className="absolute left-[100px] bottom-[130px] flex gap-16"
+      className="absolute left-[100px] bottom-[110px] flex gap-16"
     >
       {(slide.stats || []).map((s) => (
         <motion.div key={s.label} variants={item}>
-          <div className="text-[64px] leading-none font-heading font-bold text-primary">
+          <div className="text-[78px] leading-none font-heading font-bold text-primary">
             {s.value}
           </div>
           <div className="as-caption text-navy-foreground/75 mt-2">{s.label}</div>
@@ -169,7 +176,7 @@ const CapabilitiesSlide = ({ slide }: { slide: DeckSlideData }) => (
 const AudienceSlide = ({ slide }: { slide: DeckSlideData }) => (
   <>
     <Header slide={slide} />
-    <div className="absolute left-[100px] top-[330px] w-[980px] flex flex-col gap-6">
+    <div className="absolute left-[100px] top-[380px] w-[980px] flex flex-col gap-6">
       {(slide.cards || []).map((card) => (
         <motion.div
           key={card.title}
@@ -189,7 +196,7 @@ const AudienceSlide = ({ slide }: { slide: DeckSlideData }) => (
         variants={item}
         src={slide.image}
         alt={slide.imageAlt || ""}
-        className="absolute right-[100px] top-[300px] w-[660px] h-[660px] object-cover rounded-3xl shadow-2xl"
+        className="absolute right-[100px] top-[340px] w-[660px] h-[660px] object-cover rounded-3xl shadow-2xl"
       />
     )}
     <Chrome />
@@ -208,7 +215,7 @@ const StatsSlide = ({ slide }: { slide: DeckSlideData }) => (
             i > 0 ? "border-l border-white/15" : ""
           }`}
         >
-          <div className="text-[110px] leading-none font-heading font-bold text-primary">
+          <div className="text-[132px] leading-none font-heading font-bold text-primary">
             {s.value}
           </div>
           <div className="as-body text-navy-foreground/80 mt-5 max-w-[420px]">{s.label}</div>
@@ -239,7 +246,7 @@ const ServiceSlide = ({ slide }: { slide: DeckSlideData }) => {
   return (
     <>
       <Header slide={slide} />
-      <div className="absolute left-[100px] top-[420px] w-[1720px] flex gap-20 items-start">
+      <div className="absolute left-[100px] top-[440px] w-[1720px] flex gap-20 items-start">
         {!imageRight && slide.image && <ImageBlock slide={slide} />}
         <motion.div variants={item} className="flex-1 pt-2">
           <ul className="space-y-5">
@@ -386,7 +393,7 @@ const CtaSlide = ({ slide }: { slide: DeckSlideData }) => {
           value={form.fullName}
           onChange={(e) => setForm((f) => ({ ...f, fullName: e.target.value }))}
           required
-          className="h-[68px] rounded-xl border border-input bg-background px-6 text-[26px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+          className="h-[68px] rounded-xl border border-input bg-background px-6 text-[30px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
         />
         <input
           type="email"
@@ -395,7 +402,7 @@ const CtaSlide = ({ slide }: { slide: DeckSlideData }) => {
           value={form.email}
           onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
           required
-          className="h-[68px] rounded-xl border border-input bg-background px-6 text-[26px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+          className="h-[68px] rounded-xl border border-input bg-background px-6 text-[30px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
         />
         <textarea
           name="message"
@@ -404,7 +411,7 @@ const CtaSlide = ({ slide }: { slide: DeckSlideData }) => {
           onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
           required
           rows={4}
-          className="rounded-xl border border-input bg-background px-6 py-4 text-[26px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+          className="rounded-xl border border-input bg-background px-6 py-4 text-[30px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
         />
         <button
           type="submit"

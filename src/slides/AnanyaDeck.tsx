@@ -86,30 +86,14 @@ const AnanyaDeck = () => {
   }, [inView, hovered, playing, index, go]);
 
   return (
-    <section ref={sectionRef} id="deck" className="relative py-10 bg-navy overflow-hidden">
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(900px 500px at 80% 0%, hsl(var(--navy-light) / 0.6), transparent 70%)",
-        }}
-      />
+    <section ref={sectionRef} id="deck" className="relative py-10 bg-muted overflow-hidden">
       <div className="container relative z-10">
-        <div className="text-center mb-6">
-          <span className="text-primary font-semibold text-base uppercase tracking-wider">
-            Company Deck
-          </span>
-          <h2 className="text-2xl md:text-3xl font-bold font-heading text-navy-foreground mt-2 mb-2">
-            Ananya SEO Services at a Glance
-          </h2>
-        </div>
-
         <div
-          className="relative mx-auto rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/15"
+          className="relative mx-auto rounded-2xl overflow-hidden shadow-2xl ring-1 ring-navy/10"
           style={{
             aspectRatio: "16 / 9",
-            width: "min(100%, calc(68vh * 16 / 9))",
-            maxHeight: "68vh",
+            width: "min(100%, calc(74vh * 16 / 9))",
+            maxHeight: "74vh",
           }}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
@@ -138,7 +122,7 @@ const AnanyaDeck = () => {
             type="button"
             aria-label="Previous slide"
             onClick={() => go(index - 1, -1)}
-            className="p-2.5 rounded-full bg-white/10 text-white hover:bg-white/25 transition-colors"
+            className="p-2.5 rounded-full bg-navy/10 text-navy hover:bg-navy/20 transition-colors"
           >
             <ChevronLeft size={20} />
           </button>
@@ -146,7 +130,7 @@ const AnanyaDeck = () => {
             type="button"
             aria-label={playing ? "Pause slideshow" : "Play slideshow"}
             onClick={() => setPlaying((p) => !p)}
-            className="p-2.5 rounded-full bg-white/10 text-white hover:bg-white/25 transition-colors"
+            className="p-2.5 rounded-full bg-navy/10 text-navy hover:bg-navy/20 transition-colors"
           >
             {playing ? <Pause size={20} /> : <Play size={20} />}
           </button>
@@ -154,7 +138,7 @@ const AnanyaDeck = () => {
             type="button"
             aria-label="Next slide"
             onClick={() => go(index + 1, 1)}
-            className="p-2.5 rounded-full bg-white/10 text-white hover:bg-white/25 transition-colors"
+            className="p-2.5 rounded-full bg-navy/10 text-navy hover:bg-navy/20 transition-colors"
           >
             <ChevronRight size={20} />
           </button>
@@ -167,13 +151,13 @@ const AnanyaDeck = () => {
                 aria-label={`Go to slide ${i + 1}`}
                 onClick={() => go(i, i > index ? 1 : -1)}
                 className={`h-2.5 rounded-full transition-all duration-300 ${
-                  i === index ? "w-7 bg-primary" : "w-2.5 bg-white/30 hover:bg-white/60"
+                  i === index ? "w-7 bg-primary" : "w-2.5 bg-navy/20 hover:bg-navy/40"
                 }`}
               />
             ))}
           </div>
 
-          <span className="text-white/70 text-sm font-medium tabular-nums">
+          <span className="text-navy/70 text-sm font-medium tabular-nums">
             {String(index + 1).padStart(2, "0")} / {deckSlides.length}
           </span>
 

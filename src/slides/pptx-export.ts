@@ -26,7 +26,7 @@ const addHeader = (pptx: PptxGenJS, slide: DeckSlideData) => {
       w: 12,
       h: 0.4,
       fontFace: "Poppins",
-      fontSize: 13,
+      fontSize: 15,
       bold: true,
       color: BRAND.orange,
       charSpacing: 2,
@@ -38,7 +38,7 @@ const addHeader = (pptx: PptxGenJS, slide: DeckSlideData) => {
     w: 12,
     h: 0.9,
     fontFace: "Poppins",
-    fontSize: 34,
+    fontSize: 40,
     bold: true,
     color: BRAND.white,
   });
@@ -49,17 +49,17 @@ const addHeader = (pptx: PptxGenJS, slide: DeckSlideData) => {
       w: 11.9,
       h: 0.9,
       fontFace: "Open Sans",
-      fontSize: 15,
+      fontSize: 17.5,
       color: BRAND.softText,
     });
   }
-  s.addText("Ananya SEO Services · ananyaseo.com", {
+  s.addText("Ananya SEO Services at a Glance · ananyaseo.com", {
     x: 0.7,
-    y: 7.05,
-    w: 6,
+    y: 7.08,
+    w: 6.5,
     h: 0.3,
     fontFace: "Open Sans",
-    fontSize: 10,
+    fontSize: 11.5,
     color: BRAND.softText,
   });
   return s;
@@ -97,17 +97,17 @@ const addCard = (
     w: w - 0.7,
     h: 0.5,
     fontFace: "Poppins",
-    fontSize: 17,
+    fontSize: 20,
     bold: true,
     color: BRAND.white,
   });
   s.addText(card.text, {
     x: x + 0.35,
-    y: y + 1.55,
+    y: y + 1.6,
     w: w - 0.7,
-    h: h - 1.8,
+    h: h - 1.85,
     fontFace: "Open Sans",
-    fontSize: 12.5,
+    fontSize: 15,
     color: BRAND.softText,
   });
 };
@@ -142,21 +142,21 @@ const addRowCard = (
   });
   s.addText(card.title, {
     x: x + 1.15,
-    y: y + 0.22,
+    y: y + 0.2,
     w: w - 1.5,
-    h: 0.45,
+    h: 0.5,
     fontFace: "Poppins",
-    fontSize: 16,
+    fontSize: 20,
     bold: true,
     color: BRAND.white,
   });
   s.addText(card.text, {
     x: x + 1.15,
-    y: y + 0.68,
+    y: y + 0.7,
     w: w - 1.5,
     h: h - 0.85,
     fontFace: "Open Sans",
-    fontSize: 12,
+    fontSize: 15,
     color: BRAND.softText,
   });
 };
@@ -189,53 +189,70 @@ const buildSlide = (
       }
       s.addText((slide.kicker || "").toUpperCase(), {
         x: 0.7,
-        y: 1.5,
+        y: 1.2,
         w: 6,
         h: 0.4,
         fontFace: "Poppins",
-        fontSize: 13,
+        fontSize: 15,
         bold: true,
         color: BRAND.orange,
         charSpacing: 2,
       });
       s.addText(slide.title, {
         x: 0.7,
-        y: 2.0,
+        y: 1.7,
         w: 6.4,
-        h: 1.6,
+        h: 1.9,
         fontFace: "Poppins",
-        fontSize: 44,
+        fontSize: 52,
         bold: true,
         color: BRAND.white,
       });
       s.addText(slide.subtitle || "", {
         x: 0.7,
-        y: 3.6,
+        y: 3.65,
         w: 6,
-        h: 0.8,
+        h: 0.85,
         fontFace: "Poppins",
-        fontSize: 19,
+        fontSize: 23,
         bold: true,
         color: BRAND.green,
       });
+      if (slide.logo && images.has(slide.logo)) {
+        s.addShape("roundRect", {
+          x: 0.7,
+          y: 4.6,
+          w: 1.35,
+          h: 1.35,
+          fill: { color: BRAND.white },
+          rectRadius: 0.1,
+        });
+        s.addImage({
+          data: images.get(slide.logo)!,
+          x: 0.78,
+          y: 4.68,
+          w: 1.19,
+          h: 1.19,
+        });
+      }
       (slide.stats || []).forEach((stat, i) => {
         s.addText(stat.value, {
           x: 0.7 + i * 2.1,
-          y: 5.4,
+          y: 6.15,
           w: 2,
-          h: 0.8,
+          h: 0.7,
           fontFace: "Poppins",
-          fontSize: 34,
+          fontSize: 40,
           bold: true,
           color: BRAND.green,
         });
         s.addText(stat.label, {
           x: 0.7 + i * 2.1,
-          y: 6.15,
+          y: 6.85,
           w: 2,
-          h: 0.6,
+          h: 0.5,
           fontFace: "Open Sans",
-          fontSize: 11,
+          fontSize: 13,
           color: BRAND.softText,
         });
       });
@@ -254,7 +271,7 @@ const buildSlide = (
           h: 0.45,
           align: "center",
           fontFace: "Open Sans",
-          fontSize: 12,
+          fontSize: 13.5,
           color: BRAND.softText,
           line: { color: BRAND.white, transparency: 70 },
         });
