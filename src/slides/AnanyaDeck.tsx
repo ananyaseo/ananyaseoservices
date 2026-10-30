@@ -122,7 +122,7 @@ const AnanyaDeck = () => {
             type="button"
             aria-label="Previous slide"
             onClick={() => go(index - 1, -1)}
-            className="p-2.5 rounded-full bg-white/10 text-white hover:bg-white/25 transition-colors"
+            className="p-2.5 rounded-full bg-navy/10 text-navy hover:bg-navy/20 transition-colors"
           >
             <ChevronLeft size={20} />
           </button>
@@ -130,7 +130,7 @@ const AnanyaDeck = () => {
             type="button"
             aria-label={playing ? "Pause slideshow" : "Play slideshow"}
             onClick={() => setPlaying((p) => !p)}
-            className="p-2.5 rounded-full bg-white/10 text-white hover:bg-white/25 transition-colors"
+            className="p-2.5 rounded-full bg-navy/10 text-navy hover:bg-navy/20 transition-colors"
           >
             {playing ? <Pause size={20} /> : <Play size={20} />}
           </button>
@@ -138,7 +138,7 @@ const AnanyaDeck = () => {
             type="button"
             aria-label="Next slide"
             onClick={() => go(index + 1, 1)}
-            className="p-2.5 rounded-full bg-white/10 text-white hover:bg-white/25 transition-colors"
+            className="p-2.5 rounded-full bg-navy/10 text-navy hover:bg-navy/20 transition-colors"
           >
             <ChevronRight size={20} />
           </button>
@@ -151,13 +151,13 @@ const AnanyaDeck = () => {
                 aria-label={`Go to slide ${i + 1}`}
                 onClick={() => go(i, i > index ? 1 : -1)}
                 className={`h-2.5 rounded-full transition-all duration-300 ${
-                  i === index ? "w-7 bg-primary" : "w-2.5 bg-white/30 hover:bg-white/60"
+                  i === index ? "w-7 bg-primary" : "w-2.5 bg-navy/20 hover:bg-navy/40"
                 }`}
               />
             ))}
           </div>
 
-          <span className="text-white/70 text-sm font-medium tabular-nums">
+          <span className="text-navy/70 text-sm font-medium tabular-nums">
             {String(index + 1).padStart(2, "0")} / {deckSlides.length}
           </span>
 
