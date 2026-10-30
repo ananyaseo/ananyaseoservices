@@ -26,7 +26,7 @@ const addHeader = (pptx: PptxGenJS, slide: DeckSlideData) => {
       w: 12,
       h: 0.4,
       fontFace: "Poppins",
-      fontSize: 13,
+      fontSize: 15,
       bold: true,
       color: BRAND.orange,
       charSpacing: 2,
@@ -38,7 +38,7 @@ const addHeader = (pptx: PptxGenJS, slide: DeckSlideData) => {
     w: 12,
     h: 0.9,
     fontFace: "Poppins",
-    fontSize: 34,
+    fontSize: 40,
     bold: true,
     color: BRAND.white,
   });
@@ -49,17 +49,17 @@ const addHeader = (pptx: PptxGenJS, slide: DeckSlideData) => {
       w: 11.9,
       h: 0.9,
       fontFace: "Open Sans",
-      fontSize: 15,
+      fontSize: 17.5,
       color: BRAND.softText,
     });
   }
-  s.addText("Ananya SEO Services · ananyaseo.com", {
+  s.addText("Ananya SEO Services at a Glance · ananyaseo.com", {
     x: 0.7,
-    y: 7.05,
-    w: 6,
+    y: 7.08,
+    w: 6.5,
     h: 0.3,
     fontFace: "Open Sans",
-    fontSize: 10,
+    fontSize: 11.5,
     color: BRAND.softText,
   });
   return s;
@@ -97,17 +97,17 @@ const addCard = (
     w: w - 0.7,
     h: 0.5,
     fontFace: "Poppins",
-    fontSize: 17,
+    fontSize: 20,
     bold: true,
     color: BRAND.white,
   });
   s.addText(card.text, {
     x: x + 0.35,
-    y: y + 1.55,
+    y: y + 1.6,
     w: w - 0.7,
-    h: h - 1.8,
+    h: h - 1.85,
     fontFace: "Open Sans",
-    fontSize: 12.5,
+    fontSize: 15,
     color: BRAND.softText,
   });
 };
@@ -142,21 +142,21 @@ const addRowCard = (
   });
   s.addText(card.title, {
     x: x + 1.15,
-    y: y + 0.22,
+    y: y + 0.2,
     w: w - 1.5,
-    h: 0.45,
+    h: 0.5,
     fontFace: "Poppins",
-    fontSize: 16,
+    fontSize: 20,
     bold: true,
     color: BRAND.white,
   });
   s.addText(card.text, {
     x: x + 1.15,
-    y: y + 0.68,
+    y: y + 0.7,
     w: w - 1.5,
     h: h - 0.85,
     fontFace: "Open Sans",
-    fontSize: 12,
+    fontSize: 15,
     color: BRAND.softText,
   });
 };
