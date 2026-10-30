@@ -196,7 +196,7 @@ const AudienceSlide = ({ slide }: { slide: DeckSlideData }) => (
         variants={item}
         src={slide.image}
         alt={slide.imageAlt || ""}
-        className="absolute right-[100px] top-[300px] w-[660px] h-[660px] object-cover rounded-3xl shadow-2xl"
+        className="absolute right-[100px] top-[340px] w-[660px] h-[660px] object-cover rounded-3xl shadow-2xl"
       />
     )}
     <Chrome />
@@ -215,7 +215,7 @@ const StatsSlide = ({ slide }: { slide: DeckSlideData }) => (
             i > 0 ? "border-l border-white/15" : ""
           }`}
         >
-          <div className="text-[110px] leading-none font-heading font-bold text-primary">
+          <div className="text-[132px] leading-none font-heading font-bold text-primary">
             {s.value}
           </div>
           <div className="as-body text-navy-foreground/80 mt-5 max-w-[420px]">{s.label}</div>
@@ -246,7 +246,7 @@ const ServiceSlide = ({ slide }: { slide: DeckSlideData }) => {
   return (
     <>
       <Header slide={slide} />
-      <div className="absolute left-[100px] top-[420px] w-[1720px] flex gap-20 items-start">
+      <div className="absolute left-[100px] top-[440px] w-[1720px] flex gap-20 items-start">
         {!imageRight && slide.image && <ImageBlock slide={slide} />}
         <motion.div variants={item} className="flex-1 pt-2">
           <ul className="space-y-5">
