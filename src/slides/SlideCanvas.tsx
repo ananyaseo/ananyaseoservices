@@ -393,7 +393,7 @@ const CtaSlide = ({ slide }: { slide: DeckSlideData }) => {
           value={form.fullName}
           onChange={(e) => setForm((f) => ({ ...f, fullName: e.target.value }))}
           required
-          className="h-[68px] rounded-xl border border-input bg-background px-6 text-[26px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+          className="h-[68px] rounded-xl border border-input bg-background px-6 text-[30px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
         />
         <input
           type="email"
@@ -402,7 +402,7 @@ const CtaSlide = ({ slide }: { slide: DeckSlideData }) => {
           value={form.email}
           onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
           required
-          className="h-[68px] rounded-xl border border-input bg-background px-6 text-[26px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+          className="h-[68px] rounded-xl border border-input bg-background px-6 text-[30px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
         />
         <textarea
           name="message"
@@ -411,7 +411,7 @@ const CtaSlide = ({ slide }: { slide: DeckSlideData }) => {
           onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
           required
           rows={4}
-          className="rounded-xl border border-input bg-background px-6 py-4 text-[26px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+          className="rounded-xl border border-input bg-background px-6 py-4 text-[30px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
         />
         <button
           type="submit"
