@@ -61,6 +61,7 @@ export const deckSlides: DeckSlideData[] = [
     kicker: "Established in Bangalore · Since 2010",
     title: "Ananya SEO Services",
     subtitle: "Your One-Stop Solution for Digital Marketing Success",
+    logo,
     stats: [
       { value: "500+", label: "Clients Consulted" },
       { value: "14+", label: "Years of Excellence" },
