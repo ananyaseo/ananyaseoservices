@@ -60,7 +60,12 @@ const Header = ({ slide }: { slide: DeckSlideData }) => (
     )}
     <h2 className="as-title font-bold text-navy-foreground">{slide.title}</h2>
     {slide.subtitle && (
-      <p className="as-subtitle text-navy-foreground/70 mt-5 max-w-[1250px]">{slide.subtitle}</p>
+      <p
+        className="as-subtitle text-navy-foreground/70 mt-5 max-w-[1250px]"
+        style={slide.layout === "audience" ? { maxWidth: 1000 } : undefined}
+      >
+        {slide.subtitle}
+      </p>
     )}
   </motion.div>
 );
@@ -176,12 +181,12 @@ const CapabilitiesSlide = ({ slide }: { slide: DeckSlideData }) => (
 const AudienceSlide = ({ slide }: { slide: DeckSlideData }) => (
   <>
     <Header slide={slide} />
-    <div className="absolute left-[100px] top-[380px] w-[980px] flex flex-col gap-6">
+    <div className="absolute left-[100px] top-[460px] w-[980px] flex flex-col gap-5">
       {(slide.cards || []).map((card) => (
         <motion.div
           key={card.title}
           variants={item}
-          className="flex items-center gap-7 bg-navy-light/70 border border-white/10 rounded-3xl px-9 py-7"
+          className="flex items-center gap-7 bg-navy-light/70 border border-white/10 rounded-3xl px-9 py-6"
         >
           <IconCircle icon={card.icon} size={72} />
           <div>

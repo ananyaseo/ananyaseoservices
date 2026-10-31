@@ -281,7 +281,7 @@ const buildSlide = (
     case "audience": {
       const s = addHeader(pptx, slide);
       (slide.cards || []).forEach((card, i) =>
-        addRowCard(s, card, 0.7, 2.9 + i * 1.45, 7.4, 1.3)
+        addRowCard(s, card, 0.7, 2.9 + i * 1.5, 7.4, 1.4)
       );
       if (slide.image && images.has(slide.image)) {
         s.addImage({
@@ -305,7 +305,7 @@ const buildSlide = (
           h: 1.2,
           align: "center",
           fontFace: "Poppins",
-          fontSize: 60,
+          fontSize: 72,
           bold: true,
           color: BRAND.green,
         });
@@ -316,7 +316,7 @@ const buildSlide = (
           h: 0.8,
           align: "center",
           fontFace: "Open Sans",
-          fontSize: 14,
+          fontSize: 16.5,
           color: BRAND.white,
         });
       });
@@ -328,7 +328,7 @@ const buildSlide = (
           h: 0.45,
           align: "center",
           fontFace: "Open Sans",
-          fontSize: 11.5,
+          fontSize: 13,
           color: BRAND.softText,
           line: { color: BRAND.white, transparency: 70 },
         });
@@ -353,27 +353,15 @@ const buildSlide = (
       (slide.bullets || []).forEach((b, i) => {
         s.addText(b, {
           x: textX + 0.35,
-          y: 2.95 + i * 0.62,
-          w: 6.2,
+          y: 2.9 + i * 0.68,
+          w: imageRight ? 6.2 : 4.6,
           h: 0.6,
           fontFace: "Open Sans",
-          fontSize: 13.5,
+          fontSize: 15,
           color: BRAND.white,
           bullet: { characterCode: "2713" },
         });
       });
-      if (slide.link) {
-        s.addText(slide.link.label.toUpperCase(), {
-          x: textX + 0.35,
-          y: 6.6,
-          w: 5,
-          h: 0.5,
-          fontFace: "Poppins",
-          fontSize: 12,
-          bold: true,
-          color: BRAND.green,
-        });
-      }
       break;
     }
     case "strengths": {
@@ -394,7 +382,7 @@ const buildSlide = (
         w: 6,
         h: 0.4,
         fontFace: "Poppins",
-        fontSize: 13,
+        fontSize: 15,
         bold: true,
         color: BRAND.orange,
         charSpacing: 2,
@@ -405,7 +393,7 @@ const buildSlide = (
         w: 6.5,
         h: 1.6,
         fontFace: "Poppins",
-        fontSize: 44,
+        fontSize: 50,
         bold: true,
         color: BRAND.white,
       });
@@ -415,7 +403,7 @@ const buildSlide = (
         w: 5.8,
         h: 0.8,
         fontFace: "Open Sans",
-        fontSize: 15,
+        fontSize: 17,
         color: BRAND.softText,
       });
       [
@@ -438,7 +426,7 @@ const buildSlide = (
           w: 5.5,
           h: 0.5,
           fontFace: "Open Sans",
-          fontSize: 16,
+          fontSize: 18.5,
           color: BRAND.white,
         });
       });
@@ -457,7 +445,7 @@ const buildSlide = (
         w: 4.2,
         h: 0.5,
         fontFace: "Poppins",
-        fontSize: 16,
+        fontSize: 18,
         bold: true,
         color: BRAND.navy,
       });
@@ -477,7 +465,7 @@ const buildSlide = (
           w: 3.9,
           h: 0.5,
           fontFace: "Open Sans",
-          fontSize: 11,
+          fontSize: 12,
           color: BRAND.navy,
           transparency: 40,
         });
@@ -497,9 +485,18 @@ const buildSlide = (
         h: 0.55,
         align: "center",
         fontFace: "Poppins",
-        fontSize: 14,
+        fontSize: 16,
         bold: true,
         color: BRAND.white,
+      });
+      s.addText("Ananya SEO Services at a Glance · ananyaseo.com", {
+        x: 0.7,
+        y: 7.08,
+        w: 6.5,
+        h: 0.3,
+        fontFace: "Open Sans",
+        fontSize: 11.5,
+        color: BRAND.softText,
       });
       break;
     }
@@ -521,8 +518,45 @@ export const downloadDeckPptx = async () => {
     if (slide.image && !images.has(slide.image)) {
       images.set(slide.image, await toDataUrl(slide.image));
     }
+    if (slide.logo && !images.has(slide.logo)) {
+      images.set(slide.logo, await toDataUrl(slide.logo));
+    }
   }
 
   for (const slide of deckSlides) buildSlide(pptx, slide, images);
-  await pptx.writeFile({ fileName: "ananya-seo-services-deck.pptx" });
+
+  // pptxgenjs 4.0.1 writes Content_Types overrides for slide masters that don't
+  // exist and puts notesMasterIdLst in the wrong position — PowerPoint refuses
+  // to open the file. Generate the blob, then repair both issues with JSZip.
+  const blob = (await pptx.write({ outputType: "blob" })) as Blob;
+  const JSZip = (await import("jszip")).default;
+  const zip = await JSZip.loadAsync(blob);
+  const partNames = new Set(Object.keys(zip.files));
+  const ctFile = zip.file("[Content_Types].xml")!;
+  const ct = await ctFile.async("string");
+  const cleanedCt = ct.replace(
+    /<Override PartName="([^"]+)"[^>]*\/>/g,
+    (m: string, part: string) => (partNames.has(part.replace(/^\//, "")) ? m : "")
+  );
+  zip.file("[Content_Types].xml", cleanedCt);
+  const pres = zip.file("ppt/presentation.xml")!;
+  let presXml = await pres.async("string");
+  const notesMaster = presXml.match(/<p:notesMasterIdLst>.*?<\/p:notesMasterIdLst>/s);
+  if (notesMaster) {
+    presXml = presXml.replace(notesMaster[0], "");
+    presXml = presXml.replace(
+      /(<p:sldMasterIdLst>.*?<\/p:sldMasterIdLst>)/s,
+      `$1${notesMaster[0]}`
+    );
+    zip.file("ppt/presentation.xml", presXml);
+  }
+  const repaired = await zip.generateAsync({ type: "blob" });
+  const url = URL.createObjectURL(repaired);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "ananya-seo-services-deck.pptx";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
 };
