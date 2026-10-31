@@ -281,7 +281,7 @@ const buildSlide = (
     case "audience": {
       const s = addHeader(pptx, slide);
       (slide.cards || []).forEach((card, i) =>
-        addRowCard(s, card, 0.7, 2.9 + i * 1.45, 7.4, 1.3)
+        addRowCard(s, card, 0.7, 2.9 + i * 1.5, 7.4, 1.4)
       );
       if (slide.image && images.has(slide.image)) {
         s.addImage({
@@ -305,7 +305,7 @@ const buildSlide = (
           h: 1.2,
           align: "center",
           fontFace: "Poppins",
-          fontSize: 60,
+          fontSize: 72,
           bold: true,
           color: BRAND.green,
         });
@@ -316,7 +316,7 @@ const buildSlide = (
           h: 0.8,
           align: "center",
           fontFace: "Open Sans",
-          fontSize: 14,
+          fontSize: 16.5,
           color: BRAND.white,
         });
       });
