@@ -524,5 +524,42 @@ export const downloadDeckPptx = async () => {
   }
 
   for (const slide of deckSlides) buildSlide(pptx, slide, images);
-  await pptx.writeFile({ fileName: "ananya-seo-services-deck.pptx" });
+
+  // pptxgenjs 4.0.1 writes Content_Types overrides for slide masters that don't
+  // exist and puts notesMasterIdLst in the wrong position — PowerPoint refuses
+  // to open the file. Generate the blob, then repair both issues with JSZip.
+  const blob = (await pptx.write({ outputType: "blob" })) as Blob;
+  const JSZip = (await import("jszip")).default;
+  const zip = await JSZip.loadAsync(blob);
+  const ct = await zip.file("[Content_Types].xml")!.async("string");
+  const partNames = new Set(Object.keys(zip.files));
+  await zip
+    .file(
+      "[Content_Types].xml",
+      ct.replace(
+        /<Override PartName="([^"]+)"[^>]*\/>/g,
+        (m: string, part: string) => (partNames.has(part.replace(/^\//, "")) ? m : "")
+      )
+    )
+    .async === undefined; // no-op to satisfy types
+  const pres = zip.file("ppt/presentation.xml")!;
+  let presXml = await pres.async("string");
+  const notesMaster = presXml.match(/<p:notesMasterIdLst>.*?<\/p:notesMasterIdLst>/s);
+  if (notesMaster) {
+    presXml = presXml.replace(notesMaster[0], "");
+    presXml = presXml.replace(
+      /(<p:sldMasterIdLst>.*?<\/p:sldMasterIdLst>)/s,
+      `$1${notesMaster[0]}`
+    );
+    zip.file("ppt/presentation.xml", presXml);
+  }
+  const repaired = await zip.generateAsync({ type: "blob" });
+  const url = URL.createObjectURL(repaired);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "ananya-seo-services-deck.pptx";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
 };
