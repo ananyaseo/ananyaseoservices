@@ -531,17 +531,14 @@ export const downloadDeckPptx = async () => {
   const blob = (await pptx.write({ outputType: "blob" })) as Blob;
   const JSZip = (await import("jszip")).default;
   const zip = await JSZip.loadAsync(blob);
-  const ct = await zip.file("[Content_Types].xml")!.async("string");
   const partNames = new Set(Object.keys(zip.files));
-  await zip
-    .file(
-      "[Content_Types].xml",
-      ct.replace(
-        /<Override PartName="([^"]+)"[^>]*\/>/g,
-        (m: string, part: string) => (partNames.has(part.replace(/^\//, "")) ? m : "")
-      )
-    )
-    .async === undefined; // no-op to satisfy types
+  const ctFile = zip.file("[Content_Types].xml")!;
+  const ct = await ctFile.async("string");
+  const cleanedCt = ct.replace(
+    /<Override PartName="([^"]+)"[^>]*\/>/g,
+    (m: string, part: string) => (partNames.has(part.replace(/^\//, "")) ? m : "")
+  );
+  zip.file("[Content_Types].xml", cleanedCt);
   const pres = zip.file("ppt/presentation.xml")!;
   let presXml = await pres.async("string");
   const notesMaster = presXml.match(/<p:notesMasterIdLst>.*?<\/p:notesMasterIdLst>/s);
