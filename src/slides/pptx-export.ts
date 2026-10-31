@@ -426,7 +426,7 @@ const buildSlide = (
           w: 5.5,
           h: 0.5,
           fontFace: "Open Sans",
-          fontSize: 16,
+          fontSize: 18.5,
           color: BRAND.white,
         });
       });
@@ -445,7 +445,7 @@ const buildSlide = (
         w: 4.2,
         h: 0.5,
         fontFace: "Poppins",
-        fontSize: 16,
+        fontSize: 18,
         bold: true,
         color: BRAND.navy,
       });
@@ -465,7 +465,7 @@ const buildSlide = (
           w: 3.9,
           h: 0.5,
           fontFace: "Open Sans",
-          fontSize: 11,
+          fontSize: 12,
           color: BRAND.navy,
           transparency: 40,
         });
@@ -485,9 +485,18 @@ const buildSlide = (
         h: 0.55,
         align: "center",
         fontFace: "Poppins",
-        fontSize: 14,
+        fontSize: 16,
         bold: true,
         color: BRAND.white,
+      });
+      s.addText("Ananya SEO Services at a Glance · ananyaseo.com", {
+        x: 0.7,
+        y: 7.08,
+        w: 6.5,
+        h: 0.3,
+        fontFace: "Open Sans",
+        fontSize: 11.5,
+        color: BRAND.softText,
       });
       break;
     }
@@ -508,6 +517,9 @@ export const downloadDeckPptx = async () => {
   for (const slide of deckSlides) {
     if (slide.image && !images.has(slide.image)) {
       images.set(slide.image, await toDataUrl(slide.image));
+    }
+    if (slide.logo && !images.has(slide.logo)) {
+      images.set(slide.logo, await toDataUrl(slide.logo));
     }
   }
 
