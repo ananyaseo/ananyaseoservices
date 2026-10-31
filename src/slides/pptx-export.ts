@@ -328,7 +328,7 @@ const buildSlide = (
           h: 0.45,
           align: "center",
           fontFace: "Open Sans",
-          fontSize: 11.5,
+          fontSize: 13,
           color: BRAND.softText,
           line: { color: BRAND.white, transparency: 70 },
         });
@@ -353,27 +353,15 @@ const buildSlide = (
       (slide.bullets || []).forEach((b, i) => {
         s.addText(b, {
           x: textX + 0.35,
-          y: 2.95 + i * 0.62,
-          w: 6.2,
+          y: 2.9 + i * 0.68,
+          w: imageRight ? 6.2 : 4.6,
           h: 0.6,
           fontFace: "Open Sans",
-          fontSize: 13.5,
+          fontSize: 15,
           color: BRAND.white,
           bullet: { characterCode: "2713" },
         });
       });
-      if (slide.link) {
-        s.addText(slide.link.label.toUpperCase(), {
-          x: textX + 0.35,
-          y: 6.6,
-          w: 5,
-          h: 0.5,
-          fontFace: "Poppins",
-          fontSize: 12,
-          bold: true,
-          color: BRAND.green,
-        });
-      }
       break;
     }
     case "strengths": {
@@ -394,7 +382,7 @@ const buildSlide = (
         w: 6,
         h: 0.4,
         fontFace: "Poppins",
-        fontSize: 13,
+        fontSize: 15,
         bold: true,
         color: BRAND.orange,
         charSpacing: 2,
@@ -405,7 +393,7 @@ const buildSlide = (
         w: 6.5,
         h: 1.6,
         fontFace: "Poppins",
-        fontSize: 44,
+        fontSize: 50,
         bold: true,
         color: BRAND.white,
       });
@@ -415,7 +403,7 @@ const buildSlide = (
         w: 5.8,
         h: 0.8,
         fontFace: "Open Sans",
-        fontSize: 15,
+        fontSize: 17,
         color: BRAND.softText,
       });
       [
