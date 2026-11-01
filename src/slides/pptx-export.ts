@@ -281,7 +281,7 @@ const buildSlide = (
     case "audience": {
       const s = addHeader(pptx, slide);
       (slide.cards || []).forEach((card, i) =>
-        addRowCard(s, card, 0.7, 2.9 + i * 1.5, 7.4, 1.4)
+        addRowCard(s, card, 0.7, 2.85 + i * 1.42, 7.4, 1.32)
       );
       if (slide.image && images.has(slide.image)) {
         s.addImage({
@@ -454,7 +454,7 @@ const buildSlide = (
           x: 8.0,
           y: 2.05 + i * 1.15,
           w: 4.2,
-          h: i === 2 ? 1.6 : 0.75,
+          h: i === 2 ? 1.3 : 0.75,
           fill: { color: "F3F5F7" },
           line: { color: "D7DEE6" },
           rectRadius: 0.08,
