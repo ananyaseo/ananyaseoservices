@@ -17,6 +17,7 @@ const Index = () => {
     title: "SEO & Digital Marketing Agency India | Ananya SEO",
     description: "Grow your business with Ananya SEO. We provide SEO, responsive WordPress web development, and digital marketing solutions across industries.",
     canonicalUrl: "https://www.ananyaseo.com",
+    includeProfessionalServiceSchema: true,
     breadcrumbs: [
       { name: "Home", url: "/" },
     ],

@@ -26,6 +26,7 @@ interface UseSEOOptions {
     url?: string;
   };
   additionalSchema?: Record<string, unknown>;
+  includeProfessionalServiceSchema?: boolean;
   breadcrumbs?: BreadcrumbItem[];
 }
 
@@ -36,6 +37,7 @@ export function useSEO({
   canonicalUrl: canonicalUrlOverride,
   schemaData,
   additionalSchema,
+  includeProfessionalServiceSchema = false,
   breadcrumbs,
 }: UseSEOOptions): React.ReactElement | null {
   if (typeof window === "undefined") {
@@ -118,6 +120,66 @@ export function useSEO({
       dangerouslySetInnerHTML: { __html: JSON.stringify(orgSchema) }
     })
   );
+
+  if (includeProfessionalServiceSchema) {
+    const professionalServiceSchema = {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://www.ananyaseo.com/#business",
+      "name": "Ananya SEO Services",
+      "url": "https://www.ananyaseo.com/",
+      "logo": "https://www.ananyaseo.com/wp-content/uploads/2018/03/cropped-Ananya_nospace_528x150-1.jpg",
+      "image": [
+        "https://www.ananyaseo.com/wp-content/uploads/2018/03/cropped-Ananya_nospace_528x150-1.jpg"
+      ],
+      "description": "Digital marketing company offering Search Engine Optimization (SEO), PPC advertising, and Social Media Marketing services.",
+      "priceRange": "INR 18,000 - INR 100,000",
+      "currenciesAccepted": "INR",
+      "telephone": "+91-9845038936",
+      "email": "sanand.rao@gmail.com",
+      "hasMap": "https://maps.app.goo.gl/Mc33ZNH6rcBSegiGA",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "49, 2nd Main, Arakere MICO Layout I Stage",
+        "addressLocality": "Bangalore",
+        "addressRegion": "Karnataka",
+        "postalCode": "560076",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.8921,
+        "longitude": 77.5984
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Bangalore" },
+        { "@type": "State", "name": "Karnataka" },
+        { "@type": "State", "name": "Andhra Pradesh" },
+        { "@type": "State", "name": "Tamil Nadu" },
+        { "@type": "Place", "name": "Global markets" }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/ananya-seo-services",
+        "https://www.facebook.com/ananya.seo.services",
+        "https://maps.app.goo.gl/Mc33ZNH6rcBSegiGA"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:30",
+          "closes": "18:30"
+        }
+      ]
+    };
+    schemas.push(
+      React.createElement("script", {
+        key: "professional-service-schema",
+        type: "application/ld+json",
+        dangerouslySetInnerHTML: { __html: JSON.stringify(professionalServiceSchema) }
+      })
+    );
+  }
 
   // Service schema
   if (schemaData) {

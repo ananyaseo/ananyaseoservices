@@ -17,6 +17,7 @@ const Contact = () => {
   const seoSchemas = useSEO({
     title: "Contact Ananya SEO Services | Get in Touch",
     description: "Connect with Ananya SEO Services for SEO, PPC, social media marketing, and website development services in Bangalore, India.",
+    includeProfessionalServiceSchema: true,
     breadcrumbs: [
       { name: "Home", url: "/" },
       { name: "Contact", url: "/contact" },
