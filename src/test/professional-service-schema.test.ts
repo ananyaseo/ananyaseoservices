@@ -18,5 +18,7 @@ describe("ProfessionalService schema", () => {
     expect(homepageMarkup).toContain('"@type":"ProfessionalService"');
     expect(homepageMarkup).toContain('"currenciesAccepted":"INR"');
     expect(otherPageMarkup).not.toContain('"@type":"ProfessionalService"');
+    expect(homepageMarkup).not.toContain('"@type":"Organization"');
+    expect(otherPageMarkup).not.toContain('"@type":"Organization"');
   });
 });
